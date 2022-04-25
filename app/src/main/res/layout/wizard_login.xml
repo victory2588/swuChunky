@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BAEAFF">
+    android:background="#F7FBFD">
 
     <ImageView
         android:id="@+id/chunkyLogo"
         android:layout_width="243dp"
         android:layout_height="205dp"
         android:layout_marginTop="92dp"
+        android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/wizard_Id_Insert"
@@ -23,7 +23,6 @@
         android:layout_height="39dp"
         android:layout_marginTop="56dp"
         android:layout_marginBottom="8dp"
-        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=" 아이디"
@@ -33,14 +32,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_introduction" />
+        app:layout_constraintTop_toBottomOf="@+id/wizard_introduction"
+        android:background="@drawable/text_border" />
 
     <EditText
         android:id="@+id/wizard_pw_Insert"
         android:layout_width="218dp"
         android:layout_height="39dp"
         android:layout_marginBottom="48dp"
-        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=" 비밀번호"
@@ -50,7 +49,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_Id_Insert" />
+        app:layout_constraintTop_toBottomOf="@+id/wizard_Id_Insert"
+        android:background="@drawable/text_border" />
 
     <TextView
         android:id="@+id/wizard_introduction"

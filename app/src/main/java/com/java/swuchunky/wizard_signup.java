@@ -1,4 +1,13 @@
 package com.java.swuchunky;
 
-public class wizard_signup {
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class wizard_signup extends AppCompatActivity {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.wizard_signup);
+    }
 }
