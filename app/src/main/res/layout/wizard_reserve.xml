@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".wizard_reserve">
+
+    <Button
+        android:id="@+id/reserve_reg_btn"
+        android:layout_width="199dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="196dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="정기예약"
+        android:textColor="#366BFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#366BFF"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/reserve_sel_btn"
+        android:layout_width="199dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="날짜선택"
+        android:textColor="#68d5ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reserve_reg_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="#68d5ff"
+        app:strokeWidth="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
