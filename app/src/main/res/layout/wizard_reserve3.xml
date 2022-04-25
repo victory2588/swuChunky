@@ -131,7 +131,7 @@
         tools:layout_editor_absoluteX="316dp" />
 
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/reserve_checkbox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="에어컨"
@@ -140,7 +140,7 @@
         tools:layout_editor_absoluteY="444dp" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/reserve_checkbox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="소파"
@@ -149,40 +149,13 @@
         tools:layout_editor_absoluteY="444dp" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="냉장고"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="507dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="공기청정기"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="444dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="김치냉장고"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="507dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/reserve_checkbox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="선풍기"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="507dp" />
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="444dp" />
 
     <TextView
         android:id="@+id/reservation3_txtexp2"

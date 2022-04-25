@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:gravity="center_horizontal"
-        android:text="당신은 마법사와 계약한 청소요정 <청키>입니다. \n원하는 마법사와 계약하고 보수를 받으세요."
+        android:text="당신은 마법사와 계약한 청소요정 청키입니다. \n원하는 마법사와 계약하고 보수를 받으세요."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
