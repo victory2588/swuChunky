@@ -18,14 +18,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/dobi_Id_Insert"
+        android:id="@+id/dobi_email_Insert"
         android:layout_width="218dp"
         android:layout_height="39dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/text_border"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text=" 아이디"
+        android:text=" 이메일"
         android:textColor="#b8b8b8"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dobi_Id_Insert" />
+        app:layout_constraintTop_toBottomOf="@+id/dobi_email_Insert" />
 
     <TextView
         android:id="@+id/dobi_introduction"
