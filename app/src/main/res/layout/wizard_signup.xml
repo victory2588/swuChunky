@@ -123,7 +123,7 @@
         app:layout_constraintEnd_toStartOf="@+id/img_google"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/kakao" />
+        android:src="@drawable/kakao" />
 
     <ImageView
         android:id="@+id/img_instagram"
@@ -135,7 +135,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_naver"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/naver" />
+        android:src="@drawable/naver" />
 
     <ImageView
         android:id="@+id/img_naver"
@@ -147,7 +147,7 @@
         app:layout_constraintEnd_toStartOf="@+id/img_instagram"
         app:layout_constraintStart_toEndOf="@+id/img_google"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/facebook" />
+        android:src="@drawable/facebook" />
 
     <ImageView
         android:id="@+id/img_google"
@@ -159,6 +159,6 @@
         app:layout_constraintEnd_toStartOf="@+id/img_naver"
         app:layout_constraintStart_toEndOf="@+id/img_kakao"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/google" />
+        android:src="@drawable/google" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
