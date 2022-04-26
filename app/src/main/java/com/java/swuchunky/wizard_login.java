@@ -33,7 +33,7 @@ public class wizard_login extends AppCompatActivity {
         //버튼 등록하기
         wizard_membership_txt = findViewById(R.id.wizard_membership_txt);
         mLoginBtn = findViewById(R.id.wizard_login_btn);
-        mEmailText = findViewById(R.id.wizard_Id_Insert);
+        mEmailText = findViewById(R.id.wizard_email_Insert);
         mPasswordText = findViewById(R.id.wizard_pw_Insert);
 
 
@@ -50,7 +50,6 @@ public class wizard_login extends AppCompatActivity {
 
         //로그인 버튼이 눌리면
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 String email = mEmailText.getText().toString().trim();
