@@ -39,7 +39,6 @@ public class wizard_login extends AppCompatActivity {
 
         //가입 버튼이 눌리면
         wizard_membership_txt.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 //intent함수를 통해 register액티비티 함수를 호출한다.
@@ -55,11 +54,11 @@ public class wizard_login extends AppCompatActivity {
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
                 firebaseAuth.signInWithEmailAndPassword(email,pwd)
-                        .addOnCompleteListener((Activity) getApplicationContext(), new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Intent intent = new Intent(getApplicationContext(), wizard_main.class);
+                                    Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     startActivity(intent);
 
                                 }else{
