@@ -50,7 +50,6 @@ public class wizard_login extends AppCompatActivity {
 
         //로그인 버튼이 눌리면
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 String email = mEmailText.getText().toString().trim();
