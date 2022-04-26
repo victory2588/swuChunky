@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "280553755557",
+    "project_id": "swuchunky",
+    "storage_bucket": "swuchunky.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280553755557:android:3fba64e58077c4ac898e4c",
+        "android_client_info": {
+          "package_name": "com.java.swuchunky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280553755557-ima09e7t47aroreim7gp2ggf62a1df0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMGxZX8yQ1JhE95IsPF9LoHwFqxEBN77Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280553755557-ima09e7t47aroreim7gp2ggf62a1df0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
