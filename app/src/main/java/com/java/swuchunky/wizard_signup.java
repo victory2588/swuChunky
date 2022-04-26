@@ -120,6 +120,10 @@ public class wizard_signup extends AppCompatActivity {
             }
         });
     }
+    public boolean onSupportNavigateUp(){
+        onBackPressed();; // 뒤로가기 버튼이 눌렸을시
+        return super.onSupportNavigateUp(); // 뒤로가기 버튼
+    }
     /*protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_signup);
