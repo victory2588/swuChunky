@@ -1,4 +1,4 @@
-package com.java.swuchunky;
+package com.java.swuchunky.wizard.reserve;
 
 import android.os.Bundle;
 
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.java.swuchunky.R;
 
 public class wizard_reserve extends Fragment {
     @Override

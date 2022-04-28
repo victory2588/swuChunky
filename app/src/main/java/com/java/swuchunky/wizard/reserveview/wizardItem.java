@@ -1,4 +1,4 @@
-package com.java.swuchunky;
+package com.java.swuchunky.wizard.reserveview;
 
 //wizard_reserveveiw에서의 리스트 아이템
 public class wizardItem {

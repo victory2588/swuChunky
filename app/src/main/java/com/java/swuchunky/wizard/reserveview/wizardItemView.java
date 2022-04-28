@@ -1,4 +1,4 @@
-package com.java.swuchunky;
+package com.java.swuchunky.wizard.reserveview;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+
+import com.java.swuchunky.R;
 
 public class wizardItemView extends LinearLayout {
 

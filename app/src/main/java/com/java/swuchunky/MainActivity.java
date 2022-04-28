@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+import com.java.swuchunky.wizard.main_calendar.wizard_main;
+import com.java.swuchunky.wizard.wizard_mypage;
+import com.java.swuchunky.wizard.reserve.wizard_reserve;
+import com.java.swuchunky.wizard.reserveview.wizard_reserveview;
 
 public class MainActivity extends AppCompatActivity {
 

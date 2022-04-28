@@ -8,6 +8,9 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.java.swuchunky.dobi.dobi_login;
+import com.java.swuchunky.wizard.wizard_login;
+
 public class selectuser extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
