@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+//import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -18,6 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.java.swuchunky.R;
 import com.java.swuchunky.wizard.main_calendar.wizard_main;
+
 
 public class wizard_login extends AppCompatActivity {
     Button mLoginBtn;
@@ -29,6 +32,12 @@ public class wizard_login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
+
+        /*
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.wizard_login_btn, ItemFragment.newInstance("d"));
+        fragmentTransaction.commit();*/
 
         firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
@@ -69,32 +78,5 @@ public class wizard_login extends AppCompatActivity {
 
             }
         });
-    /*protected void onCreate(@Nullable Bundle savedInstanceState) {
-        TextView wizard_membership_txt;
-
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.wizard_login);
-
-        //로그인 버튼 클릭시 - 메인 이동
-        Button wizard_login_btn = (Button) findViewById(R.id.wizard_login_btn);
-        wizard_login_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizard_main.class);
-                startActivity(intent);
-            }
-        });
-
-        //회원가입 텍스트뷰 클릭시 - 회원가입
-        wizard_membership_txt = (TextView) findViewById(R.id.wizard_membership_txt);
-        wizard_membership_txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizard_signup.class);
-                startActivity(intent);
-            }
-        });
-    }*/
     }
 }
