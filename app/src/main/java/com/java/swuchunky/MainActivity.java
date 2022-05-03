@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -28,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         //하단 네비게이션 선택시 반응 리스너 설정
         bottom_menu.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
 
+        //처음 보일 프래그먼트
+        getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
+
         //프래그먼트 객체 생성
         wizard_main = new wizard_main();
         wizard_mypage = new wizard_mypage();
         wizard_reserve = new wizard_reserve();
         wizard_reserveview = new wizard_reserveview();
-
-        //처음 보일 프래그먼트
-        getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
     }
 
 

@@ -1,5 +1,6 @@
 package com.java.swuchunky.wizard.main_calendar;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.widget.CalendarView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
 
 import java.util.Calendar;
@@ -23,20 +25,31 @@ public class wizard_main extends Fragment {
 //    private HomeViewModel homeViewModel;
 //    private FragmentHomeBinding binding;
 
+    MainActivity activity;
+
     TextView dateText;
     CalendarView calendarView;
     Calendar calendar;
 
+    //화면이 붙을때 작동하는 메서드
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        //현재 소속된 액티비티를 메인 액티비티로 한다.
+        activity = (MainActivity) getActivity();
+    }
 
-//        homeViewModel =
-//                new ViewModelProvider(this).get(HomeViewModel.class);
-//
-//        binding = FragmentHomeBinding.inflate(inflater, container, false);
-//        View root = binding.getRoot();
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState)
+    {
+        // Inflate the layout for this fragment
 
         //뷰 넘어가는 부분
         View view = inflater.inflate(R.layout.wizard_main, container, false);
