@@ -18,11 +18,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
 import com.java.swuchunky.wizard.main_calendar.wizard_main;
 
 
 public class wizard_login extends AppCompatActivity {
+    MainActivity activity;
+
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
@@ -75,7 +78,7 @@ public class wizard_login extends AppCompatActivity {
                                 }
                             }
                         });
-
+                activity.onFragmentChanged(1); //메뉴-캘린더 이동
             }
         });
     }

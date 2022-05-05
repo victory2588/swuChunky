@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class wizard_main extends Fragment {
 //    private HomeViewModel homeViewModel;
 //    private FragmentHomeBinding binding;
 
+    //메인 액티비티 객체 선언
     MainActivity activity;
 
     TextView dateText;
@@ -36,7 +38,6 @@ public class wizard_main extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         //현재 소속된 액티비티를 메인 액티비티로 한다.
-        activity = (MainActivity) getActivity();
     }
 
     @Override
@@ -52,7 +53,20 @@ public class wizard_main extends Fragment {
         // Inflate the layout for this fragment
 
         //뷰 넘어가는 부분
-        View view = inflater.inflate(R.layout.wizard_main, container, false);
+        //setHasOptionsMenu(true); //흠....
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
+
+        MainActivity activity = (MainActivity) getActivity();
+
+        //버튼대신 메뉴버튼(아이템...)을 하려면...어떻게 해야할까?
+        Button button = view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                activity.onFragmentChanged(2);
+            }
+        });
+
+
 
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
@@ -77,7 +91,6 @@ public class wizard_main extends Fragment {
         });
 
         return view;
-        //return inflater.inflate(R.layout.wizard_main, container, false);
     }
 
     @Override

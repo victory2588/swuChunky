@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         bottom_menu.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
 
         //처음 보일 프래그먼트
-        getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
+        wizard_main = (wizard_main) getSupportFragmentManager().findFragmentById(R.id.wizard_main);
+        //getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
 
         //프래그먼트 객체 생성
         wizard_main = new wizard_main();
@@ -40,28 +41,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public boolean onNavigationItemSelected (@NonNull MenuItem item) {
-        int id = item.getItemId();
+    public boolean onFragmentChanged (@NonNull int fragmentNum) { //onNavigationItem
         //홈버튼 선택
-        if (id == R.id.wizard_main) {
+        if (fragmentNum == 1) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
             return true;
         }
         //예약리스트 보기 선택
-        if (id == R.id.wizard_reserveview) {
+        if (fragmentNum == 2) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
             return true;
         }
         //검색(예약하기) 선택
-        if (id == R.id.wizard_reserve) {
+        if (fragmentNum == 3) { //id == R.id.wizard_reserve
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
             return true;
         }
         //마이페이지 선택
-        if (id == R.id.wizard_mypage) {
+        if (fragmentNum == 4) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
             return true;
         }
         return true;
     }
+
 }

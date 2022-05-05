@@ -10,14 +10,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
 
 public class wizard_reserve extends Fragment {
+
+    MainActivity activity;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_reserve, container, false);
+
+        activity = (MainActivity) getActivity();
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.wizard_reserve, container, false);
+        return view;
     }
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

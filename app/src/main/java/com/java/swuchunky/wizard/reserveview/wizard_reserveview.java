@@ -9,8 +9,11 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
 import com.java.swuchunky.wizard.reserveview.wizardItem;
 import com.java.swuchunky.wizard.reserveview.wizardItemView;
@@ -18,13 +21,18 @@ import com.java.swuchunky.wizard.reserveview.wizardItemView;
 import java.util.ArrayList;
 
 public class wizard_reserveview extends Fragment {
+    MainActivity activity;
+
     wizardAdapter adapter;
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.wizard_reserveview, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                @Nullable Bundle savedInstanceState) {
 
-        ListView listView = (ListView) v.findViewById(R.id.wizard_reserveview_listView);
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_reserveview, container, false);
+
+        activity = (MainActivity) getActivity();
+
+        ListView listView = (ListView) view.findViewById(R.id.wizard_reserveview_listView);
         //어댑터 안에 데이터 담기
         adapter = new wizardAdapter();
 
@@ -45,7 +53,7 @@ public class wizard_reserveview extends Fragment {
                 Toast.makeText(getActivity().getApplicationContext(), "선택 :" + item.getName(), Toast.LENGTH_LONG).show();
             }
         });
-        return v;
+        return view;
     }
 
     class wizardAdapter extends BaseAdapter {
