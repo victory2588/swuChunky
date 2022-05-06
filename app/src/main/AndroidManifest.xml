@@ -20,9 +20,6 @@
         </activity>
 
         <activity android:name=".selectuser"/>
-        <activity android:name=".wizard_login"/>
-        <activity android:name=".dobi_login"/>
-        <activity android:name=".wizard_signup"/>
     </application>
 
 </manifest>

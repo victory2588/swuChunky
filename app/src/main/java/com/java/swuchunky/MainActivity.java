@@ -32,29 +32,29 @@ public class MainActivity extends AppCompatActivity {
         wizard_reserveview = new wizard_reserveview();
 
         //처음 보일 프래그먼트
-        getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
+        wizard_main=(wizard_main)getSupportFragmentManager().findFragmentById(R.id.nav_wizard_main);
     }
 
 
     public boolean onNavigationItemSelected (@NonNull MenuItem item) {
         int id = item.getItemId();
         //홈버튼 선택
-        if (id == R.id.wizard_main) {
+        if (id == R.id.nav_wizard_main) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
             return true;
         }
         //예약리스트 보기 선택
-        if (id == R.id.wizard_reserveview) {
+        if (id == R.id.nav_wizard_reserveview) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
             return true;
         }
         //검색(예약하기) 선택
-        if (id == R.id.wizard_reserve) {
+        if (id == R.id.nav_wizard_reserve) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
             return true;
         }
         //마이페이지 선택
-        if (id == R.id.wizard_mypage) {
+        if (id == R.id.nav_wizard_mypage) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
             return true;
         }

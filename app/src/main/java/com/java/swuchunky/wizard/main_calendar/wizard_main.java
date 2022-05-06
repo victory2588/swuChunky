@@ -80,7 +80,4 @@ public class wizard_main extends Fragment {
         super.onDestroyView();
         //binding = null;
     }
-    //public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-   //     super.onViewCreated(view, savedInstanceState);
-   // }
 }

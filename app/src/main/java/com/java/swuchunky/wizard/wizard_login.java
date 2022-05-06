@@ -1,6 +1,5 @@
-package com.java.swuchunky;
+package com.java.swuchunky.wizard;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,26 +7,38 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+//import android.app.Fragment;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+//import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.java.swuchunky.R;
+
 
 public class wizard_login extends AppCompatActivity {
+    //MainActivity activity;
+
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
-    @Override
+    // @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //protected void onCreateView(@NonNull LayoutInflater inflater, @androidx.annotation.Nullable ViewGroup container,
+               // @Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
+
+       //activity = (MainActivity) getActivity();
+        //wizard_main = new Fragment(); //음...
 
         firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
@@ -43,7 +54,6 @@ public class wizard_login extends AppCompatActivity {
             public void onClick(View v) {
                 //intent함수를 통해 register액티비티 함수를 호출한다.
                 startActivity(new Intent(getApplicationContext(), wizard_signup.class));
-
             }
         });
 
@@ -53,48 +63,26 @@ public class wizard_login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
-                firebaseAuth.signInWithEmailAndPassword(email,pwd)
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+
+               firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Intent intent = new Intent(wizard_login.this, wizard_main.class);
-                                    startActivity(intent);
-
+                                    //Intent intent = new Intent(wizard_login.this, wizard_main.class);
+                                    //startActivity(intent);
+                                    //activity.onFragmentChanged(1); //메뉴-캘린더 이동
+                                    FragmentManager fragmentManager = getSupportFragmentManager();
+                                    fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-
             }
         });
-    /*protected void onCreate(@Nullable Bundle savedInstanceState) {
-        TextView wizard_membership_txt;
-
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.wizard_login);
-
-        //로그인 버튼 클릭시 - 메인 이동
-        Button wizard_login_btn = (Button) findViewById(R.id.wizard_login_btn);
-        wizard_login_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizard_main.class);
-                startActivity(intent);
-            }
-        });
-
-        //회원가입 텍스트뷰 클릭시 - 회원가입
-        wizard_membership_txt = (TextView) findViewById(R.id.wizard_membership_txt);
-        wizard_membership_txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizard_signup.class);
-                startActivity(intent);
-            }
-        });
-    }*/
     }
 }
