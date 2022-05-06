@@ -20,6 +20,8 @@
         </activity>
 
         <activity android:name=".selectuser"/>
+        <activity android:name=".wizard.wizard_signup"/>
+
     </application>
 
 </manifest>
