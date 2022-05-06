@@ -1,5 +1,6 @@
 package com.java.swuchunky.wizard.main_calendar;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.os.Bundle;
 
@@ -57,16 +58,7 @@ public class wizard_main extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
         MainActivity activity = (MainActivity) getActivity();
-
-        //버튼대신 메뉴버튼(아이템...)을 하려면...어떻게 해야할까?
-        Button button = view.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                activity.onFragmentChanged(2);
-            }
-        });
-
-
+        activity.onFragmentChanged(2);
 
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};

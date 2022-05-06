@@ -1,15 +1,20 @@
 package com.java.swuchunky.wizard;
 
+//import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 //import androidx.fragment.app.Fragment;
@@ -24,23 +29,25 @@ import com.java.swuchunky.wizard.main_calendar.wizard_main;
 
 
 public class wizard_login extends AppCompatActivity {
-    MainActivity activity;
+    //MainActivity activity;
+    //public Fragment wizard_main;
 
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
-    @Override
+
+    // @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //protected void onCreateView(@NonNull LayoutInflater inflater, @androidx.annotation.Nullable ViewGroup container,
+               // @Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
 
-        /*
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.wizard_login_btn, ItemFragment.newInstance("d"));
-        fragmentTransaction.commit();*/
+        //activity = (MainActivity) getActivity();
+        //wizard_main = new Fragment(); //음...
 
         firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
@@ -56,7 +63,6 @@ public class wizard_login extends AppCompatActivity {
             public void onClick(View v) {
                 //intent함수를 통해 register액티비티 함수를 호출한다.
                 startActivity(new Intent(getApplicationContext(), wizard_signup.class));
-
             }
         });
 
@@ -71,14 +77,17 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Intent intent = new Intent(wizard_login.this, wizard_main.class); //왜 메인으로 가지 않는가..https://developside.tistory.com/101
-                                    startActivity(intent);
+                                    //Intent intent = new Intent(wizard_login.this, wizard_main.class);
+                                    //startActivity(intent);
+                                    //activity.onFragmentChanged(1); //메뉴-캘린더 이동
+                                    FragmentManager fragmentManager = getSupportFragmentManager();
+                                    //FragmentManager fragmentManager = getFragmentManager();
+                                    fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-                activity.onFragmentChanged(1); //메뉴-캘린더 이동
             }
         });
     }
