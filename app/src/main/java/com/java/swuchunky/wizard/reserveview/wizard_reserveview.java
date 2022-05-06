@@ -31,7 +31,7 @@ public class wizard_reserveview extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_reserveview, container, false);
 
         activity = (MainActivity) getActivity();
-        activity.onFragmentChanged(2);
+        //activity.onFragmentChanged(2);
 
         ListView listView = (ListView) view.findViewById(R.id.wizard_reserveview_listView);
         //어댑터 안에 데이터 담기

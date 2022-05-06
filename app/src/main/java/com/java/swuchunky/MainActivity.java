@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -30,8 +31,7 @@ public class MainActivity extends AppCompatActivity {
         bottom_menu.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
 
         //처음 보일 프래그먼트
-        wizard_main = (wizard_main) getSupportFragmentManager().findFragmentById(R.id.wizard_main);
-        //getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
+        wizard_main = (wizard_main) getSupportFragmentManager().findFragmentById(R.id.nav_wizard_main);
 
         //프래그먼트 객체 생성
         wizard_main = new wizard_main();
@@ -41,24 +41,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public boolean onFragmentChanged (@NonNull int fragmentNum) { //onNavigationItem
+    public boolean onNavigationItemSelected (MenuItem item) { //onNavigationItem
+        int id = item.getItemId();
+
         //홈버튼 선택
-        if (fragmentNum == 1) {
+        if (id == R.id.nav_wizard_main) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
             return true;
         }
         //예약리스트 보기 선택
-        if (fragmentNum == 2) {
+        else if (id == R.id.nav_wizard_reserveview) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
             return true;
         }
         //검색(예약하기) 선택
-        if (fragmentNum == 3) { //id == R.id.wizard_reserve
+        else if (id == R.id.nav_wizard_reserve) { //id == R.id.wizard_reserve
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
             return true;
         }
         //마이페이지 선택
-        if (fragmentNum == 4) {
+        else if (id == R.id.nav_wizard_mypage) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
             return true;
         }

@@ -35,11 +35,11 @@ public class wizard_main extends Fragment {
     Calendar calendar;
 
     //화면이 붙을때 작동하는 메서드
-    @Override
+   /* @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         //현재 소속된 액티비티를 메인 액티비티로 한다.
-    }
+    }*/
 
     @Override
     public void onDetach() {
@@ -58,7 +58,7 @@ public class wizard_main extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
         MainActivity activity = (MainActivity) getActivity();
-        activity.onFragmentChanged(2);
+        //activity.onFragmentChanged(2);
 
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};

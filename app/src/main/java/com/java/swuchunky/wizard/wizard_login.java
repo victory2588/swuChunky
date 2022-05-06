@@ -1,6 +1,5 @@
 package com.java.swuchunky.wizard;
 
-//import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+//import android.app.Fragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,13 +30,11 @@ import com.java.swuchunky.wizard.main_calendar.wizard_main;
 
 public class wizard_login extends AppCompatActivity {
     //MainActivity activity;
-    //public Fragment wizard_main;
 
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
-    private FirebaseAuth firebaseAuth;
-
+    //private FirebaseAuth firebaseAuth;
 
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +47,7 @@ public class wizard_login extends AppCompatActivity {
         //activity = (MainActivity) getActivity();
         //wizard_main = new Fragment(); //음...
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        //firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
         wizard_membership_txt = findViewById(R.id.wizard_membership_txt);
         mLoginBtn = findViewById(R.id.wizard_login_btn);
@@ -72,7 +70,11 @@ public class wizard_login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
-                firebaseAuth.signInWithEmailAndPassword(email,pwd)
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+
+               /* firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -80,14 +82,13 @@ public class wizard_login extends AppCompatActivity {
                                     //Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     //startActivity(intent);
                                     //activity.onFragmentChanged(1); //메뉴-캘린더 이동
-                                    FragmentManager fragmentManager = getSupportFragmentManager();
-                                    //FragmentManager fragmentManager = getFragmentManager();
-                                    fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+                                    //FragmentManager fragmentManager = getSupportFragmentManager();
+                                    //fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
-                        });
+                        });*/
             }
         });
     }
