@@ -34,7 +34,7 @@ public class wizard_login extends AppCompatActivity {
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
-    //private FirebaseAuth firebaseAuth;
+    private FirebaseAuth firebaseAuth;
 
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +44,10 @@ public class wizard_login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
 
-        //activity = (MainActivity) getActivity();
+       //activity = (MainActivity) getActivity();
         //wizard_main = new Fragment(); //음...
 
-        //firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
         wizard_membership_txt = findViewById(R.id.wizard_membership_txt);
         mLoginBtn = findViewById(R.id.wizard_login_btn);
@@ -74,7 +74,7 @@ public class wizard_login extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
 
-               /* firebaseAuth.signInWithEmailAndPassword(email,pwd)
+               firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -82,13 +82,13 @@ public class wizard_login extends AppCompatActivity {
                                     //Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     //startActivity(intent);
                                     //activity.onFragmentChanged(1); //메뉴-캘린더 이동
-                                    //FragmentManager fragmentManager = getSupportFragmentManager();
-                                    //fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+                                    FragmentManager fragmentManager = getSupportFragmentManager();
+                                    fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
-                        });*/
+                        });
             }
         });
     }

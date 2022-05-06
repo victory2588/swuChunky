@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public boolean onNavigationItemSelected (MenuItem item) { //onNavigationItem
+    public boolean onNavigationItemSelected (MenuItem item) {
         int id = item.getItemId();
 
         //홈버튼 선택
