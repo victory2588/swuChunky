@@ -5,9 +5,6 @@
       <map>
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.161" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.161" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listitem.xml" value="0.145" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listview.xml" value="0.145" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listview_header.xml" value="0.1" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/text_border.xml" value="0.135" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/activity_main.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_login.xml" value="0.22" />
@@ -16,13 +13,10 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_item_list.xml" value="0.34427083333333336" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_wizard_main.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_wizard_mypage.xml" value="0.35885416666666664" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/listitem.xml" value="0.1638888888888889" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.14629629629629629" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.14893617021276595" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_item.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.25" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.25" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.1" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.14402173913043478" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mypage.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve1_reg.xml" value="0.20909090909090908" />
@@ -34,6 +28,11 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/menu/bottom_menu.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.33242753623188404" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.1831306990881459" />
       </map>
     </option>
   </component>

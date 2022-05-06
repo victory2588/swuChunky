@@ -4,44 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".wizard.main_calendar.wizard_main">
+    tools:context=".wizard_main">
 
     <CalendarView
-        android:id="@+id/wizard_main_calendarView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:clickable="false"
-        app:layout_constraintBottom_toTopOf="@+id/wizard_main_listview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
-
-    <TextView
-        android:id="@+id/date"
+        android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="6dp"
-        android:text="날짜"
-        app:layout_constraintBottom_toTopOf="@+id/wizard_main_listview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_main_calendarView" />
-
-    <ListView
-        android:id="@+id/wizard_main_listview"
-        android:layout_width="413dp"
-        android:layout_height="259dp"
-        android:background="@drawable/listview"
-        android:divider="#ffffff"
-        android:dividerHeight="0px"
-        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date">
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </ListView>
 </androidx.constraintlayout.widget.ConstraintLayout>

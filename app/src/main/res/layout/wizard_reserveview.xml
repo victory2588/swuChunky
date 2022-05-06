@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".wizard.reserveview.wizard_reserveview">
+    tools:context=".wizard_reserveview">
 
     <LinearLayout
         android:id="@+id/wizard_reserveview_layout"
