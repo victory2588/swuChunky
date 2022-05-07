@@ -64,8 +64,8 @@ public class wizard_login extends AppCompatActivity {
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+                //FragmentManager fragmentManager = getSupportFragmentManager();
+               // fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
 
                firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
