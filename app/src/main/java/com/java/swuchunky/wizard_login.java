@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 //import androidx.fragment.app.Fragment;
 
@@ -20,7 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class wizard_login extends AppCompatActivity {
+public class wizard_login extends FragmentActivity {
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
@@ -28,9 +29,6 @@ public class wizard_login extends AppCompatActivity {
 
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        //protected void onCreateView(@NonNull LayoutInflater inflater, @androidx.annotation.Nullable ViewGroup container,
-               // @Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
 
@@ -57,9 +55,6 @@ public class wizard_login extends AppCompatActivity {
             public void onClick(View v) {
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
-
-                //FragmentManager fragmentManager = getSupportFragmentManager();
-               // fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
 
                firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
