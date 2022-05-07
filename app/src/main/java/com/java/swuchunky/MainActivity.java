@@ -12,7 +12,7 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends FragmentActivity { //AppCompatActivity
+public class MainActivity extends AppCompatActivity { //AppCompatActivity
 
     BottomNavigationView bottom_menu; //하단 네비게이션
     public Fragment wizard_main, wizard_mypage, wizard_reserve, wizard_reserveview; //네비게이션을 통해 이동할 프래그먼트
@@ -38,8 +38,8 @@ public class MainActivity extends FragmentActivity { //AppCompatActivity
     }
 
 
-    public boolean onNavigationItemSelected (@NonNull MenuItem item) {
-        int id = item.getItemId();
+    public boolean onNavigationItemSelected (@NonNull int id) {
+        //int id = item.getItemId();
         //홈버튼 선택
         if (id == R.id.nav_wizard_main) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();

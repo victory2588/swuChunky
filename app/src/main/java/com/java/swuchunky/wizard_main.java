@@ -28,13 +28,23 @@ public class wizard_main extends Fragment {
 //    private HomeViewModel homeViewModel;
 //    private FragmentHomeBinding binding;
 
+    MainActivity activity;
+
     TextView dateText;
     CalendarView calendarView;
     Calendar calendar;
 
     @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        activity = (MainActivity) getActivity();
+    }
+
+    @Override
     public void onDetach() {
         super.onDetach();
+        activity = null;
     }
 
     @Nullable
@@ -46,6 +56,7 @@ public class wizard_main extends Fragment {
 
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
+
 
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
@@ -69,12 +80,8 @@ public class wizard_main extends Fragment {
             }
         });
 
+        getActivity();
         return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        //binding = null;
-    }
 }

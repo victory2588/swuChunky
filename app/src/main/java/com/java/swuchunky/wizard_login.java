@@ -21,12 +21,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class wizard_login extends FragmentActivity {
+public class wizard_login extends AppCompatActivity {
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
+    MainActivity activity;
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,13 @@ public class wizard_login extends FragmentActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String email = mEmailText.getText().toString().trim();
+
+                activity.onNavigationItemSelected(R.id.nav_wizard_main);
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+
+                /*String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
 
                firebaseAuth.signInWithEmailAndPassword(email,pwd)
@@ -69,7 +76,7 @@ public class wizard_login extends FragmentActivity {
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
-                        });
+                        });*/
             }
         });
     }
