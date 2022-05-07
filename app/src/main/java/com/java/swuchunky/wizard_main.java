@@ -28,9 +28,6 @@ public class wizard_main extends Fragment {
 //    private HomeViewModel homeViewModel;
 //    private FragmentHomeBinding binding;
 
-    //메인 액티비티 객체 선언
-    MainActivity activity;
-
     TextView dateText;
     CalendarView calendarView;
     Calendar calendar;
@@ -49,10 +46,6 @@ public class wizard_main extends Fragment {
 
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
-
-        MainActivity activity = (MainActivity) getActivity();
-        //FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        //fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
 
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
