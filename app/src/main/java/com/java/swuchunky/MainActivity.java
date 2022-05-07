@@ -12,7 +12,7 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity { //AppCompatActivity
 
     BottomNavigationView bottom_menu; //하단 네비게이션
     public Fragment wizard_main, wizard_mypage, wizard_reserve, wizard_reserveview; //네비게이션을 통해 이동할 프래그먼트
