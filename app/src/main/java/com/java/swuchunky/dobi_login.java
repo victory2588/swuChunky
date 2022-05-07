@@ -1,4 +1,4 @@
-package com.java.swuchunky.dobi;
+package com.java.swuchunky;
 
 import android.os.Bundle;
 
@@ -7,10 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.java.swuchunky.R;
 
-public class dobi_signup extends AppCompatActivity {
+public class dobi_login extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dobi_signup);
+        setContentView(R.layout.dobi_login);
     }
 }
-

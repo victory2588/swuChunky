@@ -1,4 +1,4 @@
-package com.java.swuchunky.wizard;
+package com.java.swuchunky;
 
 import android.os.Bundle;
 

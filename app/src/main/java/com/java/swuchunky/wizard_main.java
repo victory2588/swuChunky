@@ -1,4 +1,4 @@
-package com.java.swuchunky.wizard.main_calendar;
+package com.java.swuchunky;
 
 import android.content.ClipData;
 import android.content.Context;
@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,8 @@ import com.java.swuchunky.R;
 import java.util.Calendar;
 
 public class wizard_main extends Fragment {
+//    private HomeViewModel homeViewModel;
+//    private FragmentHomeBinding binding;
 
     //메인 액티비티 객체 선언
     MainActivity activity;
@@ -47,8 +50,9 @@ public class wizard_main extends Fragment {
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
-        //MainActivity activity = (MainActivity) getActivity();
-        //activity.onNavigationItemSelected(R.id.nav_wizard_main);
+        MainActivity activity = (MainActivity) getActivity();
+        //FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        //fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
 
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};

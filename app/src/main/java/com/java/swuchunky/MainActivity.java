@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
         //하단 네비게이션 선택시 반응 리스너 설정
-        bottom_menu.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);
+        bottom_menu.setOnItemSelectedListener((BottomNavigationView.OnItemSelectedListener) this); //setOnNavigationItemSelectedListener
 
         //프래그먼트 객체 생성
         wizard_main = new wizard_main();

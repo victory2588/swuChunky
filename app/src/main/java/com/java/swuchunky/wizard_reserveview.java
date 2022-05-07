@@ -1,4 +1,4 @@
-package com.java.swuchunky.wizard.reserveview;
+package com.java.swuchunky;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,11 +12,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
-import com.java.swuchunky.MainActivity;
-import com.java.swuchunky.R;
-import com.java.swuchunky.wizard.reserveview.wizardItem;
-import com.java.swuchunky.wizard.reserveview.wizardItemView;
 
 import java.util.ArrayList;
 

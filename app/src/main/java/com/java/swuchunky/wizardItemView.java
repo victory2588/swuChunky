@@ -1,4 +1,4 @@
-package com.java.swuchunky.wizard.reserveview;
+package com.java.swuchunky;
 
 import android.content.Context;
 import android.util.AttributeSet;

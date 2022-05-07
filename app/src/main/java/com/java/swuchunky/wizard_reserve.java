@@ -1,4 +1,4 @@
-package com.java.swuchunky.wizard.reserve;
+package com.java.swuchunky;
 
 import android.os.Bundle;
 

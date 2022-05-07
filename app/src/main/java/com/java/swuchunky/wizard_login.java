@@ -1,4 +1,4 @@
-package com.java.swuchunky.wizard;
+package com.java.swuchunky;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,14 +18,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.java.swuchunky.R;
-
-import com.java.swuchunky.wizard.main_calendar.wizard_main;
 
 
 public class wizard_login extends AppCompatActivity {
-    //MainActivity activity;
-
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
@@ -38,9 +33,6 @@ public class wizard_login extends AppCompatActivity {
                // @Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
-
-       //activity = (MainActivity) getActivity();
-        //wizard_main = new Fragment(); //음...
 
         firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
@@ -76,7 +68,6 @@ public class wizard_login extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     //Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     //startActivity(intent);
-                                    //activity.onFragmentChanged(1); //메뉴-캘린더 이동
                                     FragmentManager fragmentManager = getSupportFragmentManager();
                                     fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                 }else{
