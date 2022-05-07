@@ -20,6 +20,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.java.swuchunky.R;
 
+import com.java.swuchunky.wizard.main_calendar.wizard_main;
+
 
 public class wizard_login extends AppCompatActivity {
     //MainActivity activity;

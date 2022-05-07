@@ -21,6 +21,9 @@
 
         <activity android:name=".selectuser"/>
         <activity android:name=".wizard.wizard_signup"/>
+        <activity android:name=".wizard.wizard_login"/>
+
+
 
     </application>
 
