@@ -70,6 +70,8 @@ public class wizard_login extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     //Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     //startActivity(intent);
+                                    Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
+
                                     FragmentManager fragmentManager = getSupportFragmentManager();
                                     fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                 }else{

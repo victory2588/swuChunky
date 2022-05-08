@@ -28,6 +28,7 @@ public class wizard_signup extends AppCompatActivity {
     EditText mEmailText, mPasswordText, mPasswordcheckText, mName;
     Button mregisterBtn;
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference firebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -40,9 +41,8 @@ public class wizard_signup extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘
 
         //파이어베이스 접근 설정
-        //user = firebaseAuth.getCurrentUser();
         firebaseAuth =  FirebaseAuth.getInstance();
-        //firebaseDatabase = FirebaseDatabase.getInstance().getReference();
+        firebaseDatabase = FirebaseDatabase.getInstance().getReference("membership");
 
         mName = findViewById(R.id.membership_name_txt);
         mEmailText = findViewById(R.id.membership_email_txt);
@@ -56,10 +56,10 @@ public class wizard_signup extends AppCompatActivity {
             public void onClick(View v) {
 
                 //가입 정보 가져오기
-                final String name = mName.getText().toString().trim();
+                String name = mName.getText().toString().trim();
                 final String email = mEmailText.getText().toString().trim();
-                final String pwd = mPasswordText.getText().toString().trim();
-                final String pwdcheck = mPasswordcheckText.getText().toString().trim();
+                String pwd = mPasswordText.getText().toString().trim();
+                String pwdcheck = mPasswordcheckText.getText().toString().trim();
 
 
                 if(pwd.equals(pwdcheck)) {
@@ -77,22 +77,13 @@ public class wizard_signup extends AppCompatActivity {
                                 mDialog.dismiss();
 
                                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                                String email = user.getEmail();
-                                String uid = user.getUid();
-                                String name = mName.getText().toString().trim();
-                                //해쉬맵 테이블을 파이어베이스 데이터베이스에 저장
+                                userAccount account=new userAccount();
+                                account.setIdToken(user.getUid());
+                                account.setEmail(user.getEmail());
+                                account.setName(name);
+                                account.setPwd(pwd);
 
-                                HashMap<Object,String> hashMap = new HashMap<>();
-
-                                hashMap.put("uid",uid);
-                                hashMap.put("email",email);
-                                hashMap.put("name",name);
-
-
-                                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                DatabaseReference reference = database.getReference("Users");
-                                reference.child(uid).setValue(hashMap);
-
+                                firebaseDatabase.child("userAccount").child(user.getUid()).setValue(account);
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
                                 Intent intent = new Intent(wizard_signup.this, wizard_login.class);
                                 startActivity(intent);
@@ -101,7 +92,7 @@ public class wizard_signup extends AppCompatActivity {
 
                             } else {
                                 mDialog.dismiss();
-                                Toast.makeText(getApplicationContext(), "이미 존재하는 아이디 입니다.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
                                 return;  //해당 메소드 진행을 멈추고 빠져나감.
                             }
                         }
