@@ -28,7 +28,7 @@ public class wizard_main extends Fragment {
 //    private HomeViewModel homeViewModel;
 //    private FragmentHomeBinding binding;
 
-    MainActivity activity;
+    wizardMainActivity activity;
 
     TextView dateText;
     CalendarView calendarView;
@@ -38,7 +38,7 @@ public class wizard_main extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        activity = (MainActivity) getActivity();
+        activity = (wizardMainActivity) getActivity();
     }
 
     @Override

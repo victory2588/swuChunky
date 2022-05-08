@@ -27,7 +27,7 @@ public class wizard_login extends AppCompatActivity {
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
-    MainActivity activity;
+    wizardMainActivity activity;
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
