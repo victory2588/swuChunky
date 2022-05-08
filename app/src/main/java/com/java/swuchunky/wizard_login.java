@@ -57,10 +57,10 @@ public class wizard_login extends AppCompatActivity {
 
                 activity.onNavigationItemSelected(R.id.nav_wizard_main);
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
+                //FragmentManager fragmentManager = getSupportFragmentManager();
+                //fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
 
-                /*String email = mEmailText.getText().toString().trim();
+                String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
 
                firebaseAuth.signInWithEmailAndPassword(email,pwd)
@@ -76,7 +76,7 @@ public class wizard_login extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
                             }
-                        });*/
+                        });
             }
         });
     }
