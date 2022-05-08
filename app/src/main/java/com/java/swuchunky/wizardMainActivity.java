@@ -16,7 +16,7 @@ public class wizardMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); //프래그먼트 화면
 
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
@@ -34,28 +34,28 @@ public class wizardMainActivity extends AppCompatActivity {
     }
 
 
-    public boolean onNavigationItemSelected (@NonNull int id) {
+    public void onNavigationItemSelected (@NonNull int id) {
         //int id = item.getItemId();
         //홈버튼 선택
-        if (id == R.id.nav_wizard_main) {
+        if (id == 1) { //R.id.nav_wizard_main
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
-            return true;
+            //return true;
         }
         //예약리스트 보기 선택
-        if (id == R.id.nav_wizard_reserveview) {
+        if (id == 2) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
-            return true;
+            //return true;
         }
         //검색(예약하기) 선택
-        if (id == R.id.nav_wizard_reserve) {
+        if (id == 3) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
-            return true;
+            //return true;
         }
         //마이페이지 선택
-        if (id == R.id.nav_wizard_mypage) {
+        if (id == 4) {
             getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
-            return true;
+            //return true;
         }
-        return true;
+        //return true;
     }
 }

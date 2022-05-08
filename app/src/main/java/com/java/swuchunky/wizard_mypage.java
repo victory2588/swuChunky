@@ -15,7 +15,7 @@ import com.java.swuchunky.R;
 
 public class wizard_mypage extends Fragment {
 
-    MainActivity activity;
+    wizardMainActivity activity;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -23,7 +23,7 @@ public class wizard_mypage extends Fragment {
 
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_mypage, container, false);
 
-        activity = (MainActivity) getActivity();
+        activity = (wizardMainActivity) getActivity();
 
         // Inflate the layout for this fragment
         return view;

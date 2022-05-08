@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SwuChunky">
         <activity
-            android:name=".firstpage"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,9 @@
         <activity android:name=".selectuser"/>
         <activity android:name=".wizard_signup"/>
         <activity android:name=".wizard_login"/>
+        <activity android:name=".wizardMainActivity"/>
+        <activity android:name=".dobi_login"/>
+        <activity android:name=".dobi_signup"/>
 
 
 

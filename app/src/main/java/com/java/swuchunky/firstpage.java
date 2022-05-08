@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class firstpage extends AppCompatActivity {
-
+/*
     protected void onCreate(Bundle savedIntstance) {
         super.onCreate(savedIntstance);
         setContentView(R.layout.firstpage);
@@ -22,6 +22,6 @@ public class firstpage extends AppCompatActivity {
             }
         });
     }
-
+*/
 }
 

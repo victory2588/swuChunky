@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import java.util.ArrayList;
 
 public class wizard_reserveview extends Fragment {
-    MainActivity activity;
+    wizardMainActivity activity;
 
     wizardAdapter adapter;
 
@@ -25,7 +25,7 @@ public class wizard_reserveview extends Fragment {
 
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_reserveview, container, false);
 
-        activity = (MainActivity) getActivity();
+        activity = (wizardMainActivity) getActivity();
         //activity.onFragmentChanged(2);
 
         ListView listView = (ListView) view.findViewById(R.id.wizard_reserveview_listView);
