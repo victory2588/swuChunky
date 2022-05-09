@@ -36,13 +36,13 @@ public class wizard_signup extends AppCompatActivity {
         setContentView(R.layout.wizard_signup);
         //액션 바 등록하기
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("회원가입");
+        actionBar.setTitle("마법사 되기");
         actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
         actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘
 
         //파이어베이스 접근 설정
         firebaseAuth =  FirebaseAuth.getInstance();
-        firebaseDatabase = FirebaseDatabase.getInstance().getReference("membership");
+        firebaseDatabase = FirebaseDatabase.getInstance().getReference("wizard membership");
 
         mName = findViewById(R.id.membership_name_txt);
         mEmailText = findViewById(R.id.membership_email_txt);
