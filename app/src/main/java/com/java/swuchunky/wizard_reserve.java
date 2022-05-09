@@ -24,7 +24,7 @@ public class wizard_reserve extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_reserve, container, false);
 
         activity = (wizardMainActivity) getActivity();
-        //activity.onFragmentChanged(3);
+        activity.onNavigationItemSelected(3);
 
         // Inflate the layout for this fragment
         return view;

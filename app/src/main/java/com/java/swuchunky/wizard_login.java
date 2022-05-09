@@ -55,6 +55,9 @@ public class wizard_login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main()).commit();
+
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
 
@@ -65,10 +68,8 @@ public class wizard_login extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     //Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     //startActivity(intent);
-                                    activity.onNavigationItemSelected(1);
-                                    //FragmentManager fragmentManager = getSupportFragmentManager();
-                                    //fragmentManager.beginTransaction().replace(R.id.menu_containers, new wizard_main()).commit();
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
+                                    activity.onNavigationItemSelected(1);
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }

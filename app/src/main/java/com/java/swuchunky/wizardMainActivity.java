@@ -1,6 +1,7 @@
 package com.java.swuchunky;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +22,7 @@ public class wizardMainActivity extends AppCompatActivity {
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
         //하단 네비게이션 선택시 반응 리스너 설정
-        bottom_menu.setOnItemSelectedListener((BottomNavigationView.OnItemSelectedListener) this); //setOnNavigationItemSelectedListener
+        bottom_menu.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this); //setOnNavigationItemSelectedListener
 
         //프래그먼트 객체 생성
         wizard_main = new wizard_main();
@@ -34,7 +35,7 @@ public class wizardMainActivity extends AppCompatActivity {
     }
 
 
-    public void onNavigationItemSelected (@NonNull int id) {
+    public void onNavigationItemSelected (int id) {
         //int id = item.getItemId();
         //홈버튼 선택
         if (id == 1) { //R.id.nav_wizard_main

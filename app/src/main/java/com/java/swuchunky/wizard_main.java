@@ -37,7 +37,6 @@ public class wizard_main extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
         activity = (wizardMainActivity) getActivity();
     }
 
@@ -80,7 +79,6 @@ public class wizard_main extends Fragment {
             }
         });
 
-        getActivity();
         return view;
     }
 
