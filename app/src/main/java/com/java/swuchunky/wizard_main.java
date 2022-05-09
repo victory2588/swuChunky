@@ -35,11 +35,6 @@ public class wizard_main extends Fragment {
     Calendar calendar;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         //activity = (wizardMainActivity) getActivity();
