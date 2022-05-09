@@ -31,7 +31,7 @@ public class dobi_login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.wizard_login);
+        setContentView(R.layout.dobi_login);
 
         firebaseAuth = FirebaseAuth.getInstance();
         //버튼 등록하기
