@@ -24,11 +24,12 @@ public class wizardMainActivity extends AppCompatActivity {
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
 
-       /* //프래그먼트 객체 생성
+        /*
         wizard_main = new wizard_main();
         wizard_mypage = new wizard_mypage();
         wizard_reserve = new wizard_reserve();
-        wizard_reserveview = new wizard_reserveview(); */
+        wizard_reserveview = new wizard_reserveview();
+        */
 
         //제일 처음 띄워주는 프래그먼트
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -36,7 +37,7 @@ public class wizardMainActivity extends AppCompatActivity {
                 .commitAllowingStateLoss();
 
     bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
-        //변경이유 : 액티비티 값 전달 때문에
+        //변경이유 : 액티비티 값 전달 때문에(중첩, 초기화 방지)
         @Override
         public boolean onNavigationItemSelected (@NonNull MenuItem item) {
             FragmentManager fragmentManager = getSupportFragmentManager();

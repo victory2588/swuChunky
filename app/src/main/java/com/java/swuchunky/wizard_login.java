@@ -28,7 +28,7 @@ public class wizard_login extends AppCompatActivity {
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
-    // @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
@@ -54,10 +54,6 @@ public class wizard_login extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
-                //FragmentManager fragmentManager = getSupportFragmentManager();
-                //fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main()).commit();
-
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
 
@@ -66,12 +62,9 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    //Intent intent = new Intent(wizard_login.this, wizard_main.class);
-                                    //startActivity(intent);
-                                    Intent intent = new Intent(getApplicationContext(), wizardMainActivity.class);
+                                    Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
-                                    //activity.onNavigationItemSelected(1);
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }

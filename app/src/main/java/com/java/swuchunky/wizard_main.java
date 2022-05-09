@@ -34,19 +34,23 @@ public class wizard_main extends Fragment {
     CalendarView calendarView;
     Calendar calendar;
 
-    /*
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        activity = (wizardMainActivity) getActivity();
+        //activity = (wizardMainActivity) getActivity();
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        activity = null;
+        //activity = null;
     }
-*/
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

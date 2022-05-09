@@ -26,8 +26,6 @@
         <activity android:name=".dobi_login"/>
         <activity android:name=".dobi_signup"/>
 
-
-
     </application>
 
 </manifest>
