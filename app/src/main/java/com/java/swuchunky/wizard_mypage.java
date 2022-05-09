@@ -24,7 +24,7 @@ public class wizard_mypage extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_mypage, container, false);
 
         activity = (wizardMainActivity) getActivity();
-        activity.onNavigationItemSelected(4);
+        //activity.onNavigationItemSelected(4);
         // Inflate the layout for this fragment
         return view;
     }

@@ -34,6 +34,7 @@ public class wizard_main extends Fragment {
     CalendarView calendarView;
     Calendar calendar;
 
+    /*
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -45,7 +46,7 @@ public class wizard_main extends Fragment {
         super.onDetach();
         activity = null;
     }
-
+*/
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

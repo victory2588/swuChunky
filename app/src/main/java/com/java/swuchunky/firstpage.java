@@ -22,6 +22,6 @@ public class firstpage extends AppCompatActivity {
             }
         });
     }
-*/
+*/ //MainActivity로 이전
 }
 

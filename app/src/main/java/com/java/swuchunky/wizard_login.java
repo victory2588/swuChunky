@@ -1,5 +1,6 @@
 package com.java.swuchunky;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,6 @@ public class wizard_login extends AppCompatActivity {
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
-    wizardMainActivity activity;
     // @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +55,8 @@ public class wizard_login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main()).commit();
+                //FragmentManager fragmentManager = getSupportFragmentManager();
+                //fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main()).commit();
 
                 String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
@@ -68,8 +68,10 @@ public class wizard_login extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     //Intent intent = new Intent(wizard_login.this, wizard_main.class);
                                     //startActivity(intent);
+                                    Intent intent = new Intent(getApplicationContext(), wizardMainActivity.class);
+                                    startActivity(intent);
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
-                                    activity.onNavigationItemSelected(1);
+                                    //activity.onNavigationItemSelected(1);
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
