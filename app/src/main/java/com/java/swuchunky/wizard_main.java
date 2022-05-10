@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
@@ -34,19 +35,19 @@ public class wizard_main extends Fragment {
     CalendarView calendarView;
     Calendar calendar;
 
-    @Override
+    /*@Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        //activity = (wizardMainActivity) getActivity();
+        activity = (wizardMainActivity) getActivity();
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        //activity = null;
+        activity = null;
     }
 
-    @Nullable
+    @Nullable*/
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState)
@@ -57,7 +58,7 @@ public class wizard_main extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
 
-        //캘린더 내의 리스트
+        /*//캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
         ListView listView = (ListView) view.findViewById(R.id.wizard_main_listview);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.wizard_mainitem, R.id.textList, LIST);
@@ -77,9 +78,12 @@ public class wizard_main extends Fragment {
                 String date = year + "년 " + (month+1) + "월 " + dayOfMonth + "일";
                 dateText.setText(date);
             }
-        });
+        });*/
 
         return view;
     }
+    /*public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+    }*/
 
 }

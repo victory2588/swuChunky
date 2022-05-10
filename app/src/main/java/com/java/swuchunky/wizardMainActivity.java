@@ -7,11 +7,15 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class wizardMainActivity extends AppCompatActivity {
+public class wizardMainActivity extends FragmentActivity {
+
+    wizard_main wmain;
 
     private BottomNavigationView bottom_menu; //하단 네비게이션
     private Fragment wizard_main, wizard_mypage, wizard_reserve, wizard_reserveview; //네비게이션을 통해 이동할 프래그먼트
@@ -20,6 +24,8 @@ public class wizardMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //프래그먼트 화면
+
+        /*wmain=new wizard_main();
 
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
@@ -32,9 +38,11 @@ public class wizardMainActivity extends AppCompatActivity {
         */
 
         //제일 처음 띄워주는 프래그먼트
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main, "wizard_main")
-                .commitAllowingStateLoss();
+        //FragmentManager fragmentManager = getSupportFragmentManager();
+        //getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main, "wizard_main")
+        //        .commitAllowingStateLoss();
+        /*getSupportFragmentManager().beginTransaction().add(R.id.menu_containers, wizard_main, "wizard_main")
+                .commit();
 
     bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
         //변경이유 : 액티비티 값 전달 때문에(중첩, 초기화 방지)
@@ -132,7 +140,7 @@ public class wizardMainActivity extends AppCompatActivity {
             }
             return false;
         }
-    });
+    });*/
     }
 }
 
