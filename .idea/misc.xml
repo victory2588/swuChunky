@@ -13,10 +13,12 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_item_list.xml" value="0.34427083333333336" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_wizard_main.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_wizard_mypage.xml" value="0.35885416666666664" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.3260416666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.14893617021276595" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_item.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.25" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.14402173913043478" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.25" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.3260416666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mypage.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve1_reg.xml" value="0.20909090909090908" />
@@ -41,7 +43,6 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserve1_reg.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.1831306990881459" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/menu/bottom_menu.xml" value="0.37435897435897436" />
       </map>
     </option>
   </component>
