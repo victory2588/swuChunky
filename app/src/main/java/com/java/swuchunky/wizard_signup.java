@@ -42,7 +42,7 @@ public class wizard_signup extends AppCompatActivity {
 
         //파이어베이스 접근 설정
         firebaseAuth =  FirebaseAuth.getInstance();
-        firebaseDatabase = FirebaseDatabase.getInstance().getReference("wizard membership");
+        firebaseDatabase = FirebaseDatabase.getInstance().getReference("membership");
 
         mName = findViewById(R.id.membership_name_txt);
         mEmailText = findViewById(R.id.membership_email_txt);

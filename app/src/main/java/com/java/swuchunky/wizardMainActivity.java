@@ -5,6 +5,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -24,7 +25,6 @@ public class wizardMainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //프래그먼트 화면
-
 
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
@@ -71,16 +71,6 @@ public class wizardMainActivity extends FragmentActivity {
         }
     });
     }
-    /*public void changeFragment(int index){
-        switch(index){
-            case 1:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment_main).commit();
-                break;
-            case 2:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment_menu).commit();
-                break;
-        }
-    }*/
 }
 
  /*int id = item.getItemId();
