@@ -25,7 +25,6 @@ public class wizardMainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //프래그먼트 화면
 
-        /*wmain=new wizard_main();
 
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
@@ -41,8 +40,7 @@ public class wizardMainActivity extends FragmentActivity {
         //FragmentManager fragmentManager = getSupportFragmentManager();
         //getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main, "wizard_main")
         //        .commitAllowingStateLoss();
-        /*getSupportFragmentManager().beginTransaction().add(R.id.menu_containers, wizard_main, "wizard_main")
-                .commit();
+
 
     bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
         //변경이유 : 액티비티 값 전달 때문에(중첩, 초기화 방지)
@@ -140,8 +138,18 @@ public class wizardMainActivity extends FragmentActivity {
             }
             return false;
         }
-    });*/
+    });
     }
+    /*public void changeFragment(int index){
+        switch(index){
+            case 1:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment_main).commit();
+                break;
+            case 2:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment_menu).commit();
+                break;
+        }
+    }*/
 }
 
  /*int id = item.getItemId();
