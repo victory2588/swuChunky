@@ -71,16 +71,6 @@ public class wizardMainActivity extends FragmentActivity {
         }
     });
     }
-    /*public void changeFragment(int index){
-        switch(index){
-            case 1:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment_main).commit();
-                break;
-            case 2:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, fragment_menu).commit();
-                break;
-        }
-    }*/
 }
 
  /*int id = item.getItemId();
