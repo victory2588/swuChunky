@@ -25,7 +25,6 @@ public class wizardMainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //프래그먼트 화면
 
-        wmain=new wizard_main();
 
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);

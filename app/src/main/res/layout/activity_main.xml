@@ -20,7 +20,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_menu"
         android:layout_width="match_parent"
@@ -34,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/bottom_menu" />
+
     <fragment
         android:id="@+id/fragment_main"
         android:layout_width="match_parent"
