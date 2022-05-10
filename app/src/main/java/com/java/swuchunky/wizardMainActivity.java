@@ -29,17 +29,15 @@ public class wizardMainActivity extends FragmentActivity {
         //하단 네비게이션 초기화
         bottom_menu = findViewById(R.id.bottom_menu);
 
-        /*
         wizard_main = new wizard_main();
         wizard_mypage = new wizard_mypage();
         wizard_reserve = new wizard_reserve();
         wizard_reserveview = new wizard_reserveview();
-        */
+
 
         //제일 처음 띄워주는 프래그먼트
-        //FragmentManager fragmentManager = getSupportFragmentManager();
-        //getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main, "wizard_main")
-        //        .commitAllowingStateLoss();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
 
 
     bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
@@ -49,94 +47,27 @@ public class wizardMainActivity extends FragmentActivity {
             FragmentManager fragmentManager = getSupportFragmentManager();
 
             int id = item.getItemId();
-            if (id == R.id.nav_wizard_main) {
-                //프래그먼트 존재시 보여줌
-                if (fragmentManager.findFragmentByTag("wizard_main") != null) {
-                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("wizard_main")).commit();
-                }
-                //존재안하면 프래그먼트를 매니저에 추가
-                else {
-                    fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main(), "wizard_main").commit();
-                }
-                //다른 프래그먼트 보이면 가려줌
-                if (fragmentManager.findFragmentByTag("wizard_reserveview") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_reserveview")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_reserve") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_reserve")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_mypage") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_mypage")).commit();
-                }
+            //홈버튼 선택
+            if (id == R.id.nav_wizard_main) { //R.id.nav_wizard_main
+                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
                 return true;
             }
-
+            //예약리스트 보기 선택
             if (id == R.id.nav_wizard_reserveview) {
-                //프래그먼트 존재시 보여줌
-                if (fragmentManager.findFragmentByTag("wizard_reserveview") != null) {
-                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("wizard_reserveview")).commit();
-                }
-                //존재안하면 프래그먼트를 매니저에 추가
-                else {
-                    fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main(), "wizard_main").commit();
-                }
-                //다른 프래그먼트 보이면 가려줌
-                if (fragmentManager.findFragmentByTag("wizard_main") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_main")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_reserve") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_reserve")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_mypage") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_mypage")).commit();
-                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
                 return true;
             }
-
+            //검색(예약하기) 선택
             if (id == R.id.nav_wizard_reserve) {
-                //프래그먼트 존재시 보여줌
-                if (fragmentManager.findFragmentByTag("wizard_reserveview") != null) {
-                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("wizard_reserveveiw")).commit();
-                }
-                //존재안하면 프래그먼트를 매니저에 추가
-                else {
-                    fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main(), "wizard_main").commit();
-                }
-                //다른 프래그먼트 보이면 가려줌
-                if (fragmentManager.findFragmentByTag("wizard_main") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_main")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_reserveview") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_reserveveiw")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_mypage") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_mypage")).commit();
-                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
                 return true;
             }
-
+            //마이페이지 선택
             if (id == R.id.nav_wizard_mypage) {
-                //프래그먼트 존재시 보여줌
-                if (fragmentManager.findFragmentByTag("wizard_mypage") != null) {
-                    fragmentManager.beginTransaction().show(fragmentManager.findFragmentByTag("wizard_mypage")).commit();
-                }
-                //존재안하면 프래그먼트를 매니저에 추가
-                else {
-                    fragmentManager.beginTransaction().add(R.id.menu_containers, new wizard_main(), "wizard_main").commit();
-                }
-                //다른 프래그먼트 보이면 가려줌
-                if (fragmentManager.findFragmentByTag("wizard_main") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_main")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_reserveview") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_reserveveiw")).commit();
-                }
-                if (fragmentManager.findFragmentByTag("wizard_mypage") != null) {
-                    fragmentManager.beginTransaction().hide(fragmentManager.findFragmentByTag("wizard_mypage")).commit();
-                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
                 return true;
             }
-            return false;
+            return true;
         }
     });
     }
