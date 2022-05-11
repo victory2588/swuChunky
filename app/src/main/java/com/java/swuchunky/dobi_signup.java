@@ -22,7 +22,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-
+/*
 public class dobi_signup extends AppCompatActivity {
     private static final String TAG = "dobi_signup";
     EditText mEmailText, mPasswordText, mPasswordcheckText, mName;
@@ -76,6 +76,7 @@ public class dobi_signup extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 mDialog.dismiss();
 
+
                                 FirebaseUser user = firebaseAuth.getCurrentUser();
                                 userAccount_dobi account=new userAccount_dobi();
                                 account.setIdToken(user.getUid());
@@ -115,3 +116,4 @@ public class dobi_signup extends AppCompatActivity {
 }
 
 
+*/

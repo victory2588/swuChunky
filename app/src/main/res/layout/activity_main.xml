@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:labelVisibilityMode="labeled"
     tools:context=".wizardMainActivity">
 
     <FrameLayout
@@ -31,7 +32,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:itemBackground="@color/white"
-            app:labelVisibilityMode="labeled"
             app:menu="@menu/bottom_menu" />
     </FrameLayout>
 
