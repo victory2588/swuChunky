@@ -16,8 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reserve_checkbox1"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintTop_toBottomOf="@+id/company_txt"
+        app:layout_constraintVertical_bias="0.907" />
 
     <TextView
         android:id="@+id/reservation3_txt"
@@ -143,39 +143,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/trash_txt"
         app:layout_constraintTop_toBottomOf="@+id/reservation3_toilet" />
-
-    <CheckBox
-        android:id="@+id/reserve_checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="29dp"
-        android:text="에어컨"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/special_txt" />
-
-    <CheckBox
-        android:id="@+id/reserve_checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="29dp"
-        android:text="소파"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/reserve_checkbox1"
-        app:layout_constraintTop_toBottomOf="@+id/company_txt" />
-
-    <CheckBox
-        android:id="@+id/reserve_checkbox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="29dp"
-        android:text="선풍기"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/reserve_checkbox2"
-        app:layout_constraintTop_toBottomOf="@+id/trash_txt" />
 
     <TextView
         android:id="@+id/reservation3_txtexp2"

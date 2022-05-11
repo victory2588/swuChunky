@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.161" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.161" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listview.xml" value="0.2195" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/text_border.xml" value="0.135" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/activity_main.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_login.xml" value="0.22" />
@@ -17,6 +18,7 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_item.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.14402173913043478" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.3416666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mypage.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve1_reg.xml" value="0.20909090909090908" />
