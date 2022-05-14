@@ -40,12 +40,12 @@
                 android:id="@+id/rBtnCalendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="날짜 설정"/>
+                android:text="날짜 설정하기"/>
             <RadioButton
                 android:id="@+id/rBtnTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="시간 설정"/>
+                android:text="시간 설정하기"/>
         </RadioGroup>
     </LinearLayout>
 
