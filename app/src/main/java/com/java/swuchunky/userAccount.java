@@ -39,4 +39,5 @@ public class userAccount {
     public void setIdToken(String idToken) {
         this.idToken = idToken;
     }
+
 }
