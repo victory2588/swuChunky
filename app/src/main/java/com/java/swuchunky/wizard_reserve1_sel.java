@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.Chronometer;
-import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -26,7 +24,7 @@ public class wizard_reserve1_sel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_reserve1_sel);
 
-        reservation1_next_btn = (Button) findViewById(R.id.reservation1_next_btn)
+        reservation1_next_btn = (Button) findViewById(R.id.reservation1_next_btn);
 
         rBtnCalendar = (RadioButton) findViewById(R.id.rBtnCalendar);
         rBtnTime = (RadioButton) findViewById(R.id.rBtnTime);
