@@ -5,6 +5,7 @@ public class userAccount {
     private String pwd;
     private String name;
     private String idToken;
+    private String role;
 
     public userAccount(){}
 
@@ -40,4 +41,10 @@ public class userAccount {
         this.idToken = idToken;
     }
 
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
 }

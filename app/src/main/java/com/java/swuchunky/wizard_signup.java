@@ -60,6 +60,8 @@ public class wizard_signup extends AppCompatActivity {
                 final String email = mEmailText.getText().toString().trim();
                 String pwd = mPasswordText.getText().toString().trim();
                 String pwdcheck = mPasswordcheckText.getText().toString().trim();
+                Intent intent=getIntent();
+                String role=intent.getStringExtra("Whatrole").toString().trim();
 
 
                 if(pwd.equals(pwdcheck)) {
@@ -82,11 +84,12 @@ public class wizard_signup extends AppCompatActivity {
                                 account.setEmail(user.getEmail());
                                 account.setName(name);
                                 account.setPwd(pwd);
+                                account.setRole(role);
 
                                 firebaseDatabase.child("UserAccount").child(user.getUid()).setValue(account);
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
-                                Intent intent = new Intent(wizard_signup.this, wizard_login.class);
-                                startActivity(intent);
+                                Intent i = new Intent(wizard_signup.this, wizard_main.class);
+                                startActivity(i);
                                 finish();
                                 Toast.makeText(getApplicationContext(), "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
 

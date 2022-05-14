@@ -24,7 +24,8 @@ public class selectuser extends AppCompatActivity {
         makeWizard_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizardMainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), wizard_login.class);
+                intent.putExtra("Whatrole","dobi");
                 startActivity(intent);
             }
         });
@@ -33,7 +34,8 @@ public class selectuser extends AppCompatActivity {
         makeFairy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizardMainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), wizard_login.class);
+                intent.putExtra("Whatrole","wizard");
                 startActivity(intent);
             }
         });
