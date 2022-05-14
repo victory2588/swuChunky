@@ -88,8 +88,8 @@ public class wizard_signup extends AppCompatActivity {
 
                                 firebaseDatabase.child("UserAccount").child(user.getUid()).setValue(account);
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
-                                Intent intent = new Intent(wizard_signup.this, wizard_login.class);
-                                startActivity(intent);
+                                Intent i = new Intent(wizard_signup.this, wizard_login.class);
+                                startActivity(i);
                                 finish();
                                 Toast.makeText(getApplicationContext(), "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
 
