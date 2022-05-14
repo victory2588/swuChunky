@@ -1,11 +1,13 @@
 package com.java.swuchunky;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,7 +28,6 @@ public class wizard_reserveview extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_reserveview, container, false);
 
         activity = (wizardMainActivity) getActivity();
-        //activity.onNavigationItemSelected(2);
 
         ListView listView = (ListView) view.findViewById(R.id.wizard_reserveview_listView);
         //어댑터 안에 데이터 담기

@@ -27,7 +27,7 @@ public class selectuser extends AppCompatActivity {
         makeFairy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), dobi_login.class);
+                Intent intent = new Intent(getApplicationContext(), wizardMainActivity.class);
                 startActivity(intent);
             }
         });

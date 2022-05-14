@@ -58,7 +58,8 @@ public class wizard_main extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
 
-        /*//캘린더 내의 리스트
+        /*
+        //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
         ListView listView = (ListView) view.findViewById(R.id.wizard_main_listview);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.wizard_mainitem, R.id.textList, LIST);
@@ -66,7 +67,7 @@ public class wizard_main extends Fragment {
 
         //캘린더 뷰 선언
         calendar = Calendar.getInstance();
-        dateText = (TextView)view.findViewById(R.id.date);
+        //dateText = (TextView)view.findViewById(R.id.date);
         calendarView = (CalendarView) view.findViewById(R.id.wizard_main_calendarView);
 
         String date = calendar.get(Calendar.YEAR) + "년 " + (calendar.get(Calendar.MONTH)+1) + "월 " + calendar.get(Calendar.DAY_OF_MONTH) + "일";

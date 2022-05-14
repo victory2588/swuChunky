@@ -72,30 +72,3 @@ public class wizardMainActivity extends FragmentActivity {
     });
     }
 }
-
- /*int id = item.getItemId();
-
-            //홈버튼 선택
-            if (id == R.id.nav_wizard_main) { //R.id.nav_wizard_main
-                //getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main,"home").commit();
-                fra
-                return true;
-            }
-            //예약리스트 보기 선택
-            if (id == R.id.nav_wizard_reserveview) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
-                return true;
-            }
-            //검색(예약하기) 선택
-            if (id == R.id.nav_wizard_reserve) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
-                return true;
-            }
-            //마이페이지 선택
-            if (id == R.id.nav_wizard_mypage) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
-                return true;
-            }
-            return true;
-        }
-    }*/

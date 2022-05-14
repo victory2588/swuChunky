@@ -5,31 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/reservation3_uploadbtn"
-        android:layout_width="126dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="46dp"
-        android:backgroundTint="#00b8ff"
-        android:text="일정 등록하기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reserve_checkbox1"
-        app:layout_constraintVertical_bias="0.851" />
-
     <TextView
         android:id="@+id/reservation3_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="28dp"
         android:text="청소 카테고리 설정"
         android:textColor="#0B0B0B"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -144,39 +130,6 @@
         app:layout_constraintStart_toEndOf="@+id/trash_txt"
         app:layout_constraintTop_toBottomOf="@+id/reservation3_toilet" />
 
-    <CheckBox
-        android:id="@+id/reserve_checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="29dp"
-        android:text="에어컨"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/special_txt" />
-
-    <CheckBox
-        android:id="@+id/reserve_checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="29dp"
-        android:text="소파"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/reserve_checkbox1"
-        app:layout_constraintTop_toBottomOf="@+id/company_txt" />
-
-    <CheckBox
-        android:id="@+id/reserve_checkbox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="29dp"
-        android:text="선풍기"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/reserve_checkbox2"
-        app:layout_constraintTop_toBottomOf="@+id/trash_txt" />
-
     <TextView
         android:id="@+id/reservation3_txtexp2"
         android:layout_width="wrap_content"
@@ -271,5 +224,36 @@
         app:layout_constraintStart_toEndOf="@+id/reservation3_trash"
         app:layout_constraintTop_toBottomOf="@+id/animal_txt"
         app:srcCompat="@drawable/toilet" />
+
+    <EditText
+        android:id="@+id/wizard_reserve_rqt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="56dp"
+        android:ems="19"
+        android:hint="요청사항"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/reservation3_uploadbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/company_txt" />
+
+    <Button
+        android:id="@+id/reservation3_uploadbtn"
+        android:layout_width="126dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#00b8ff"
+        android:text="일정 등록하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wizard_reserve_rqt"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
