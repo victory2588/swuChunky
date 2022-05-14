@@ -1,142 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/reservation1_info2"
-        android:layout_width="278dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="*예약 후 변경사항은 마이페이지에서 수정해주세요"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_next_btn" />
-
-    <TextView
-        android:id="@+id/reservation1_reg_txt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="청소요정 소환하기"
-        android:textColor="#0B0B0B"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/reservation1_reg_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="청소요정 소환하기"
+            android:textColor="#0B0B0B"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/reservation1_reg_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="청소요정이 방문할 날짜를 선택해주세요" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/reservation1_requestbtn"
-        android:layout_width="86dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#b8b8b8"
-        android:text="주소"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/reservation1_request_txt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_timebtn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rBtnCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="날짜 설정"/>
+            <RadioButton
+                android:id="@+id/rBtnTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="시간 설정"/>
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CalendarView
+                android:id="@+id/reserve_calendarVeiw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:showWeekNumber="false"/>
+            <TimePicker
+                android:id="@+id/reserve_timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:timePickerMode="spinner"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/reservation1_next_btn"
-        android:layout_width="117dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#00b8ff"
-        android:text="다음"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_request_txt" />
+        android:layout_gravity="center"
+        android:text="다음" />
 
-    <Button
-        android:id="@+id/reservation1_datebtn"
-        android:layout_width="86dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="#ff8da4"
-        android:text="날짜 선택"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/reservation1_timebtn"
-        app:layout_constraintEnd_toStartOf="@+id/reserve_date_txt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txtexp2" />
 
-    <TextView
-        android:id="@+id/reservation1_reg_txtexp2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="청소요정이 방문할 날짜를 선택해주세요"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txt" />
-
-    <Button
-        android:id="@+id/reservation1_timebtn"
-        android:layout_width="86dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="#b8b8b8"
-        android:text="시간 선택"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/reservation1_requestbtn"
-        app:layout_constraintEnd_toStartOf="@+id/reserve_time_txt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_datebtn" />
-
-    <EditText
-        android:id="@+id/reservation1_request_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="67dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_requestbtn"
-        app:layout_constraintTop_toBottomOf="@+id/reserve_time_txt" />
-
-    <TextView
-        android:id="@+id/reserve_date_txt"
-        android:layout_width="151dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="126dp"
-        android:text="2022년 10월 25일"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_datebtn"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txtexp2" />
-
-    <TextView
-        android:id="@+id/reserve_time_txt"
-        android:layout_width="151dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="126dp"
-        android:text="2022년 10월 25일"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_timebtn"
-        app:layout_constraintTop_toBottomOf="@+id/reserve_date_txt" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
