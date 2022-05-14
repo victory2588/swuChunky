@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         firstpage_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), selectuser.class);
+                Intent intent = new Intent(getApplicationContext(), wizard_login.class);
                 startActivity(intent);
             }
         });

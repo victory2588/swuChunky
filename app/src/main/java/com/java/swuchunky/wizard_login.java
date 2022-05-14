@@ -46,7 +46,7 @@ public class wizard_login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //intent함수를 통해 register액티비티 함수를 호출한다.
-                startActivity(new Intent(getApplicationContext(), wizard_signup.class));
+                startActivity(new Intent(getApplicationContext(), selectuser.class));
             }
         });
 
@@ -62,7 +62,7 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Intent intent = new Intent(wizard_login.this, selectuser.class); //getApplicationContext()
+                                    Intent intent = new Intent(wizard_login.this, wizard_main.class); //getApplicationContext()
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
                                 }else{
