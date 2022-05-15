@@ -58,7 +58,6 @@ public class wizard_main extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
 
-        /*
         //캘린더 내의 리스트
         final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
         ListView listView = (ListView) view.findViewById(R.id.wizard_main_listview);
@@ -79,7 +78,7 @@ public class wizard_main extends Fragment {
                 String date = year + "년 " + (month+1) + "월 " + dayOfMonth + "일";
                 dateText.setText(date);
             }
-        });*/
+        });
 
         return view;
     }

@@ -9,8 +9,12 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/text_border.xml" value="0.135" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/activity_main.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_activity_main.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_apply.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_ceritified.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_findwork1.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_login.xml" value="0.22" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_main.xml" value="0.20185185185185187" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_mypage.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_signup.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/firstpage.xml" value="0.22" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_item_list.xml" value="0.34427083333333336" />
@@ -18,6 +22,7 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_wizard_mypage.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.3416666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.14893617021276595" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_activity_main.xml" value="0.3458333333333333" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_item.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.14402173913043478" />
