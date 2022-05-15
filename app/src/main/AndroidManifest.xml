@@ -25,7 +25,6 @@
         <activity android:name=".wizardMainActivity"/>
         <activity android:name=".dobi_login"/>
         <activity android:name=".dobi_signup"/>
-        <activity android:name=".dobiMainActivity"/>
 
     </application>
 
