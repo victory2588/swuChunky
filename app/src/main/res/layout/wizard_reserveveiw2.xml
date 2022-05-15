@@ -13,31 +13,28 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="30dp"
             android:background="#00b8ff"
             android:gravity="center"
             android:text="지원한 청소요정"
             android:textColor="#fff"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
     </LinearLayout>
     <!-- //end 타이틀바 -->
 
-    <!-- Notice -->
+    <!-- 지원한 청소요정 리스트-->
     <LinearLayout
-        android:padding="24dp"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <TextView
-            android:id="@+id/txtText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:alpha="0.87"
-            android:gravity="center"
-            android:textColor="#000000"
-            android:textSize="15sp" />
+        <ListView
+            android:id="@+id/reserveview_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
     </LinearLayout>
     <!-- Notice -->
 
@@ -55,14 +52,14 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="40sp"
             android:background="#00000000"
             android:gravity="center"
             android:onClick="mOnClose"
-            android:padding="16dp"
+            android:padding="4dp"
             android:text="확인"
             android:textColor="#00b8ff"
-            android:textSize="15sp" />
+            android:textSize="12sp" />
     </LinearLayout>
     <!--// 닫기 버튼 -->
 
