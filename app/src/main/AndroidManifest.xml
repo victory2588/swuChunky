@@ -23,8 +23,6 @@
         <activity android:name=".wizard_signup"/>
         <activity android:name=".wizard_login"/>
         <activity android:name=".wizardMainActivity"/>
-        <activity android:name=".dobi_login"/>
-        <activity android:name=".dobi_signup"/>
 
     </application>
 
