@@ -11,8 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="8dp"
         android:text="일정 보기"
         android:textColor="#0B0B0B"
         android:textSize="30sp"
@@ -22,18 +20,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <CalendarView
+    <!--캘린더-->
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/wizard_main_calendarView"
         android:layout_width="match_parent"
-        android:layout_height="315dp"
-        android:clickable="false"
-        app:layout_constraintBottom_toTopOf="@+id/wizard_main_listview"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/main_txt"
+        app:mcv_selectionColor="#03A9F4"
+        app:mcv_showOtherDates="all" />
 
-    <ListView
+    <!--<ListView
         android:id="@+id/wizard_main_listview"
         android:layout_width="match_parent"
         android:layout_height="270dp"
@@ -44,6 +44,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_main_calendarView"></ListView>
+        app:layout_constraintTop_toBottomOf="@+id/wizard_main_calendarView"></ListView>!-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

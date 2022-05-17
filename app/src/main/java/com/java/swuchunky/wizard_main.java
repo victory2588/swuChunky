@@ -22,19 +22,18 @@ import android.widget.TextView;
 
 import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 
 import java.util.Calendar;
 
 public class wizard_main extends Fragment {
-//    private HomeViewModel homeViewModel;
-//    private FragmentHomeBinding binding;
 
     wizardMainActivity activity;
 
     TextView dateText;
-    CalendarView calendarView;
     Calendar calendar;
-
+    private MaterialCalendarView calendarView;
 
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -56,29 +55,8 @@ public class wizard_main extends Fragment {
 
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
-
-
-        //캘린더 내의 리스트
-        final String[] LIST = {"List1", "List2", "List3", "List4", "List5", "List6", "List7"};
-        ListView listView = (ListView) view.findViewById(R.id.wizard_main_listview);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.wizard_mainitem, R.id.textList, LIST);
-        listView.setAdapter(adapter);
-
-        //캘린더 뷰 선언
-        calendar = Calendar.getInstance();
-        //dateText = (TextView)view.findViewById(R.id.date);
-        calendarView = (CalendarView) view.findViewById(R.id.wizard_main_calendarView);
-
-        String date = calendar.get(Calendar.YEAR) + "년 " + (calendar.get(Calendar.MONTH)+1) + "월 " + calendar.get(Calendar.DAY_OF_MONTH) + "일";
-        dateText.setText(date);
-
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String date = year + "년 " + (month+1) + "월 " + dayOfMonth + "일";
-                dateText.setText(date);
-            }
-        });
+        calendarView = view.findViewById(R.id.wizard_main_calendarView);
+        calendarView.setSelectedDate(CalendarDay.today());
 
         return view;
     }
