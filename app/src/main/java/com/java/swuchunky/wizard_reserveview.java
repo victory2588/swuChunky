@@ -33,11 +33,11 @@ public class wizard_reserveview extends Fragment {
         //어댑터 안에 데이터 담기
         adapter = new wizardAdapter();
 
-        adapter.addItem(new wizardItem("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 경기도 김포시", R.drawable.living));
-        adapter.addItem(new wizardItem("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 경기도 김포시", R.drawable.living));
-        adapter.addItem(new wizardItem("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 경기도 김포시", R.drawable.living));
-        adapter.addItem(new wizardItem("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 경기도 김포시", R.drawable.living));
-        adapter.addItem(new wizardItem("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 경기도 김포시", R.drawable.living));
+        adapter.addItem(new wizardItem("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 서울 관악구", R.drawable.living));
+        adapter.addItem(new wizardItem("화장실 청소, 설거지, 분리수거", "일급 : 35,000원 /n집 주소 : 경기도 김포시", R.drawable.toilet));
+        adapter.addItem(new wizardItem("냉장고 정리, 설거지, 분리수거", "일급 : 20,000원 /n집 주소 : 서울 동작구", R.drawable.sofa));
+        adapter.addItem(new wizardItem("사무실 청소, 분리수거", "일급 : 70,000원 /n집 주소 : 경기도 김포시", R.drawable.company));
+        adapter.addItem(new wizardItem("곰팡이 제거", "일급 : 85,000원 /n집 주소 : 경기도 구리시", R.drawable.special));
 
         // 리스트 뷰에 어댑터 설정
         listView.setAdapter(adapter);
