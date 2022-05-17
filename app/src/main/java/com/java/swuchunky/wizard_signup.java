@@ -36,7 +36,7 @@ public class wizard_signup extends AppCompatActivity {
         setContentView(R.layout.wizard_signup);
         //액션 바 등록하기
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("마법사 되기");
+        actionBar.setTitle("회원가입");
         actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
         actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘
 
