@@ -1,13 +1,13 @@
 package com.java.swuchunky;
 
 //wizard_reserveveiw에서의 리스트 아이템
-public class wizardItem {
+public class wizard_reserveview_Item {
     String name;
     String mobile;
     int resId;
 
     // Generate > Constructor
-    public wizardItem(String name, String mobile, int resId) {
+    public wizard_reserveview_Item(String name, String mobile, int resId) {
         this.name = name;
         this.mobile = mobile;
         this.resId = resId;

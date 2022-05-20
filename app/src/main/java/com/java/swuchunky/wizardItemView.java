@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.java.swuchunky.R;
-
 public class wizardItemView extends LinearLayout {
 
     TextView clean_info;
@@ -34,7 +32,7 @@ public class wizardItemView extends LinearLayout {
     // singer_item.xml을 inflation
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.wizard_item, this, true);
+        inflater.inflate(R.layout.wizard_reserveview_item, this, true);
 
         clean_info = (TextView) findViewById(R.id.clean_info);
         clean_category = (TextView) findViewById(R.id.clean_category);
