@@ -33,15 +33,17 @@ public class wizard_login extends AppCompatActivity {
     Button mLoginBtn;
     TextView wizard_membership_txt;
     EditText mEmailText, mPasswordText;
-    String role;
+    String role,email,pwd;
     private FirebaseAuth firebaseAuth;
-    private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
+    //private FirebaseDatabase database;
+    //private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //버튼 등록하기
         wizard_membership_txt = findViewById(R.id.wizard_membership_txt);
@@ -63,10 +65,10 @@ public class wizard_login extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String email = mEmailText.getText().toString().trim();
-                String pwd = mPasswordText.getText().toString().trim();
+                email = mEmailText.getText().toString().trim();
+                pwd = mPasswordText.getText().toString().trim();
 
-               firebaseAuth.signInWithEmailAndPassword(email,pwd)
+                firebaseAuth.signInWithEmailAndPassword(email,pwd)
                         .addOnCompleteListener(wizard_login.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -75,36 +77,6 @@ public class wizard_login extends AppCompatActivity {
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
 
-                                    /*database = FirebaseDatabase.getInstance();
-                                    databaseReference=database.getReference("membership");
-                                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-                                        FirebaseUser user = firebaseAuth.getCurrentUser();
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            for (DataSnapshot postSnapshot: snapshot.getChildren()){
-                                                String key = postSnapshot.getKey();
-                                                if(key==user.getUid()){
-                                                    userAccount account=snapshot.getValue(userAccount.class);
-                                                    role=account.getRole().trim();
-                                                }
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-                                            Toast.makeText(getApplicationContext(), "데이터 가져오기 실패", Toast.LENGTH_LONG).show();
-                                        }
-                                    });
-
-                                    if(role=="wizard"){
-                                        Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
-                                        startActivity(intent);
-                                        Toast.makeText(getApplicationContext(),"마법사님 환영합니다!",Toast.LENGTH_SHORT).show();
-                                    }else{
-                                        Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
-                                        startActivity(intent);
-                                        Toast.makeText(getApplicationContext(),"요정님 환영합니다!",Toast.LENGTH_SHORT).show();
-                                    }*/
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
