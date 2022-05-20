@@ -2,13 +2,15 @@ package com.java.swuchunky;
 
 public class wizard_main_Item {
     String name;
-    String mobile;
+    String category;
+    String date;
     int resId;
 
     // Generate > Constructor
-    public wizard_main_Item(String name, String mobile, int resId) {
+    public wizard_main_Item(String name, String category, String date, int resId) {
         this.name = name;
-        this.mobile = mobile;
+        this.category = category;
+        this.date = date;
         this.resId = resId;
     }
 
@@ -21,12 +23,12 @@ public class wizard_main_Item {
         this.name = name;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getCategory() {
+        return category;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public int getResId() {
@@ -43,7 +45,7 @@ public class wizard_main_Item {
     public String toString() {
         return "SingerItem{" +
                 "name='" + name + '\'' +
-                ", mobile='" + mobile + '\'' +
+                ", mobile='" + category + '\'' +
                 '}';
     }
 }

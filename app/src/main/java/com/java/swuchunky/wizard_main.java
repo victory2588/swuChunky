@@ -57,22 +57,22 @@ public class wizard_main extends Fragment {
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
-        ListView listView = (ListView) view.findViewById(R.id.wizard_reserveview_listView);
+        ListView listView = (ListView) view.findViewById(R.id.wizard_main_listView);
         //어댑터 안에 데이터 담기
         adapter = new wizard_main.wizardAdapter();
 
-        adapter.addItem(new wizard_reserveview_Item("거실 청소, 설거지, 분리수거", "일급 : 50,000원 /n집 주소 : 서울 관악구", R.drawable.living));
-        adapter.addItem(new wizard_reserveview_Item("화장실 청소, 설거지, 분리수거", "일급 : 35,000원 /n집 주소 : 경기도 김포시", R.drawable.toilet));
-        adapter.addItem(new wizard_reserveview_Item("냉장고 정리, 설거지, 분리수거", "일급 : 20,000원 /n집 주소 : 서울 동작구", R.drawable.sofa));
-        adapter.addItem(new wizard_reserveview_Item("사무실 청소, 분리수거", "일급 : 70,000원 /n집 주소 : 경기도 김포시", R.drawable.company));
-        adapter.addItem(new wizard_reserveview_Item("곰팡이 제거", "일급 : 85,000원 /n집 주소 : 경기도 구리시", R.drawable.special));
+        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
+        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
+        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
+        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
+        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
 
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                wizard_reserveview_Item item = (wizard_reserveview_Item) adapter.getItem(position);
+                wizard_main_Item item = (wizard_main_Item) adapter.getItem(position);
                 Toast.makeText(getActivity().getApplicationContext(), "선택 :" + item.getName(), Toast.LENGTH_LONG).show();
             }
         });
@@ -85,7 +85,7 @@ public class wizard_main extends Fragment {
     }
 
     class wizardAdapter extends BaseAdapter {
-        ArrayList<wizard_reserveview_Item> items = new ArrayList<wizard_reserveview_Item>();
+        ArrayList<wizard_main_Item> items = new ArrayList<>();
 
         // Generate > implement methods
         @Override
@@ -93,7 +93,7 @@ public class wizard_main extends Fragment {
             return items.size();
         }
 
-        public void addItem(wizard_reserveview_Item item) {
+        public void addItem(wizard_main_Item item) {
             items.add(item);
         }
 
@@ -117,10 +117,10 @@ public class wizard_main extends Fragment {
                 view = (wizardItemView) convertView;
             }
 
-            wizard_reserveview_Item item = items.get(position);
+            wizard_main_Item item = items.get(position);
 
             view.setName(item.getName());
-            view.setMobile(item.getMobile());
+            //view.setCategory(item.getCategory());
             view.setImage(item.getResId());
 
             return view;
