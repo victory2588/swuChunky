@@ -5,12 +5,22 @@ public class wizard_main_Item {
     String category;
     String date;
     int resId;
+    String request;
 
     // Generate > Constructor
-    public wizard_main_Item(String name, String category, String date, int resId) {
+    public wizard_main_Item(String name, String category, String date, int resId, String request) {
         this.name = name;
         this.category = category;
         this.date = date;
+        this.resId = resId;
+        this.request = request;
+    }
+
+    public int getResId() {
+        return resId;
+    }
+
+    public void setResId(int resId) {
         this.resId = resId;
     }
 
@@ -31,21 +41,20 @@ public class wizard_main_Item {
         this.category = category;
     }
 
-    public int getResId() {
-        return resId;
+    public String getDate() {
+        return date;
     }
 
-    public void setResId(int resId) {
-        this.resId = resId;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    // Generate > toString() : 아이템을 문자열로 출력
-
-    @Override
-    public String toString() {
-        return "SingerItem{" +
-                "name='" + name + '\'' +
-                ", mobile='" + category + '\'' +
-                '}';
+    public String getRequest() {
+        return date;
     }
+
+    public void setRequest(String request) {
+        this.request = request;
+    }
+
 }

@@ -2,6 +2,7 @@ package com.java.swuchunky;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +36,10 @@ import java.util.Calendar;
 public class wizard_main extends Fragment {
 
     wizardMainActivity activity;
-    wizard_main.wizardAdapter adapter;
+    //wizardAdapter adapter;
+    ListView listView;
+    //Spinner spinner;
+
 
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -50,80 +55,30 @@ public class wizard_main extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState)
-    {
-        // Inflate the layout for this fragment
-
+                             @Nullable Bundle savedInstanceState) {
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
+        //adapter = new wizardAdapter();
         ListView listView = (ListView) view.findViewById(R.id.wizard_main_listView);
-        //어댑터 안에 데이터 담기
-        adapter = new wizard_main.wizardAdapter();
+       // listView.setAdapter(adapter);
 
-        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
-        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
-        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
-        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
-        adapter.addItem(new wizard_main_Item("홍선미 도비", "거실 청소, 설거지, 분리수거", "2022년 10월 5일", R.drawable.living));
-
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
+        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.month, android.R.layout.simple_spinner_dropdown_item);
+        monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); spinner.setAdapter(monthAdapter);
+        
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                wizard_main_Item item = (wizard_main_Item) adapter.getItem(position);
-                Toast.makeText(getActivity().getApplicationContext(), "선택 :" + item.getName(), Toast.LENGTH_LONG).show();
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //날짜별로 리스트 정보 뜸 //리스트 어댑터 wizardlistAdapter
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
-
         return view;
     }
 
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-    }
-
-    class wizardAdapter extends BaseAdapter {
-        ArrayList<wizard_main_Item> items = new ArrayList<>();
-
-        // Generate > implement methods
-        @Override
-        public int getCount() {
-            return items.size();
-        }
-
-        public void addItem(wizard_main_Item item) {
-            items.add(item);
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return items.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            // 뷰 객체 재사용
-            wizardItemView view = null;
-            if (convertView == null) {
-                view = new wizardItemView(getActivity().getApplicationContext());
-            } else {
-                view = (wizardItemView) convertView;
-            }
-
-            wizard_main_Item item = items.get(position);
-
-            view.setName(item.getName());
-            //view.setCategory(item.getCategory());
-            view.setImage(item.getResId());
-
-            return view;
-        }
-    }
 }
