@@ -33,8 +33,8 @@ public class wizard_reserve extends Fragment {
         reserve_sel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(reserve1_sel.getActivity(), wizard_reserve1_sel.class);
-                //startActivity(intent);
+                Intent intent = new Intent(getActivity(), wizard_reserve1_sel.class);
+                startActivity(intent);
             }
         });
 

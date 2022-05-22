@@ -24,6 +24,7 @@
         <activity android:name=".wizard_login"/>
         <activity android:name=".wizardMainActivity"/>
         <activity android:name=".dobiMainActivity"/>
+        <activity android:name=".wizard_reserve1_sel"/>
     </application>
 
 </manifest>
