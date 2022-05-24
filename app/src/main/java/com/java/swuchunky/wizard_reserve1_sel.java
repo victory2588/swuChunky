@@ -13,6 +13,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -22,7 +23,7 @@ import com.google.firebase.firestore.SetOptions;
 import java.util.ArrayList;
 
 
-public class wizard_reserve1_sel extends AppCompatActivity {
+public class wizard_reserve1_sel extends FragmentActivity {
     Button reservation1_next_btn;
     RadioButton rBtnCalendar, rBtnTime;
     CalendarView calView;
