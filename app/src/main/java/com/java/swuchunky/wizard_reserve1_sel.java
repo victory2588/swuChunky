@@ -47,11 +47,11 @@ public class wizard_reserve1_sel extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),
-                        Integer.toString(selectYear)+"년"+ 
-                                Integer.toString(selectMonth)+"월"+
-                                Integer.toString(selectDay)+"일"+
-                                Integer.toString(tPicker.getCurrentHour())+"시"+
-                                Integer.toString(tPicker.getCurrentMinute())+"분 저장됨"
+                        Integer.toString(selectYear)+"년 "+
+                                Integer.toString(selectMonth)+"월 "+
+                                Integer.toString(selectDay)+"일 "+
+                                Integer.toString(tPicker.getCurrentHour())+"시 "+
+                                Integer.toString(tPicker.getCurrentMinute())+"분 저장됐습니다."
                 ,  Toast.LENGTH_LONG).show();
             }
         });
