@@ -1,4 +1,7 @@
 package com.java.swuchunky;
 
-public class wizard_reserve3 {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class wizard_reserve3 extends AppCompatActivity {
+
 }

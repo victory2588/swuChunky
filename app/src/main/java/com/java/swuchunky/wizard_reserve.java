@@ -28,7 +28,6 @@ public class wizard_reserve extends Fragment {
 
         activity = (wizardMainActivity) getActivity();
 
-
         Button reserve_sel_btn = view.findViewById(R.id.reserve_sel_btn);
         reserve_sel_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -34,6 +34,7 @@ public class wizard_signup extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private DatabaseReference firebaseDatabase;
     private FirebaseFirestore firestore;
+    public String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -62,7 +63,7 @@ public class wizard_signup extends AppCompatActivity {
 
                 //가입 정보 가져오기
                 String name = Name.getText().toString().trim();
-                final String email = EmailText.getText().toString().trim();
+                email = EmailText.getText().toString().trim();
                 String pwd = PasswordText.getText().toString().trim();
                 String pwdcheck = PasswordcheckText.getText().toString().trim();
                 Intent intent=getIntent();
@@ -84,33 +85,21 @@ public class wizard_signup extends AppCompatActivity {
                                 mDialog.dismiss();
 
                                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                                userAccount account=new userAccount();
+                                userAccount account=(userAccount) getApplication();
+
                                 account.setIdToken(user.getUid());
                                 account.setEmail(user.getEmail());
                                 account.setName(name);
                                 account.setPwd(pwd);
                                 account.setRole(role);
 
-                                db.collection("membership")
-                                        .add(account)
-                                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                            @Override
-                                            public void onSuccess(DocumentReference documentReference) {
-                                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                                            }
-                                        })
-                                        .addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-                                                Log.w(TAG, "Error adding document", e);
-                                            }
-                                        });
+                                db.collection("membership").document(email).set(account);
+
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
                                 Intent i = new Intent(wizard_signup.this, wizard_login.class);
                                 startActivity(i);
                                 finish();
                                 Toast.makeText(getApplicationContext(), "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();
-
                             } else {
                                 mDialog.dismiss();
                                 Toast.makeText(getApplicationContext(), "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show();
@@ -121,7 +110,6 @@ public class wizard_signup extends AppCompatActivity {
 
                     //비밀번호 오류시
                 }else{
-
                     Toast.makeText(getApplicationContext(), "비밀번호가 틀렸습니다. 다시 입력해 주세요.", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -132,7 +120,6 @@ public class wizard_signup extends AppCompatActivity {
         onBackPressed();; // 뒤로가기 버튼이 눌렸을시
         return super.onSupportNavigateUp(); // 뒤로가기 버튼
     }
-
 }
 
 

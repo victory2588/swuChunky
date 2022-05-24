@@ -73,6 +73,10 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
+                                    userAccount account=(userAccount) getApplication();
+                                    account.setEmail(email);
+
+                                    Log.d("로그인 email",email);
                                     Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
