@@ -43,6 +43,14 @@ public class wizard_reserve1_sel extends AppCompatActivity {
             }
         });
 
+        rBtnCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tPicker.setVisibility(View.INVISIBLE);
+                calView.setVisibility(View.VISIBLE);
+            }
+        });
+
         reservation1_next_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
