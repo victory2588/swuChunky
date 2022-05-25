@@ -4,7 +4,7 @@ import android.app.Application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class userAccount extends Application {
+public class userAccount {
     public static String email;
     private String pwd;
     private String name;
@@ -13,7 +13,7 @@ public class userAccount extends Application {
     private int hour;
 
     //public userAccount(){}
-    @Override
+    /*@Override
     public void onCreate() {
         //전역 변수 초기화
         super.onCreate();
@@ -22,7 +22,7 @@ public class userAccount extends Application {
     @Override
     public void onTerminate() {
         super.onTerminate();
-    }
+    }*/
 
 
     public String getEmail() {

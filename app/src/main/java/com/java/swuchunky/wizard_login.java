@@ -35,8 +35,6 @@ public class wizard_login extends AppCompatActivity {
     EditText mEmailText, mPasswordText;
     String role,email,pwd;
     private FirebaseAuth firebaseAuth;
-    //private FirebaseDatabase database;
-    //private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +71,11 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    userAccount account=(userAccount) getApplication();
-                                    account.setEmail(email);
+                                    //userAccount account=(userAccount) getApplication();
+                                    firebaseAuth =  FirebaseAuth.getInstance();
+                                    FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                                    Log.d("로그인 email",email);
+                                    Log.d("로그인 uid",user.getUid());
                                     Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
                                     startActivity(intent);
                                     Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();

@@ -15,9 +15,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.ArrayList;
@@ -32,14 +39,15 @@ public class wizard_reserve1_sel extends FragmentActivity {
     userAccount account;
     wizard_signup ws;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private DatabaseReference firebaseDatabase;
+    private FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_reserve1_sel);
 
-        String email=((userAccount)this.getApplication()).getEmail();
-        Log.d("로그인 email",email);
         reservation1_next_btn = (Button) findViewById(R.id.reservation1_next_btn);
 
         rBtnCalendar = (RadioButton) findViewById(R.id.rBtnCalendar);
@@ -50,6 +58,9 @@ public class wizard_reserve1_sel extends FragmentActivity {
 
         tPicker.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        Log.d("로그인 uid",user.getUid());
 
         rBtnTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +89,8 @@ public class wizard_reserve1_sel extends FragmentActivity {
                                 Integer.toString(selectDay)+"일 "+
                                 Integer.toString(selectHour)+"시 "+
                                 Integer.toString(selectMin)+"분 저장됐습니다."
-                ,  Toast.LENGTH_LONG).show();
+                ,  Toast.LENGTH_SHORT).show();
+
 
                 /*ws.accountRef.update("hour", tPicker.getCurrentHour().toString())
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
