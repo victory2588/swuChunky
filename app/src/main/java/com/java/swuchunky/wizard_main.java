@@ -67,16 +67,23 @@ public class wizard_main extends Fragment {
         ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.month, android.R.layout.simple_spinner_dropdown_item);
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); spinner.setAdapter(monthAdapter);
         
+        //스피너
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //날짜별로 리스트 정보 뜸 //리스트 어댑터 wizardlistAdapter
+                //날짜별로 리스트 정보 뜸wizard_main_item //리스트 어댑터 wizardlistAdapter //리스트에서 또 팝업 정의필요wizard_main2
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
+
+
+
+
+
+
         });
         return view;
     }
