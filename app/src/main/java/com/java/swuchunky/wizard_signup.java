@@ -33,7 +33,8 @@ public class wizard_signup extends AppCompatActivity {
     Button registerBtn;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference firebaseDatabase;
-    public String email;
+    public int count;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -62,7 +63,7 @@ public class wizard_signup extends AppCompatActivity {
 
                 //가입 정보 가져오기
                 String name = Name.getText().toString().trim();
-                email = EmailText.getText().toString().trim();
+                String email = EmailText.getText().toString().trim();
                 String pwd = PasswordText.getText().toString().trim();
                 String pwdcheck = PasswordcheckText.getText().toString().trim();
                 Intent intent=getIntent();
@@ -82,7 +83,7 @@ public class wizard_signup extends AppCompatActivity {
                             //가입 성공시
                             if (task.isSuccessful()) {
                                 mDialog.dismiss();
-
+                                count=((count)getApplication()).getCount()+1;
                                 FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
                                 userAccount account=new userAccount();
 
