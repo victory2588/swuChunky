@@ -142,7 +142,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reservation3_txtexp" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_living"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -152,7 +152,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reservation3_txtexp2"
         app:srcCompat="@drawable/living" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_move"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -161,7 +161,7 @@
         app:layout_constraintTop_toTopOf="@+id/reservation3_living"
         app:srcCompat="@drawable/move" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_sofa"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -171,7 +171,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reservation3_txtexp2"
         app:srcCompat="@drawable/sofa" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_animal"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -183,7 +183,7 @@
         app:layout_constraintTop_toBottomOf="@+id/reservation3_txtexp2"
         app:srcCompat="@drawable/animal" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_special"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -193,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@+id/living_txt"
         app:srcCompat="@drawable/special" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_company"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -203,7 +203,7 @@
         app:layout_constraintTop_toBottomOf="@+id/move_txt"
         app:srcCompat="@drawable/company" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_trash"
         android:layout_width="72dp"
         android:layout_height="66dp"
@@ -213,7 +213,7 @@
         app:layout_constraintTop_toBottomOf="@+id/sofa_txt"
         app:srcCompat="@drawable/trash" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/reservation3_toilet"
         android:layout_width="72dp"
         android:layout_height="66dp"
