@@ -3,6 +3,7 @@ package com.java.swuchunky;
 
 import static android.content.ContentValues.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -36,9 +38,6 @@ public class wizard_reserve1_sel extends FragmentActivity {
     CalendarView calView;
     TimePicker tPicker;
     int selectYear, selectMonth, selectDay,selectHour,selectMin;
-    userAccount account;
-    wizard_signup ws;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
     private DatabaseReference firebaseDatabase;
     private FirebaseAuth firebaseAuth;
 
@@ -47,6 +46,8 @@ public class wizard_reserve1_sel extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_reserve1_sel);
+
+        firebaseDatabase=FirebaseDatabase.getInstance().getReference("reservation");
 
         reservation1_next_btn = (Button) findViewById(R.id.reservation1_next_btn);
 
@@ -59,8 +60,8 @@ public class wizard_reserve1_sel extends FragmentActivity {
         tPicker.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        Log.d("로그인 uid",user.getUid());
+        //FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //Log.d("로그인 email",user.getEmail());
 
         rBtnTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,23 +93,21 @@ public class wizard_reserve1_sel extends FragmentActivity {
                 ,  Toast.LENGTH_SHORT).show();
 
 
-                /*ws.accountRef.update("hour", tPicker.getCurrentHour().toString())
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Log.d(TAG, "DocumentSnapshot successfully updated!");
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w(TAG, "Error updating document", e);
-                            }
-                        });*/
-                //userAccount account=(userAccount) getApplication();
-                //account.setHour(selectHour);
-                //db.collection("membership").document(account.getEmail()).set(account, SetOptions.merge());
-                //Log.d("시간 추가", String.valueOf(account.getHour()));
+                FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
+                reservation_info rv=new reservation_info();
+
+                rv.setEmail(user.getEmail());
+                rv.setYear(selectYear);
+                rv.setMonth(selectMonth);
+                rv.setDay(selectDay);
+                rv.setHour(selectHour);
+                rv.setMin(selectMin);
+
+                firebaseDatabase.child(user.getUid()).child("info").setValue(rv);
+                Log.d("로그인 정보",user.getEmail());
+
+                Intent intent = new Intent(getApplicationContext(), wizard_reserve3.class);
+                startActivity(intent);
             }
         });
 

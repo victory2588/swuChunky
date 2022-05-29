@@ -1,36 +1,62 @@
 package com.java.swuchunky;
 
 public class reservation_info {
-    private String date;
-    private String time;
-    private String address;
+    private String Email;
+    private int Year;
+    private int Month;
+    private int Day;
+    private int Hour;
+    private int Min;
     private String category;
-    private String request_item;
+    private String request;
 
-    public reservation_info(){}
 
-    public String getDate() {
-        return date;
+    public String getEmail() {
+        return Email;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setEmail(String email) {
+        Email = email;
     }
 
-    public String getTime() {
-        return time;
+    public int getYear() {
+        return Year;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setYear(int year) {
+        Year = year;
     }
 
-    public String getAddress() {
-        return address;
+    public int getMonth() {
+        return Month;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMonth(int month) {
+        Month = month;
+    }
+
+    public int getDay() {
+        return Day;
+    }
+
+    public void setDay(int day) {
+        Day = day;
+    }
+
+    public int getHour() {
+        return Hour;
+    }
+
+    public void setHour(int hour) {
+        Hour = hour;
+    }
+
+    public int getMin() {
+        return Min;
+    }
+
+    public void setMin(int min) {
+        Min = min;
     }
 
     public String getCategory() {
@@ -41,11 +67,12 @@ public class reservation_info {
         this.category = category;
     }
 
-    public String getRequest_item() {
-        return request_item;
+    public String getRequest() {
+        return request;
     }
 
-    public void setRequest_item(String request_item) {
-        this.request_item = request_item;
+    public void setRequest(String request) {
+        this.request = request;
     }
 }
+
