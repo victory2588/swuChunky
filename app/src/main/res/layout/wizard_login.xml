@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#F7FBFD">
 
     <ImageView
         android:id="@+id/chunkyLogo"
         android:layout_width="243dp"
         android:layout_height="205dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="12dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/wizard_introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="당신은 청소요정을 부리는 마법사입니다. \n청소요정을 부르기 위한 소환의식을 진행해주세요."
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/wizard_email_Insert"
         android:layout_width="218dp"
         android:layout_height="39dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/text_border"
         android:ems="10"
@@ -29,51 +37,28 @@
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/wizard_pw_Insert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_introduction" />
+        android:layout_gravity="center"/>
 
     <EditText
         android:id="@+id/wizard_pw_Insert"
         android:layout_width="218dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="48dp"
         android:background="@drawable/text_border"
         android:ems="10"
         android:hint=" 비밀번호"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/wizard_login_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_email_Insert" />
-
-    <TextView
-        android:id="@+id/wizard_introduction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:gravity="center_horizontal"
-        android:text="당신은 청소요정을 부리는 마법사입니다. \n청소요정을 부르기 위한 소환의식을 진행해주세요."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chunkyLogo" />
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/wizard_login_btn"
         android:layout_width="140.7dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#00b8ff"
         android:text="로그인"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_pw_Insert" />
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/wizard_membership_txt"
@@ -81,9 +66,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="회원가입"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_login_btn" />
+        android:layout_gravity="center" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

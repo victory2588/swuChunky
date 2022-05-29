@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/membership_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="회원가입"
         android:textColor="#0B0B0B"
+        android:layout_gravity="center"
         android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/membership_txtexp"
@@ -23,36 +22,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="마법사가 되시겠습니까?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/membership_txt" />
-
-    <Button
-        android:id="@+id/wizard_membership_btn"
-        android:layout_width="140.7dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:backgroundTint="#00b8ff"
-        android:text="회원가입 완료"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mebership_pwconfirm_txt" />
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/membership_name_txt"
         android:layout_width="271dp"
         android:layout_height="38dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/text_border"
         android:ems="10"
         android:hint="  이름"
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/membership_txtexp" />
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/membership_pw_txt"
@@ -65,26 +48,7 @@
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/membership_email_txt" />
-
-    <EditText
-        android:id="@+id/mebership_pwconfirm_txt"
-        android:layout_width="271dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="56dp"
-        android:background="@drawable/text_border"
-        android:ems="10"
-        android:hint="  비밀번호 확인"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/wizard_membership_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/membership_pw_txt" />
+        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/membership_email_txt"
@@ -97,68 +61,70 @@
         android:inputType="textEmailAddress"
         android:textColor="#000000"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/membership_name_txt" />
+        android:layout_gravity="center" />
+
+    <EditText
+        android:id="@+id/mebership_pwconfirm_txt"
+        android:layout_width="271dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="  비밀번호 확인"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_gravity="center" />
+
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="119dp"
         android:layout_height="27dp"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="37dp"
         android:gravity="center_horizontal"
         android:text="소설 계정 연동하기"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wizard_membership_btn" />
+        android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/img_kakao"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/img_google"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:src="@drawable/kakao" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img_kakao"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/kakao" />
+        <ImageView
+            android:id="@+id/img_instagram"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/naver" />
+        <ImageView
+            android:id="@+id/img_naver"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/facebook" />
+        <ImageView
+            android:id="@+id/img_google"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/google" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/img_instagram"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_naver"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:src="@drawable/naver" />
 
-    <ImageView
-        android:id="@+id/img_naver"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/img_instagram"
-        app:layout_constraintStart_toEndOf="@+id/img_google"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:src="@drawable/facebook" />
-
-    <ImageView
-        android:id="@+id/img_google"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/img_naver"
-        app:layout_constraintStart_toEndOf="@+id/img_kakao"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:src="@drawable/google" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/wizard_membership_btn"
+        android:layout_width="140.7dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#00b8ff"
+        android:text="회원가입 완료"
+        android:layout_gravity="center" />
+</LinearLayout>

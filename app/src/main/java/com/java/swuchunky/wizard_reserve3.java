@@ -1,6 +1,8 @@
 package com.java.swuchunky;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -27,6 +29,16 @@ public class wizard_reserve3 extends AppCompatActivity{
         trash = (ImageButton) findViewById(R.id.reservation3_trash);
         toilet = (ImageButton) findViewById(R.id.reservation3_toilet);
         request= findViewById(R.id.wizard_reserve_rqt);
+
+
+        reservation_uploadbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), wizard_main.class);
+                intent.putExtra("Whatrole","wizard");
+                startActivity(intent);
+            }
+        });
 
     }
 }

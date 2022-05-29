@@ -1,135 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/reservation1_next_btn"
-        android:layout_width="117dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#00b8ff"
-        android:text="다음"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_request_txt" />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/reservation1_reg_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="40dp"
         android:text="청소요정 소환하기"
         android:textColor="#0B0B0B"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/reservation1_reg_txtexp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="청소요정이 방문할 주기를 선택해주세요"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txt" />
-
-    <TextView
-        android:id="@+id/reservation1_info"
-        android:layout_width="278dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="*예약 후 변경사항은 마이페이지에서 수정해주세요"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_next_btn" />
-
-    <TimePicker
-        android:id="@+id/reservation1_timePicker"
-        android:layout_width="233dp"
-        android:layout_height="171dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:timePickerMode="spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/reservation1_timebtn" />
-
-    <CheckBox
-        android:id="@+id/reservation1_checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="12dp"
-        android:text="월"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_monthlybtn" />
-
-    <CheckBox
-        android:id="@+id/reservation1_checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="화"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_checkbox1"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_weeklybtn" />
-
-    <CheckBox
-        android:id="@+id/reservation1_checkbox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="수"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_checkbox2"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_weeklybtn" />
-
-    <CheckBox
-        android:id="@+id/reservation1_checkbox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="71dp"
-        android:text="목"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_checkbox3"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txtexp" />
-
-    <CheckBox
-        android:id="@+id/reservation1_checkbox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="80dp"
-        android:text="금"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_checkbox4"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txtexp" />
+        android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/reservation1_weeklybtn"
         android:layout_width="86dp"
         android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="186dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#ff8da4"
         android:text="요일 선택"
         android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reservation1_monthlybtn"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_reg_txtexp" />
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/reservation1_checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월" />
+        <CheckBox
+            android:id="@+id/reservation1_checkbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="화" />
+        <CheckBox
+            android:id="@+id/reservation1_checkbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="수" />
+        <CheckBox
+            android:id="@+id/reservation1_checkbox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="목" />
+        <CheckBox
+            android:id="@+id/reservation1_checkbox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="금" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/reservation1_timebtn"
@@ -140,46 +80,22 @@
         android:backgroundTint="#b8b8b8"
         android:text="시간 선택"
         android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_checkbox3" />
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/reservation1_timePicker"
+        android:layout_width="233dp"
+        android:layout_height="171dp"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/reservation1_monthlybtn"
-        android:layout_width="79dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="41dp"
-        android:backgroundTint="#b8b8b8"
-        android:text="월 단위"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/reservation1_reg_txtexp" />
+        android:id="@+id/reservation1_next_btn"
+        android:layout_width="117dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#00b8ff"
+        android:text="다음"
+        android:layout_gravity="center" />
 
-    <Button
-        android:id="@+id/reservation1_requestbtn"
-        android:layout_width="86dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#b8b8b8"
-        android:text="요청사항"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_timePicker" />
-
-    <EditText
-        android:id="@+id/reservation1_request_txt"
-        android:layout_width="281dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reservation1_requestbtn" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

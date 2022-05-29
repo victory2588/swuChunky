@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".wizard_mypage">
 
     <TextView
@@ -15,10 +16,7 @@
         android:textColor="#0B0B0B"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/mypage_information"
@@ -28,10 +26,7 @@
         android:backgroundTint="#FFFFFF"
         android:text="회원가입정보"
         android:textAlignment="viewStart"
-        android:textColor="#555555"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_txt" />
+        android:textColor="#555555" />
 
     <Button
         android:id="@+id/mypage_review"
@@ -40,11 +35,7 @@
         android:backgroundTint="#FFFFFF"
         android:text="후기확인"
         android:textAlignment="viewStart"
-        android:textColor="#555555"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_information" />
+        android:textColor="#555555" />
 
     <Button
         android:id="@+id/mypage_payment"
@@ -53,10 +44,6 @@
         android:backgroundTint="#FFFFFF"
         android:text="결제수단"
         android:textAlignment="viewStart"
-        android:textColor="#555555"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_review" />
+        android:textColor="#555555"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
