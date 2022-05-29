@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/corners.xml" value="0.1285" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.161" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.161" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listitem.xml" value="0.2545" />
@@ -52,7 +53,6 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/firstpage.xml" value="0.18490374873353596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.196875" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_activity_main.xml" value="0.19429347826086957" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.33242753623188404" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.19739583333333333" />
