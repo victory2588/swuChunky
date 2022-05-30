@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ public class selectuser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selectuser);
 
-        Button makeWizard_btn = (Button) findViewById(R.id.makeWizard_btn);
+        ImageButton makeWizard_btn = (ImageButton) findViewById(R.id.makeWizard_btn);
         makeWizard_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +31,7 @@ public class selectuser extends AppCompatActivity {
             }
         });
 
-        Button makeFairy_btn = (Button) findViewById(R.id.makeFairy_btn);
+        ImageButton makeFairy_btn = (ImageButton) findViewById(R.id.makeFairy_btn);
         makeFairy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

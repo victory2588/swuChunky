@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".dobi_findWork1">
 
-
     <TextView
         android:id="@+id/main_txt"
         android:layout_width="wrap_content"
@@ -54,10 +53,10 @@
             android:layout_marginLeft="10dp"
             android:text="*총 n명의 마법사"/>
 
-        <ListView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/wizard_main_listView"
             android:layout_width="match_parent"
-            android:layout_height="498dp" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>

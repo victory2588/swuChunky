@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F7FBFD">
+    android:background="#C9EFFF">
 
     <ImageView
         android:id="@+id/chunkyLogo"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:text="당신은 청소요정을 부리는 마법사입니다. \n청소요정을 부르기 위한 소환의식을 진행해주세요."
         android:layout_gravity="center" />
 
@@ -55,7 +55,7 @@
         android:id="@+id/wizard_login_btn"
         android:layout_width="140.7dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#00b8ff"
         android:text="로그인"
         android:layout_gravity="center"/>
