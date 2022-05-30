@@ -34,7 +34,7 @@ public class selectuser extends AppCompatActivity {
         makeFairy_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), wizard_signup.class);
+                Intent intent = new Intent(getApplicationContext(), dobi_signup.class);
                 intent.putExtra("Whatrole","dobi");
                 startActivity(intent);
             }

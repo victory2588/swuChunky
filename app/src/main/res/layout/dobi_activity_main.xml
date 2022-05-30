@@ -17,7 +17,7 @@
 
         <fragment
             android:id="@+id/fragment_main"
-            android:name="com.java.swuchunky.wizard_main"
+            android:name="com.java.swuchunky.dobi_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"

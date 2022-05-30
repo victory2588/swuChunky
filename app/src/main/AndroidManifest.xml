@@ -28,6 +28,8 @@
         <activity android:name=".dobiMainActivity"/>
         <activity android:name=".wizard_reserve1_sel"/>
         <activity android:name=".wizard_reserve3"/>
+        <activity android:name=".dobi_login"/>
+        <activity android:name=".dobi_signup"/>
 
     </application>
 
