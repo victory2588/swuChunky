@@ -1,12 +1,9 @@
 package com.java.swuchunky;
 
 import android.content.Context;
-import android.widget.BaseAdapter;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class wizardlistAdapter extends RecyclerView.Adapter<wizardlistAdapter.CustomViewHolder> {
+public class wizard_reserve_listAdapter extends RecyclerView.Adapter<wizard_reserve_listAdapter.CustomViewHolder> {
     private ArrayList<wizard_main_Item> listCustom = new ArrayList<>();
 
     private ArrayList<wizard_main_Item> arrayList;
@@ -26,7 +23,7 @@ public class wizardlistAdapter extends RecyclerView.Adapter<wizardlistAdapter.Cu
     private DatabaseReference databaseReference;
 
     //메인에서 어댑터로 받아온 값
-    public wizardlistAdapter(ArrayList<wizard_main_Item> arrayList, Context context) {
+    public wizard_reserve_listAdapter(ArrayList<wizard_main_Item> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context = context;
     }
@@ -40,7 +37,7 @@ public class wizardlistAdapter extends RecyclerView.Adapter<wizardlistAdapter.Cu
     }
 
     @Override
-    public void onBindViewHolder(@NonNull wizardlistAdapter.CustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull wizard_reserve_listAdapter.CustomViewHolder holder, int position) {
         //holder.mname.setText(arrayList.get(position).getmname());
         //holder.mcontent.setText(arrayList.get(position).getmcontent());
     }
