@@ -38,6 +38,18 @@
         android:layout_gravity="center" />
 
     <EditText
+        android:id="@+id/membership_email_txt"
+        android:layout_width="271dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="  이메일"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:layout_gravity="center" />
+    <EditText
         android:id="@+id/membership_pw_txt"
         android:layout_width="271dp"
         android:layout_height="38dp"
@@ -50,18 +62,6 @@
         android:textSize="12sp"
         android:layout_gravity="center" />
 
-    <EditText
-        android:id="@+id/membership_email_txt"
-        android:layout_width="271dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/text_border"
-        android:ems="10"
-        android:hint="  이메일"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:layout_gravity="center" />
 
     <EditText
         android:id="@+id/mebership_pwconfirm_txt"

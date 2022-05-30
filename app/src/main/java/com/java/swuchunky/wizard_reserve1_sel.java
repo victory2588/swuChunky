@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
@@ -22,8 +23,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -48,7 +53,7 @@ public class wizard_reserve1_sel extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_reserve1_sel);
 
-        firebaseDatabase=FirebaseDatabase.getInstance().getReference("reservation");
+        firebaseDatabase=FirebaseDatabase.getInstance().getReference();
 
         reservation1_next_btn = (Button) findViewById(R.id.reservation1_next_btn);
 
@@ -102,8 +107,33 @@ public class wizard_reserve1_sel extends FragmentActivity {
                 rv.setHour(selectHour);
                 rv.setMin(selectMin);
 
-                firebaseDatabase.child(user.getUid()+"+"+count).child("info").setValue(rv);
-                ((count) getApplication()).setCount(count+1);
+                firebaseDatabase.addChildEventListener(new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                        firebaseDatabase.child(user.getUid()).child("reservation").push().setValue(rv);
+                    }
+
+                    @Override
+                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                    }
+
+                    @Override
+                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+                    }
+
+                    @Override
+                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
                 Log.d("로그인 정보",user.getEmail());
                 Log.d("count 수", String.valueOf(count));
 

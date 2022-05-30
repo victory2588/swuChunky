@@ -48,7 +48,7 @@ public class wizard_signup extends AppCompatActivity {
 
         //파이어베이스 접근 설정
         firebaseAuth =  FirebaseAuth.getInstance();
-        firebaseDatabase=FirebaseDatabase.getInstance().getReference("membership");
+        firebaseDatabase=FirebaseDatabase.getInstance().getReference();
 
         Name = findViewById(R.id.membership_name_txt);
         EmailText = findViewById(R.id.membership_email_txt);
@@ -93,7 +93,7 @@ public class wizard_signup extends AppCompatActivity {
                                 account.setPwd(pwd);
                                 account.setRole(role);
 
-                                firebaseDatabase.child(user.getUid()).setValue(account);
+                                firebaseDatabase.child(user.getUid()).child("user").setValue(account);
 
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
                                 Intent i = new Intent(wizard_signup.this, wizard_login.class);

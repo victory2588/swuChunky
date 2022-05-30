@@ -35,20 +35,21 @@ public class wizard_login extends AppCompatActivity {
     EditText mEmailText, mPasswordText;
     String role,email,pwd;
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference firebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_login);
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth =  FirebaseAuth.getInstance();
+
 
         //버튼 등록하기
         wizard_membership_txt = findViewById(R.id.wizard_membership_txt);
         mLoginBtn = findViewById(R.id.wizard_login_btn);
         mEmailText = findViewById(R.id.wizard_email_Insert);
         mPasswordText = findViewById(R.id.wizard_pw_Insert);
-
 
         //가입 버튼이 눌리면
         wizard_membership_txt.setOnClickListener(new View.OnClickListener() {
@@ -71,14 +72,35 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    //userAccount account=(userAccount) getApplication();
-                                    firebaseAuth =  FirebaseAuth.getInstance();
-                                    FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                                    Log.d("로그인 uid",user.getUid());
-                                    Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
-                                    startActivity(intent);
-                                    Toast.makeText(getApplicationContext(),"환영합니다!",Toast.LENGTH_SHORT).show();
+                                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                                    Log.d("로그인 정보",user.getUid());
+
+                                    //시험
+                                    firebaseDatabase.child(user.getUid()).child("user").addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            userAccount account=snapshot.getValue(userAccount.class);
+                                            String role=account.getRole();
+                                            Log.d("역할 정보",role);
+
+                                            if(role=="wizard"){
+                                                Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
+                                                startActivity(intent);
+                                                Toast.makeText(getApplicationContext(),"마법사님 환영합니다!",Toast.LENGTH_SHORT).show();
+                                            }
+                                            else{
+                                                Intent intent = new Intent(wizard_login.this, dobiMainActivity.class); //getApplicationContext()
+                                                startActivity(intent);
+                                                Toast.makeText(getApplicationContext(),"요정님 환영합니다!",Toast.LENGTH_SHORT).show();
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+                                            Log.d("역할 정보 실패",role);
+                                        }
+                                    });
 
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
