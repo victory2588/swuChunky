@@ -43,7 +43,7 @@ public class dobi_main  extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.dobi_main_listView);
         // listView.setAdapter(adapter);
 
-        Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
+        Spinner spinner = (Spinner) view.findViewById(R.id.dobi_spinner);
         ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.month, android.R.layout.simple_spinner_dropdown_item);
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); spinner.setAdapter(monthAdapter);
 

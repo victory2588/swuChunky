@@ -60,6 +60,7 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/loading_activity.xml" value="0.32608695652173914" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.196875" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_activity_main.xml" value="0.1875" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.33242753623188404" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.19739583333333333" />
@@ -71,6 +72,8 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserveview.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.1831306990881459" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/menu/bottom_menu.xml" value="0.37435897435897436" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/menu/dobi_menu.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/victo/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_dropdown_item.xml" value="0.25052083333333336" />
       </map>
     </option>
   </component>

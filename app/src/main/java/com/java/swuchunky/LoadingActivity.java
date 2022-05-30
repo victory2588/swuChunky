@@ -34,7 +34,7 @@ public class LoadingActivity extends AppCompatActivity {
                 userAccount account=snapshot.getValue(userAccount.class);
                 role=account.getRole().trim();
 
-                Log.d("역할 정보1",role);
+                Log.d("역할 정보",role);
 
                 if(role.equals("dobi")){
                     Intent intent = new Intent(LoadingActivity.this, dobiMainActivity.class); //getApplicationContext()
