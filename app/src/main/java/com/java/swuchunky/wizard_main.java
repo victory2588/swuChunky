@@ -78,12 +78,6 @@ public class wizard_main extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-
-
-
-
-
-
         });
         return view;
     }

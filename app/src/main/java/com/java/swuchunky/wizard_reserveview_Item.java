@@ -1,50 +1,46 @@
 package com.java.swuchunky;
 
+import android.widget.ImageView;
+
 //wizard_reserveveiw에서의 리스트 아이템
 public class wizard_reserveview_Item {
-    String name;
-    String mobile;
-    int resId;
+    ImageView image;
+    String category;
+    String pay;
+    String date;
 
-    // Generate > Constructor
-    public wizard_reserveview_Item(String name, String mobile, int resId) {
-        this.name = name;
-        this.mobile = mobile;
-        this.resId = resId;
+    public wizard_reserveview_Item(ImageView image, String category, String pay, String date) {
+        this.image = image;
+        this.category = category;
+        this.pay = pay;
+        this.date = date;
     }
 
-    // Generate > Getter and Setter
-    public String getName() {
-        return name;
+    public ImageView getImage(){
+        return image;
+    }
+    public void setImage(ImageView image){
+        this.image = image;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getCategory(){
+        return category;
+    }
+    public void setCategory(String category){
+        this.category = category;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getPay(){
+        return pay;
+    }
+    public void setPay(String pay){
+        this.pay = pay;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public String getDate(){
+        return pay;
     }
-
-    public int getResId() {
-        return resId;
-    }
-
-    public void setResId(int resId) {
-        this.resId = resId;
-    }
-
-    // Generate > toString() : 아이템을 문자열로 출력
-
-    @Override
-    public String toString() {
-        return "SingerItem{" +
-                "name='" + name + '\'' +
-                ", mobile='" + mobile + '\'' +
-                '}';
+    public void setDate(String date){
+        this.date = date;
     }
 }

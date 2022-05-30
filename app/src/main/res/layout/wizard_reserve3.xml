@@ -9,9 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:gravity="center"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginTop="-90dp"
+            android:src="@drawable/wizard_reserve3" />
+        <!--
         <TextView
             android:id="@+id/reservation3_txt"
             android:layout_width="wrap_content"
@@ -24,7 +29,7 @@
             android:id="@+id/reservation3_txtexp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="청소를 원하는 항목을 선택해주세요" />
+            android:text="청소를 원하는 항목을 선택해주세요" />!-->
     </LinearLayout>
 
     <TextView
@@ -32,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="14dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="285dp"
         android:text="*최소 3개 이상 선택"
         android:textColor="#ff8da4"
