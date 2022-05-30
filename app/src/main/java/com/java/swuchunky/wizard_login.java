@@ -44,7 +44,6 @@ public class wizard_login extends AppCompatActivity {
 
         firebaseAuth =  FirebaseAuth.getInstance();
 
-
         //버튼 등록하기
         wizard_membership_txt = findViewById(R.id.wizard_membership_txt);
         mLoginBtn = findViewById(R.id.wizard_login_btn);
@@ -72,36 +71,11 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-
                                     FirebaseUser user = firebaseAuth.getCurrentUser();
                                     Log.d("로그인 정보",user.getUid());
 
-                                    //시험
-                                    firebaseDatabase.child(user.getUid()).child("user").addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                            userAccount account=snapshot.getValue(userAccount.class);
-                                            String role=account.getRole();
-                                            Log.d("역할 정보",role);
-
-                                            if(role=="wizard"){
-                                                Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
-                                                startActivity(intent);
-                                                Toast.makeText(getApplicationContext(),"마법사님 환영합니다!",Toast.LENGTH_SHORT).show();
-                                            }
-                                            else{
-                                                Intent intent = new Intent(wizard_login.this, dobiMainActivity.class); //getApplicationContext()
-                                                startActivity(intent);
-                                                Toast.makeText(getApplicationContext(),"요정님 환영합니다!",Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError error) {
-                                            Log.d("역할 정보 실패",role);
-                                        }
-                                    });
-
+                                    Intent intent = new Intent(wizard_login.this, LoadingActivity.class); //getApplicationContext()
+                                    startActivity(intent);
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }

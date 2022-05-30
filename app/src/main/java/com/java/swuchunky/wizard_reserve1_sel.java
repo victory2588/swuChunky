@@ -45,7 +45,6 @@ public class wizard_reserve1_sel extends FragmentActivity {
     int selectYear, selectMonth, selectDay,selectHour,selectMin;
     private DatabaseReference firebaseDatabase;
     private FirebaseAuth firebaseAuth;
-    public int count;
 
 
     @Override
@@ -87,7 +86,6 @@ public class wizard_reserve1_sel extends FragmentActivity {
             public void onClick(View view) {
                 selectHour=tPicker.getCurrentHour();
                 selectMin=tPicker.getCurrentMinute();
-                count=((count)getApplication()).getCount();
                 Toast.makeText(getApplicationContext(),
                         Integer.toString(selectYear)+"년 "+
                                 Integer.toString(selectMonth)+"월 "+
@@ -135,7 +133,6 @@ public class wizard_reserve1_sel extends FragmentActivity {
                 });
 
                 Log.d("로그인 정보",user.getEmail());
-                Log.d("count 수", String.valueOf(count));
 
                 Intent intent = new Intent(getApplicationContext(), wizard_reserve3.class);
                 startActivity(intent);

@@ -83,7 +83,6 @@ public class dobi_signup extends AppCompatActivity {
                             //가입 성공시
                             if (task.isSuccessful()) {
                                 mDialog.dismiss();
-                                count=((count)getApplication()).getCount()+1;
                                 FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
                                 userAccount account=new userAccount();
 

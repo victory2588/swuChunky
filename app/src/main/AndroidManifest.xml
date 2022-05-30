@@ -4,7 +4,6 @@
     package="com.java.swuchunky">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:name=".count"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:roundIcon="@mipmap/ic_logo_round"
@@ -30,6 +29,7 @@
         <activity android:name=".wizard_reserve3"/>
         <activity android:name=".dobi_login"/>
         <activity android:name=".dobi_signup"/>
+        <activity android:name=".LoadingActivity"/>
 
     </application>
 
