@@ -7,32 +7,23 @@
     android:orientation="vertical"
     tools:context=".wizard_reserve">
 
-    <Button
+    <ImageButton
         android:id="@+id/reserve_reg_btn"
-        android:layout_width="199dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="170dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="정기예약"
-        android:textColor="#366BFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
-        app:strokeColor="#366BFF"
-        app:strokeWidth="2dp" />
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/wizard_reserve1" />
 
-    <Button
+    <ImageButton
         android:id="@+id/reserve_sel_btn"
-        android:layout_width="199dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="날짜선택"
-        android:textColor="#68d5ff"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
         android:layout_gravity="center"
-        app:strokeColor="#68d5ff"
-        app:strokeWidth="2dp" />
-
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/wizard_reserve2"/>
 </LinearLayout>
