@@ -65,7 +65,7 @@ public class wizard_reserveview extends Fragment {
                 Log.e("wizardMainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
             }
 
-            //adapter = new wizardlistAdapter(arrayList, this);
+            //adapter = new wizard_reserve_listAdapter(arrayList, this);
             //recyclerView.setAdapter(adapter); // 리사이클러뷰에 어댑터 연결
 
         });
