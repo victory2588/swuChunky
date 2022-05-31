@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -64,8 +65,14 @@ public class wizard_main extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
-
         RecyclerView recyclerview = (RecyclerView) view.findViewById(R.id.wizard_main_listView);
+        recyclerview.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager( getActivity().getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        arrayList = new ArrayList<>(); // 그룹 객체를 담을 어레이 리스트 (어댑터쪽으로)
+
+        database = FirebaseDatabase.getInstance(); // 파이어베이스 데이터베이스 연동
+        databaseReference = database.getReference(); // DB 테이블 연결
 
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.month, android.R.layout.simple_spinner_dropdown_item);
