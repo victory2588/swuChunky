@@ -42,10 +42,10 @@ public class wizard_reserve_listAdapter extends RecyclerView.Adapter<wizard_rese
 
     @Override
     public void onBindViewHolder(@NonNull wizard_reserve_listAdapter.CustomViewHolder holder, int position) {
-        holder.category.setText(arrayList.get(position).getCategory());
+        //holder.category.setText(arrayList.get(position).getCategory());
         //holder.image.setImage(arrayList.get(position).getImage());
         //holder.pay.setText(arrayList.get(position).getPay());
-        holder.date.setText(arrayList.get(position).getDate());
+        //holder.date.setText(arrayList.get(position).getDate());
     }
 
     @Override

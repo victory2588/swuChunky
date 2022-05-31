@@ -1,60 +1,53 @@
 package com.java.swuchunky;
 
+import android.widget.ImageView;
+
 public class wizard_main_Item {
-    String name;
+    ImageView image;
     String category;
+    String pay;
     String date;
-    int resId;
-    String request;
 
     // Generate > Constructor
-    public wizard_main_Item(String name, String category, String date, int resId, String request) {
-        this.name = name;
+    public wizard_main_Item(ImageView image, String category, String pay, String date) {
+        /*ImageView image;
+        String category;
+        String pay;
+        String date;
+
+    public wizard_main_Item(ImageView image, String category, String pay, String date) {
+        this.image = image;
         this.category = category;
+        this.pay = pay;
         this.date = date;
-        this.resId = resId;
-        this.request = request;
     }
 
-    public int getResId() {
-        return resId;
+    public ImageView getImage(){
+        return image;
+    }
+    public void setImage(ImageView image){
+        this.image = image;
     }
 
-    public void setResId(int resId) {
-        this.resId = resId;
-    }
-
-    // Generate > Getter and Setter
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCategory() {
+    public String getCategory(){
         return category;
     }
-
-    public void setCategory(String category) {
+    public void setCategory(String category){
         this.category = category;
     }
 
-    public String getDate() {
-        return date;
+    public String getPay(){
+        return pay;
+    }
+    public void setPay(String pay){
+        this.pay = pay;
     }
 
-    public void setDate(String date) {
+    public String getDate(){
+        return pay;
+    }
+    public void setDate(String date){
         this.date = date;
+    }*/
     }
-
-    public String getRequest() {
-        return date;
-    }
-
-    public void setRequest(String request) {
-        this.request = request;
-    }
-
 }
