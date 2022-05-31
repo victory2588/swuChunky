@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
 //import com.prolificinteractive.materialcalendarview.CalendarDay;
@@ -36,10 +39,13 @@ import java.util.Calendar;
 public class wizard_main extends Fragment {
 
     wizardMainActivity activity;
-    //wizardAdapter adapter;
-    ListView listView;
-    //Spinner spinner;
-
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<wizard_main_Item> arrayList;
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+    Spinner spinner;
 
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -59,9 +65,7 @@ public class wizard_main extends Fragment {
         //뷰 넘어가는 부분
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
 
-        //adapter = new wizardAdapter();
-        ListView listView = (ListView) view.findViewById(R.id.wizard_main_listView);
-       // listView.setAdapter(adapter);
+        RecyclerView recyclerview = (RecyclerView) view.findViewById(R.id.wizard_main_listView);
 
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.month, android.R.layout.simple_spinner_dropdown_item);
