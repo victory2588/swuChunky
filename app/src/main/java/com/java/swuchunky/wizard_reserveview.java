@@ -47,7 +47,7 @@ public class wizard_reserveview extends Fragment {
 
 
         //값이 변경되는걸 감지하는 함수!
-        databaseReference.child("memo").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("reserve").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // 파이어베이스 데이터베이스의 데이터를 받아오는 곳
