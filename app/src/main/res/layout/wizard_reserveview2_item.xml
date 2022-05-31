@@ -6,58 +6,43 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/dobi_image"
+            android:layout_width="85dp"
+            android:layout_height="102dp"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="3dp"
             android:src="@mipmap/ic_launcher" />
-
-        <TextView
-            android:id="@+id/dobi_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="도비 이름"
-            android:layout_gravity="center"
-            android:textSize="14dp" />
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="208dp"
         android:layout_height="100dp"
         android:layout_weight="1"
+        android:layout_marginLeft="5dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/clean_info"
+            android:id="@+id/dobi_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="청소 분야 : "
-            android:textSize="14dp" />
+            android:textStyle="bold"
+            android:text="홍선미 청키"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/clean_info1"
+            android:id="@+id/dobi_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="청소 날짜 : "
-            android:textSize="14dp" />
-
-        <TextView
-            android:id="@+id/clean_info2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="요청사항 : "
-            android:textSize="14dp" />
+            android:text="자신있는 분야 : "
+            android:textSize="13dp" />
 
     </LinearLayout>
 
@@ -69,19 +54,18 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/test_btn"
+            android:id="@+id/okay_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:backgroundTint="#d8d8d8"
-            android:text="완료하기" /> <!--시간날짜 지나면 파랑색으로 변경!-->
+            android:text="수 락" /> <!--시간날짜 지나면 파랑색으로 변경!-->
 
         <Button
-            android:id="@+id/cancel_btn"
+            android:id="@+id/reject_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#ff8da4"
-            android:text="취소하기" />
+            android:text="거 절" />
 
     </LinearLayout>
 

@@ -81,9 +81,9 @@
             android:id="@+id/test_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#d8d8d8"
             android:layout_marginTop="3dp"
-            android:text="완료하기" /> <!--시간날짜 지나면 파랑색으로 변경!-->
+            android:backgroundTint="#d8d8d8"
+            android:text="평가하기" /> <!--시간날짜 지나면 파랑색으로 변경!-->
 
         <Button
             android:id="@+id/cancel_btn"
