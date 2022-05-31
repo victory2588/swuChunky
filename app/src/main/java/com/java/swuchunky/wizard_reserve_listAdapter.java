@@ -1,6 +1,7 @@
 package com.java.swuchunky;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -31,15 +32,14 @@ public class wizard_reserve_listAdapter extends RecyclerView.Adapter<wizard_rese
     @NonNull
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wizard_main_item, parent, false);
-        //CustomViewHoler holder = new CustomViewHoler(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.wizard_main_item, parent, false);
+        CustomViewHolder holder = new CustomViewHolder(view);
         return null;
     }
 
     @Override
     public void onBindViewHolder(@NonNull wizard_reserve_listAdapter.CustomViewHolder holder, int position) {
-        //holder.mname.setText(arrayList.get(position).getmname());
-        //holder.mcontent.setText(arrayList.get(position).getmcontent());
+        holder.category.setText(arrayList.get(position).getCategory());
     }
 
     @Override
@@ -49,13 +49,11 @@ public class wizard_reserve_listAdapter extends RecyclerView.Adapter<wizard_rese
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
         //리스트.xml 요소 아이디 연결
-        TextView mname;
-        TextView mcontent;
+        TextView category;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
-            //this.mname = itemView.findViewById(R.id.mname);
-            //this.mcontent = itemView.findViewById(R.id.mcontent);
+            this.category = itemView.findViewById(R.id.clean_category);
         }
     }
 }
