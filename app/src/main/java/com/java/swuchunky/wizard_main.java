@@ -71,7 +71,7 @@ public class wizard_main extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //날짜별로 리스트 정보 뜸wizard_main_item //리스트 어댑터 wizardlistAdapter //리스트에서 또 팝업 정의필요wizard_main2
+                //날짜별로 리스트 정보 뜸wizard_main_item //리스트 어댑터 wizardmainAdapter //리스트에서 또 팝업 정의필요wizard_main2
             }
 
             @Override
