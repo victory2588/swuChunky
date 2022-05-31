@@ -1,6 +1,7 @@
 package com.java.swuchunky;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,7 +62,7 @@ public class wizard_reserveview extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 // 디비를 가져오던중 에러 발생 시
-                //Log.e("MainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
+                Log.e("wizardMainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
             }
 
             //adapter = new wizardlistAdapter(arrayList, this);

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -40,6 +43,9 @@ public class wizard_reserve_listAdapter extends RecyclerView.Adapter<wizard_rese
     @Override
     public void onBindViewHolder(@NonNull wizard_reserve_listAdapter.CustomViewHolder holder, int position) {
         holder.category.setText(arrayList.get(position).getCategory());
+        //holder.image.setImage(arrayList.get(position).getImage());
+        //holder.pay.setText(arrayList.get(position).getPay());
+        holder.date.setText(arrayList.get(position).getDate());
     }
 
     @Override
@@ -49,11 +55,17 @@ public class wizard_reserve_listAdapter extends RecyclerView.Adapter<wizard_rese
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
         //리스트.xml 요소 아이디 연결
+        ImageView image;
         TextView category;
+        TextView pay;
+        TextView date;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             this.category = itemView.findViewById(R.id.clean_category);
+            this.image = itemView.findViewById(R.id.clean_image);
+            this.pay = itemView.findViewById(R.id.clean_pay);
+            this.date = itemView.findViewById(R.id.clean_date);
         }
     }
 }
