@@ -72,7 +72,7 @@ public class wizard_main extends Fragment {
         RecyclerView recyclerview = (RecyclerView) view.findViewById(R.id.wizard_main_listView);
         recyclerview.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager( getActivity().getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
+        //recyclerView.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>(); // 그룹 객체를 담을 어레이 리스트 (어댑터쪽으로)
 
         database = FirebaseDatabase.getInstance(); // 파이어베이스 데이터베이스 연동

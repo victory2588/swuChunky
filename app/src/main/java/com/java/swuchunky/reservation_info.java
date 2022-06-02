@@ -9,6 +9,7 @@ public class reservation_info {
     private int Min;
     private String category;
     private String request;
+    private String where;
 
 
     public String getEmail() {
@@ -73,6 +74,14 @@ public class reservation_info {
 
     public void setRequest(String request) {
         this.request = request;
+    }
+
+    public String getWhere() {
+        return where;
+    }
+
+    public void setWhere(String where) {
+        this.where = where;
     }
 }
 
