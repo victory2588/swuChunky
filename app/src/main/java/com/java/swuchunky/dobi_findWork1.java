@@ -44,11 +44,11 @@ public class dobi_findWork1 extends Fragment {
         database=FirebaseDatabase.getInstance();
         FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
 
-        databaseReference=database.getReference(user.getUid());
+        databaseReference=database.getReference().child("reservation");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-                arrayList.clear();
+                //arrayList.clear();
                 for(DataSnapshot snapshot:datasnapshot.getChildren()){
                     reservation_info rv=snapshot.getValue(reservation_info.class);
                     arrayList.add(rv);
