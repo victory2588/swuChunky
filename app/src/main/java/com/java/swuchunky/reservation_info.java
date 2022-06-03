@@ -2,11 +2,7 @@ package com.java.swuchunky;
 
 public class reservation_info {
     private String Email;
-    private int Year;
-    private int Month;
-    private int Day;
-    private int Hour;
-    private int Min;
+    private String when;
     private String category;
     private String request;
     private String where;
@@ -20,44 +16,12 @@ public class reservation_info {
         Email = email;
     }
 
-    public int getYear() {
-        return Year;
+    public String getWhen() {
+        return when;
     }
 
-    public void setYear(int year) {
-        Year = year;
-    }
-
-    public int getMonth() {
-        return Month;
-    }
-
-    public void setMonth(int month) {
-        Month = month;
-    }
-
-    public int getDay() {
-        return Day;
-    }
-
-    public void setDay(int day) {
-        Day = day;
-    }
-
-    public int getHour() {
-        return Hour;
-    }
-
-    public void setHour(int hour) {
-        Hour = hour;
-    }
-
-    public int getMin() {
-        return Min;
-    }
-
-    public void setMin(int min) {
-        Min = min;
+    public void setWhen(String when) {
+        this.when = when;
     }
 
     public String getCategory() {

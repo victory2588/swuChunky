@@ -42,6 +42,7 @@ public class wizard_reserve1_sel extends FragmentActivity {
     RadioButton rBtnCalendar, rBtnTime;
     CalendarView calView;
     TimePicker tPicker;
+    private String when;
     int selectYear, selectMonth, selectDay,selectHour,selectMin;
     private DatabaseReference firebaseDatabase;
     private FirebaseAuth firebaseAuth;
@@ -94,47 +95,23 @@ public class wizard_reserve1_sel extends FragmentActivity {
                                 Integer.toString(selectMin)+"분 저장됐습니다."
                 ,  Toast.LENGTH_SHORT).show();
 
-
+                when=Integer.toString(selectYear)+"년 "+
+                        Integer.toString(selectMonth)+"월 "+
+                        Integer.toString(selectDay)+"일 "+
+                        Integer.toString(selectHour)+"시 "+
+                        Integer.toString(selectMin)+"분";
                 FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
                 reservation_info rv=new reservation_info();
 
                 rv.setEmail(user.getEmail());
-                rv.setYear(selectYear);
-                rv.setMonth(selectMonth);
-                rv.setDay(selectDay);
-                rv.setHour(selectHour);
-                rv.setMin(selectMin);
+                rv.setWhen(when);
 
-                firebaseDatabase.addChildEventListener(new ChildEventListener() {
-                    @Override
-                    public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                        firebaseDatabase.child(user.getUid()).child("reservation").push().setValue(rv);
-                    }
-
-                    @Override
-                    public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                    }
-
-                    @Override
-                    public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-                    }
-
-                    @Override
-                    public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
+                //firebaseDatabase.child(user.getUid()).child("reservation").push().setValue(rv);
 
                 Log.d("로그인 정보",user.getEmail());
 
                 Intent intent = new Intent(getApplicationContext(), wizard_reserve3.class);
+                intent.putExtra("when",when);
                 startActivity(intent);
             }
         });

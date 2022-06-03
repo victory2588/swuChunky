@@ -31,14 +31,14 @@ public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.Cust
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         holder.category.setText(arrayList.get(position).getCategory());
-        holder.date.setText(arrayList.get(position).getDay());
+        holder.date.setText(String.valueOf(arrayList.get(position).getWhen()));
         holder.request.setText(arrayList.get(position).getRequest());
         holder.where.setText(arrayList.get(position).getWhere());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arrayList != null ? arrayList.size():0;
     }
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {
