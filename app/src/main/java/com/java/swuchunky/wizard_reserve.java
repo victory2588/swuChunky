@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.java.swuchunky.MainActivity;
 import com.java.swuchunky.R;
@@ -28,7 +28,7 @@ public class wizard_reserve extends Fragment {
 
         activity = (wizardMainActivity) getActivity();
 
-        Button reserve_sel_btn = view.findViewById(R.id.reserve_sel_btn);
+        ImageButton reserve_sel_btn = view.findViewById(R.id.reserve_sel_btn);
         reserve_sel_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
