@@ -10,7 +10,7 @@
         android:id="@+id/nav_dobi_apply"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
-        android:title="신청하기" />
+        android:title="지원목록" />
     <item
         android:id="@+id/nav_dobi_findWork1"
         android:enabled="true"
