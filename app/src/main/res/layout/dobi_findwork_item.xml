@@ -23,7 +23,7 @@
             android:id="@+id/wizard_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="홍선미 마법사"
+            android:text="김예원 마법사"
             android:layout_gravity="center"
             android:textSize="12dp" />
 
