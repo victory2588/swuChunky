@@ -26,8 +26,8 @@ public class wizard_reserve3 extends AppCompatActivity{
     private DatabaseReference firebaseDatabase;
     ImageButton living, move, sofa, animal,special, company, trash, toilet;
     Button reservation_uploadbtn;
-    EditText mrequest;
-    private String request,category,when;
+    EditText mrequest,maddress;
+    private String request,category,when,address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,7 @@ public class wizard_reserve3 extends AppCompatActivity{
         trash = (ImageButton) findViewById(R.id.reservation3_trash);
         toilet = (ImageButton) findViewById(R.id.reservation3_toilet);
         mrequest= findViewById(R.id.wizard_reserve_rqt);
+        maddress=findViewById(R.id.wizard_reserve_address);
 
         reservation_info rv=new reservation_info();
         firebaseDatabase= FirebaseDatabase.getInstance().getReference();
@@ -53,7 +54,9 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View v) {
                 reservation_info rv=new reservation_info();
                 request=mrequest.getText().toString().trim();
+                address=maddress.getText().toString().trim();
                 rv.setRequest(request);
+                rv.setWhere(address);
                 rv.setCategory(category);
 
                 when= getIntent().getStringExtra("when").trim();

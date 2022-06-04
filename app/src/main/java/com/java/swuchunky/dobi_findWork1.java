@@ -21,17 +21,46 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class dobi_findWork1 extends Fragment {
-    private RecyclerView recyclerView;
+    /*private RecyclerView recyclerView;
     private findwork_adapter adapter;
-    //private RecyclerView.LayoutManager layoutManager;
+    private RecyclerView.LayoutManager layoutManager;
     private ArrayList<reservation_info> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
-    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth firebaseAuth;*/
 
-    @Nullable
+    RecyclerView rv;
+    findwork_adapter fadapter;
+    List<reservation_info> rlist=new ArrayList<>();
+
+    FirebaseDatabase database=FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference;
+
+    public dobi_findWork1(){
+    }
+
+    public static dobi_findWork1 newInstance(){
+        dobi_findWork1 fragment=new dobi_findWork1();
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle saveInstanceState){
+        super.onCreate(saveInstanceState);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState){
+        View view=inflater.inflate(R.layout.dobi_findwork1, container, false);
+
+
+        return view;
+    }
+    /*@Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,7 +68,8 @@ public class dobi_findWork1 extends Fragment {
 
         recyclerView=(RecyclerView)rootView.findViewById(R.id.dobi_main_listView);
         recyclerView.setHasFixedSize(true);
-
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        arrayList=new ArrayList<>();
 
         database=FirebaseDatabase.getInstance();
         FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
@@ -48,7 +78,7 @@ public class dobi_findWork1 extends Fragment {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
-                //arrayList.clear();
+                arrayList.clear();
                 for(DataSnapshot snapshot:datasnapshot.getChildren()){
                     reservation_info rv=snapshot.getValue(reservation_info.class);
                     arrayList.add(rv);
@@ -62,10 +92,9 @@ public class dobi_findWork1 extends Fragment {
             }
         });
         adapter=new findwork_adapter(arrayList,getActivity());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
 
 
         return rootView;
-    }
+    }*/
 }
