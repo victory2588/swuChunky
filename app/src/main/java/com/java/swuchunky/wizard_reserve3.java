@@ -61,8 +61,8 @@ public class wizard_reserve3 extends AppCompatActivity{
 
                 when= getIntent().getStringExtra("when").trim();
                 rv.setWhen(when);
-                rv.setEmail(user.getEmail());
-                firebaseDatabase.child(user.getUid()).child("reservation").push().setValue(rv);
+                rv.setUid(user.getUid());
+                firebaseDatabase.child("wizard").child("reservation").push().setValue(rv);
 
                 Toast.makeText(getApplicationContext(), "예약 완료됐습니다..", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), wizardMainActivity.class);

@@ -1,19 +1,19 @@
 package com.java.swuchunky;
 
 public class reservation_info {
-    private String Email;
+    private String Uid;
     private String when;
     private String category;
     private String request;
     private String where;
 
 
-    public String getEmail() {
-        return Email;
+    public String getUid() {
+        return Uid;
     }
 
-    public void setEmail(String email) {
-        Email = email;
+    public void setUid(String uid) {
+        Uid = uid;
     }
 
     public String getWhen() {

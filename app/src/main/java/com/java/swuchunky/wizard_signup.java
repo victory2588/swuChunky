@@ -92,7 +92,12 @@ public class wizard_signup extends AppCompatActivity {
                                 account.setPwd(pwd);
                                 account.setRole(role);
 
-                                firebaseDatabase.child(user.getUid()).child("user").setValue(account);
+                                if(role.equals("dobi")){
+                                    firebaseDatabase.child("dobi").child("user").child(user.getUid()).setValue(account);
+                                }
+                                else{
+                                    firebaseDatabase.child("wizard").child("user").child(user.getUid()).setValue(account);
+                                }
 
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
                                 Intent i = new Intent(wizard_signup.this, wizard_login.class);

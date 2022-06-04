@@ -28,7 +28,7 @@ public class LoadingActivity extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
         firebaseDatabase= FirebaseDatabase.getInstance().getReference();
         //시험
-        firebaseDatabase.child(user.getUid()).child("user").addValueEventListener(new ValueEventListener() {
+        firebaseDatabase.child("wizard").child("user").child(user.getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userAccount account=snapshot.getValue(userAccount.class);
@@ -37,6 +37,7 @@ public class LoadingActivity extends AppCompatActivity {
                 Log.d("역할 정보",role);
 
                 if(role.equals("dobi")){
+
                     Intent intent = new Intent(LoadingActivity.this, dobiMainActivity.class); //getApplicationContext()
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(),"요정님 환영합니다!",Toast.LENGTH_SHORT).show();

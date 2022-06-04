@@ -103,7 +103,7 @@ public class wizard_reserve1_sel extends FragmentActivity {
                 FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
                 reservation_info rv=new reservation_info();
 
-                rv.setEmail(user.getEmail());
+                rv.setUid(user.getUid());
                 rv.setWhen(when);
 
                 //firebaseDatabase.child(user.getUid()).child("reservation").push().setValue(rv);
