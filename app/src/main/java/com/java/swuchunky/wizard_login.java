@@ -50,6 +50,10 @@ public class wizard_login extends AppCompatActivity {
         mEmailText = findViewById(R.id.wizard_email_Insert);
         mPasswordText = findViewById(R.id.wizard_pw_Insert);
 
+        Intent intent=getIntent();
+        String role=intent.getStringExtra("Whatrole").trim();
+        Log.d("역할정보",role);
+
         //가입 버튼이 눌리면
         wizard_membership_txt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,11 +75,21 @@ public class wizard_login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    FirebaseUser user = firebaseAuth.getCurrentUser();
+                                    if(role.equals("wizard")){
+                                        Intent intent = new Intent(wizard_login.this, wizardMainActivity.class); //getApplicationContext()
+                                        startActivity(intent);
+                                        Toast.makeText(getApplicationContext(),"마법사님 환영합니다!",Toast.LENGTH_SHORT).show();
+                                    }
+                                    else{
+                                        Intent intent = new Intent(wizard_login.this, dobiMainActivity.class); //getApplicationContext()
+                                        startActivity(intent);
+                                        Toast.makeText(getApplicationContext(),"요정님 환영합니다!",Toast.LENGTH_SHORT).show();
+                                    }
+                                    /*FirebaseUser user = firebaseAuth.getCurrentUser();
                                     Log.d("로그인 정보",user.getUid());
 
                                     Intent intent = new Intent(wizard_login.this, LoadingActivity.class); //getApplicationContext()
-                                    startActivity(intent);
+                                    startActivity(intent);*/
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
