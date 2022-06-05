@@ -5,16 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".dobi_apply">
 
-    <TextView
-        android:layout_marginTop="30dp"
+    <ImageView
         android:id="@+id/apply_txt"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="청소 지원 목록"
-        android:textColor="#0B0B0B"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="250dp"
+        android:layout_marginTop="-90dp"
+        android:src="@drawable/dobi_apply" />
 
     <LinearLayout
         android:id="@+id/dobi_apply_layout"
@@ -23,7 +19,7 @@
         android:layout_below="@+id/apply_txt"
         android:layout_marginTop="20dp"
         android:orientation="vertical">
-        <ListView
+         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/dobi_apply_listView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
