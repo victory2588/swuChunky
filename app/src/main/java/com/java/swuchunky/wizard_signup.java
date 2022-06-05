@@ -100,7 +100,7 @@ public class wizard_signup extends AppCompatActivity {
                                 }
 
                                 //가입이 이루어졌을 시 가입 화면을 빠져나감.
-                                Intent i = new Intent(wizard_signup.this, wizard_login.class);
+                                Intent i = new Intent(wizard_signup.this, selectlogin.class);
                                 startActivity(i);
                                 finish();
                                 Toast.makeText(getApplicationContext(), "회원가입에 성공하셨습니다.", Toast.LENGTH_SHORT).show();

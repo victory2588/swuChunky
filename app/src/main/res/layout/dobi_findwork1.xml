@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".dobi_findWork1">
 
@@ -20,16 +20,7 @@
         android:layout_below="@+id/main_txt"
         android:layout_marginTop="30dp"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="청소지역을 선택해주세요"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="카테고리"/>
+
     </LinearLayout>
 
 
@@ -41,16 +32,11 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="*총 n명의 마법사"/>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/dobi_main_listView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 
 </LinearLayout>
