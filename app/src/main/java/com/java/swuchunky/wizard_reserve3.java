@@ -1,12 +1,14 @@
 package com.java.swuchunky;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +30,16 @@ public class wizard_reserve3 extends AppCompatActivity{
     Button reservation_uploadbtn;
     EditText mrequest,maddress;
     private String request,category,when,address;
+
+    TextView living_txt;
+    TextView move_txt;
+    TextView sofa_txt;
+    TextView animal_txt;
+    TextView special_txt;
+    TextView company_txt;
+    TextView trash_txt;
+    TextView toilet_txt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +56,14 @@ public class wizard_reserve3 extends AppCompatActivity{
         toilet = (ImageButton) findViewById(R.id.reservation3_toilet);
         mrequest= findViewById(R.id.wizard_reserve_rqt);
         maddress=findViewById(R.id.wizard_reserve_address);
+        living_txt = findViewById(R.id.living_txt);
+        move_txt = findViewById(R.id.move_txt);
+        sofa_txt = findViewById(R.id.sofa_txt);
+        animal_txt = findViewById(R.id.animal_txt);
+        special_txt = findViewById(R.id.special_txt);
+        company_txt = findViewById(R.id.company_txt);
+        trash_txt = findViewById(R.id.trash_txt);
+        toilet_txt = findViewById(R.id.toilet_txt);
 
         reservation_info rv=new reservation_info();
         firebaseDatabase= FirebaseDatabase.getInstance().getReference();
@@ -72,52 +92,60 @@ public class wizard_reserve3 extends AppCompatActivity{
         living.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="living";
+                category="생활청소";
+                living_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         move.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="move";
+                category="이사청소";
+                move_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         sofa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="sofa";
+                category="가구.가전청소";
+                sofa_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         animal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="animal";
+                category="반려동물";
+                animal_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         special.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="special";
+                category="특수청소";
+                special_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         company.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="company";
+                category="사무실청소";
+                company_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         trash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="trash";
+                category="분리수거";
+                trash_txt.setTextColor(Color.parseColor("#ff8da4"));
             }
         });
         toilet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                category="toilet";
-            }
+                category="화장실";
+                toilet_txt.setTextColor(Color.parseColor("#ff8da4"));
+                }
         });
 
-
     }
+
 }
