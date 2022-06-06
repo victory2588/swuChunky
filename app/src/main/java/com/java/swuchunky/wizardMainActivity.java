@@ -15,7 +15,7 @@ public class wizardMainActivity extends FragmentActivity {
     wizard_main wmain;
 
     private BottomNavigationView bottom_menu; //하단 네비게이션
-    private Fragment wizard_main, wizard_mypage, wizard_reserve, wizard_reserveview; //네비게이션을 통해 이동할 프래그먼트
+    private Fragment wizard_main, wizard_mypage, wizard_reserve, ChatRoomFragment; //네비게이션을 통해 이동할 프래그먼트
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class wizardMainActivity extends FragmentActivity {
         wizard_main = new wizard_main();
         wizard_mypage = new wizard_mypage();
         wizard_reserve = new wizard_reserve();
-        wizard_reserveview = new wizard_reserveview();
+        ChatRoomFragment = new ChatRoomFragment();
 
 
         //제일 처음 띄워주는 프래그먼트
@@ -49,8 +49,8 @@ public class wizardMainActivity extends FragmentActivity {
                 return true;
             }
             //예약리스트 보기 선택
-            if (id == R.id.nav_wizard_reserveview) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserveview).commit();
+            if (id == R.id.nav_wizard_chat) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, ChatRoomFragment).commit();
                 return true;
             }
             //검색(예약하기) 선택
