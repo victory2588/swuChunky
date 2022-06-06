@@ -10,9 +10,9 @@
     <ImageButton
         android:id="@+id/reserve_reg_btn"
         android:layout_width="250dp"
-        android:layout_height="150dp"
+        android:layout_height="140dp"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#FFFFFF"
         android:scaleType="centerInside"
         android:src="@drawable/wizard_reserve1" />
@@ -20,10 +20,30 @@
     <ImageButton
         android:id="@+id/reserve_sel_btn"
         android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="0dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:backgroundTint="#FFFFFF"
         android:scaleType="centerInside"
         android:src="@drawable/wizard_reserve2"/>
+
+    <ImageButton
+        android:id="@+id/reservelist_img"
+        android:layout_width="170dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerInside"
+        android:src="@drawable/reservelist_img" />
+
+    <!--
+    <TextView
+        android:id="@+id/reservelist_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:text="예약목록" />!-->
 </LinearLayout>
