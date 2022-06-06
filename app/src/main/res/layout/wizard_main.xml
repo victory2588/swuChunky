@@ -41,6 +41,7 @@
             android:id="@+id/add_schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#00b8ff"
             android:text=" 일정 추가 " />
     </LinearLayout>
 
