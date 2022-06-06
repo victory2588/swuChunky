@@ -1,7 +1,6 @@
 package com.java.swuchunky;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,27 +12,32 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.CustomViewHolder> {
+public class dobi_ceritified_adapter extends RecyclerView.Adapter<dobi_ceritified_adapter.CustomViewHolder> {
     private ArrayList<reservation_info> arrayList;
     private Context context;
-    FirebaseDatabase database=FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference;
 
-    public findwork_adapter(ArrayList<reservation_info> arrayList, Context context) {
+    public dobi_ceritified_adapter(ArrayList<reservation_info> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context = context;
+    }
+
+    interface OnItemClickListener{
+        void onItemClick(View v, int position); //뷰와 포지션값
+        void onapplyClick(View v, int positon);//삭제
+    }
+    private OnItemClickListener mListener = null;
+    //리스너 객체 참조를 어댑터에 전달 메서드
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener;
     }
 
     @NonNull
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.dobi_findwork_item,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.dobi_ceritified_item,parent,false);
         CustomViewHolder holder=new CustomViewHolder(view);
         return holder;
     }
@@ -69,18 +73,8 @@ public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.Cust
             this.date=itemView.findViewById(R.id.clean_date1);
             this.request=itemView.findViewById(R.id.clean_request1);
             this.where=itemView.findViewById(R.id.clean_where1);
-            this.apply=itemView.findViewById(R.id.test_btn);
+            this.apply=itemView.findViewById(R.id.apply_btn);
 
-            apply.setOnClickListener (new View.OnClickListener () {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(context.getApplicationContext(), "지원했습니다.", Toast.LENGTH_SHORT).show();
-                    int position = getAdapterPosition ();
-                    long a= getItemCount();
-                    Log.d("위치", String.valueOf(a));
-                    //databaseReference=database.getReference("wizard").child("reservation");
-                }
-            });
         }
     }
 }
