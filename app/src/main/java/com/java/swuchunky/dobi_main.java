@@ -13,11 +13,12 @@ import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class dobi_main  extends Fragment {
     dobiMainActivity activity;
     //wizardAdapter adapter;
-    ListView listView;
+    RecyclerView recyclerView;
     //Spinner spinner;
 
 
@@ -40,7 +41,7 @@ public class dobi_main  extends Fragment {
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.dobi_main, container, false);
 
         //adapter = new wizardAdapter();
-        ListView listView = (ListView) view.findViewById(R.id.dobi_main_listView);
+        RecyclerView recyclerview = (RecyclerView) view.findViewById(R.id.dobi_main_listView);
         // listView.setAdapter(adapter);
 
         Spinner spinner = (Spinner) view.findViewById(R.id.dobi_spinner);
