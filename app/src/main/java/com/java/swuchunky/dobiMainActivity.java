@@ -14,7 +14,7 @@ public class dobiMainActivity extends FragmentActivity {
     dobi_main dmain;
 
     private BottomNavigationView dobi_menu; //하단 네비게이션
-    private Fragment dobi_main, dobi_mypage, dobi_apply, dobi_findWork1; //네비게이션을 통해 이동할 프래그먼트
+    private Fragment dobi_main, dobi_mypage, dobi_ceritified, dobi_findWork1; //네비게이션을 통해 이동할 프래그먼트
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class dobiMainActivity extends FragmentActivity {
 
         dobi_main = new dobi_main();
         dobi_mypage = new dobi_mypage();
-        dobi_apply = new dobi_apply();
+        dobi_ceritified = new dobi_ceritified();
         dobi_findWork1 = new dobi_findWork1();
 
 
@@ -49,7 +49,7 @@ public class dobiMainActivity extends FragmentActivity {
                 }
                 //예약리스트 보기 선택
                 if (id == R.id.nav_dobi_apply) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, dobi_apply).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, dobi_ceritified).commit();
                     return true;
                 }
                 //검색(예약하기) 선택
