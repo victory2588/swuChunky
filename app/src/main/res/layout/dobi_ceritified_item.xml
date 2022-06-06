@@ -140,7 +140,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/test_btn"
+                android:id="@+id/apply_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"

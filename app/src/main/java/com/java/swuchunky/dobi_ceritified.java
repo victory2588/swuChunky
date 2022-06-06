@@ -32,7 +32,6 @@ public class dobi_ceritified extends Fragment {
     private findwork_adapter adapter;
     private ArrayList<reservation_info> arrayList;
     private FirebaseAuth firebaseAuth;
-    private ChildEventListener childEventListener;
 
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     DatabaseReference databaseReference;

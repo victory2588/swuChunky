@@ -32,7 +32,6 @@ public class dobi_findWork1 extends Fragment {
     private findwork_adapter adapter;
     private ArrayList<reservation_info> arrayList;
     private FirebaseAuth firebaseAuth;
-    private ChildEventListener childEventListener;
 
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     DatabaseReference databaseReference;
@@ -59,7 +58,6 @@ public class dobi_findWork1 extends Fragment {
 
                 adapter=new findwork_adapter(arrayList,getActivity());
                 recyclerView.setAdapter(adapter);
-                recyclerView.scrollToPosition(arrayList.size()-1);
                 adapter.notifyDataSetChanged();
             }
 
