@@ -16,9 +16,10 @@
     <LinearLayout
         android:id="@+id/wizard_main_layout"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/main_txt"
         android:layout_marginTop="10dp"
+        android:layout_weight="1"
         android:orientation="vertical">
         <Spinner
             android:id="@+id/spinner"
@@ -35,14 +36,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_weight="1"
+        android:layout_marginEnd="20dp"
+        android:gravity="right">
         <Button
             android:id="@+id/add_schedule"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00b8ff"
-            android:textColor="@color/white"
-            android:text=" 일정 추가 " />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle_btn"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:text="+" />
     </LinearLayout>
 
 </LinearLayout>
