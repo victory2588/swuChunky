@@ -3,21 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/buttom_selector.xml" value="0.182" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/circle_btn.xml" value="0.2965" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/corners.xml" value="0.1285" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.161" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.161" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listitem.xml" value="0.2545" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/listview.xml" value="0.2195" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/drawable/text_border.xml" value="0.135" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/activity_chat.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/activity_main.xml" value="0.2490740740740741" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/chat_start.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_activity_main.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_apply.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_ceritified.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_ceritified_item.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_chat_start.xml" value="0.22760416666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_findwork1.xml" value="0.25" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_findwork_item.xml" value="0.33" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_findwork_item.xml" value="0.5" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_login.xml" value="0.22" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_main.xml" value="0.20185185185185187" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_main_item.xml" value="0.25" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_main_add.xml" value="0.25" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_main_item.xml" value="0.33" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_mypage.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/dobi_signup.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/firstpage.xml" value="0.22" />
@@ -26,16 +33,20 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/fragment_wizard_mypage.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.3416666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/loading_activity.xml" value="0.25" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/selectlogin.xml" value="0.3651041666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_activity_main.xml" value="0.3458333333333333" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_findwork.xml" value="0.22760416666666666" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_findwork_item.xml" value="0.5" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_item.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.25" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.25" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.33" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main2.xml" value="0.2916666666666667" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main_item.xml" value="0.25" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main_add.xml" value="0.33" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_main_item.xml" value="0.5" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.3416666666666667" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_mypage.xml" value="0.35885416666666664" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.35885416666666664" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve1_reg.xml" value="0.20909090909090908" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve1_sel.xml" value="0.22" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserve2.xml" value="0.22" />
@@ -44,43 +55,21 @@
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserveview.xml" value="0.33" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserveview2_item.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_reserveview_item.xml" value="0.33" />
-        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.33" />
+        <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.25" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/menu/bottom_menu.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/menu/dobi_menu.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/Sunny/swuChunky/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/drawable/bg_content_et.xml" value="0.1385" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.205" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/activity_chat.xml" value="0.365625" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/activity_main.xml" value="0.35507246376811596" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/chat_start.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/custom_chat_msg.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_activity_main.xml" value="0.2259963768115942" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_apply.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_ceritified.xml" value="0.18490374873353596" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_ceritified_item.xml" value="0.22" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_chat_start.xml" value="0.3802083333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_findwork1.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_findwork_item.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_login.xml" value="0.35507246376811596" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_main.xml" value="0.2259963768115942" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_main_item.xml" value="0.3802083333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/dobi_signup.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/firstpage.xml" value="0.18490374873353596" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/fragment_chat_msg.xml" value="0.365625" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/fragment_chat_room.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/fragment_chatroom.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/listview_header.xml" value="0.19739583333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/loading_activity.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/selectlogin.xml" value="0.3802083333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/selectuser.xml" value="0.196875" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_activity_main.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_findwork.xml" value="0.15949367088607594" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_findwork_item.xml" value="0.3802083333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_login.xml" value="0.33242753623188404" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.175" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main2.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main_add.xml" value="0.1" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_mainitem.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserve.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserve1_reg.xml" value="0.35507246376811596" />
@@ -88,12 +77,8 @@
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserve3.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserveveiw2.xml" value="0.35507246376811596" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserveview.xml" value="0.35507246376811596" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserveview2_item.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_reserveview_item.xml" value="0.3802083333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_rv_list.xml" value="0.365625" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/layout/wizard_signup.xml" value="0.1831306990881459" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/menu/bottom_menu.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/menu/dobi_menu.xml" value="0.1" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/swuChunky/app/src/main/res/menu/bottom_menu.xml" value="0.37435897435897436" />
       </map>
     </option>
   </component>
