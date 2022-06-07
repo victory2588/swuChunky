@@ -20,6 +20,10 @@ public class wizard_reserve extends Fragment {
     wizardMainActivity activity;
     wizard_reserve1_sel reserve1_sel;
 
+    public static wizard_reserve newInstance() {
+        return new wizard_reserve();
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -40,8 +44,7 @@ public class wizard_reserve extends Fragment {
         reservelist_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), wizard_reserve1_sel.class);
-                startActivity(intent);
+                ((wizardMainActivity)getActivity()).replaceFragment(wizard_findwork.newInstance());
             }
         });
 

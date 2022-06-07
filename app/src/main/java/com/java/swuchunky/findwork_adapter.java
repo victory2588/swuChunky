@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -40,11 +41,13 @@ public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.Cust
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+        Glide.with(holder.itemView).load(arrayList.get(position).getImg()).into(holder.imageView);
         holder.email.setText(arrayList.get(position).getEmail());
         holder.category.setText(arrayList.get(position).getCategory());
         holder.date.setText(String.valueOf(arrayList.get(position).getWhen()));
         holder.request.setText(arrayList.get(position).getRequest());
         holder.where.setText(arrayList.get(position).getWhere());
+        holder.chatCode.setText(arrayList.get(position).getChatCode());
     }
 
     @Override
@@ -59,7 +62,7 @@ public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.Cust
         TextView request;
         TextView where;
         TextView email;
-        Button apply;
+        TextView chatCode;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,18 +72,7 @@ public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.Cust
             this.date=itemView.findViewById(R.id.clean_date1);
             this.request=itemView.findViewById(R.id.clean_request1);
             this.where=itemView.findViewById(R.id.clean_where1);
-            this.apply=itemView.findViewById(R.id.test_btn);
-
-            apply.setOnClickListener (new View.OnClickListener () {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(context.getApplicationContext(), "지원했습니다.", Toast.LENGTH_SHORT).show();
-                    int position = getAdapterPosition ();
-                    long a= getItemCount();
-                    Log.d("위치", String.valueOf(a));
-                    //databaseReference=database.getReference("wizard").child("reservation");
-                }
-            });
+            this.chatCode=itemView.findViewById(R.id.chatCode_tv);
         }
     }
 }

@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,35 +37,41 @@ public class wizardMainActivity extends FragmentActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
 
 
-    bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener(){
-        //변경이유 : 액티비티 값 전달 때문에(중첩, 초기화 방지)
-        @Override
-        public boolean onNavigationItemSelected (@NonNull MenuItem item) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
 
-            int id = item.getItemId();
-            //홈버튼 선택
-            if (id == R.id.nav_wizard_main) { //R.id.nav_wizard_main
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
+        bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            //변경이유 : 액티비티 값 전달 때문에(중첩, 초기화 방지)
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+
+                int id = item.getItemId();
+                //홈버튼 선택
+                if (id == R.id.nav_wizard_main) { //R.id.nav_wizard_main
+                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_main).commit();
+                    return true;
+                }
+                //예약리스트 보기 선택
+                if (id == R.id.nav_wizard_chat) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, ChatRoomFragment).commit();
+                    return true;
+                }
+                //검색(예약하기) 선택
+                if (id == R.id.nav_wizard_reserve) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
+                    return true;
+                }
+                //마이페이지 선택
+                if (id == R.id.nav_wizard_mypage) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
+                    return true;
+                }
                 return true;
             }
-            //예약리스트 보기 선택
-            if (id == R.id.nav_wizard_chat) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, ChatRoomFragment).commit();
-                return true;
-            }
-            //검색(예약하기) 선택
-            if (id == R.id.nav_wizard_reserve) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_reserve).commit();
-                return true;
-            }
-            //마이페이지 선택
-            if (id == R.id.nav_wizard_mypage) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.menu_containers, wizard_mypage).commit();
-                return true;
-            }
-            return true;
-        }
-    });
+        });
+    }
+    public void replaceFragment (Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.menu_containers, fragment).commit();
     }
 }

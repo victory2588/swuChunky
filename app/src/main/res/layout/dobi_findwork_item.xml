@@ -17,9 +17,9 @@
 
             <ImageView
                 android:id="@+id/wizard_image"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="3dp"
                 android:src="@mipmap/ic_launcher" />
 
@@ -139,12 +139,12 @@
             android:layout_marginRight="5dp"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/test_btn"
+            <TextView
+                android:id="@+id/chatCode_tv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
-                android:text="지원\n하기" />
+                android:text="채팅 코드" />
 
         </LinearLayout>
     </LinearLayout>

@@ -3,6 +3,7 @@ package com.java.swuchunky;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,8 +29,9 @@ public class wizard_reserve3 extends AppCompatActivity{
     private DatabaseReference firebaseDatabase;
     ImageButton living, move, sofa, animal,special, company, trash, toilet;
     Button reservation_uploadbtn;
-    EditText mrequest,maddress;
-    private String request,category,when,address;
+    EditText mrequest,maddress,mchatCode;
+    String cleanImg;
+    private String request,category,when,address,chatCode;
 
     TextView living_txt;
     TextView move_txt;
@@ -56,6 +58,7 @@ public class wizard_reserve3 extends AppCompatActivity{
         toilet = (ImageButton) findViewById(R.id.reservation3_toilet);
         mrequest= findViewById(R.id.wizard_reserve_rqt);
         maddress=findViewById(R.id.wizard_reserve_address);
+        mchatCode=findViewById(R.id.wizard_reserve_chat);
         living_txt = findViewById(R.id.living_txt);
         move_txt = findViewById(R.id.move_txt);
         sofa_txt = findViewById(R.id.sofa_txt);
@@ -72,16 +75,19 @@ public class wizard_reserve3 extends AppCompatActivity{
         reservation_uploadbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reservation_info rv=new reservation_info();
                 request=mrequest.getText().toString().trim();
                 address=maddress.getText().toString().trim();
+                chatCode=mchatCode.getText().toString().trim();
+
                 rv.setRequest(request);
                 rv.setWhere(address);
                 rv.setCategory(category);
+                rv.setChatCode(chatCode);
 
                 when= getIntent().getStringExtra("when").trim();
                 rv.setWhen(when);
                 rv.setEmail(user.getEmail());
+                Log.d("데이터",rv.getImg());
                 firebaseDatabase.child("wizard").child("reservation").push().setValue(rv);
 
                 Toast.makeText(getApplicationContext(), "예약 완료됐습니다..", Toast.LENGTH_SHORT).show();
@@ -94,6 +100,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="생활청소";
                 living_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/living.png?alt=media&token=d0ea4948-5758-4be1-b016-c96d2d072b8d");
             }
         });
         move.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +108,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="이사청소";
                 move_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/move.png?alt=media&token=0b93ea57-ad28-48cc-9aec-0b07ebcf3b7f");
             }
         });
         sofa.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +116,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="가구.가전청소";
                 sofa_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/sofa.png?alt=media&token=038cf9de-b8b9-419b-a33c-57071ca33587");
             }
         });
         animal.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +124,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="반려동물";
                 animal_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/animal.png?alt=media&token=b2ff58a6-308c-4e36-9708-dd6d1ba81493");
             }
         });
         special.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +132,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="특수청소";
                 special_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/special.png?alt=media&token=bc22435f-e8ff-4bf0-a98c-9bd2cbd16ff1");
             }
         });
         company.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +140,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="사무실청소";
                 company_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/company.png?alt=media&token=bea32d32-09b2-477c-ab19-56034f9af855");
             }
         });
         trash.setOnClickListener(new View.OnClickListener() {
@@ -136,6 +148,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="분리수거";
                 trash_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/trash.png?alt=media&token=0c8b0f00-1a44-4b84-b9ac-3a335dc545ed");
             }
         });
         toilet.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +156,7 @@ public class wizard_reserve3 extends AppCompatActivity{
             public void onClick(View view) {
                 category="화장실";
                 toilet_txt.setTextColor(Color.parseColor("#ff8da4"));
+                rv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/toilet.png?alt=media&token=48594749-9aaf-4de8-9532-26c5ce918c5f");
                 }
         });
 

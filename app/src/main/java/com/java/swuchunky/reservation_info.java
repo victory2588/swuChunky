@@ -6,6 +6,8 @@ public class reservation_info {
     private String category;
     private String request;
     private String where;
+    private String chatCode;
+    private String img;
 
 
     public String getEmail() {
@@ -46,6 +48,22 @@ public class reservation_info {
 
     public void setWhere(String where) {
         this.where = where;
+    }
+
+    public String getChatCode() {
+        return chatCode;
+    }
+
+    public void setChatCode(String chatCode) {
+        this.chatCode = chatCode;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
 
