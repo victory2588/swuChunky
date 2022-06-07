@@ -160,6 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:backgroundTint="#d8d8d8"
+                android:textSize="12sp"
                 android:textColor="@color/white"
                 android:text="평가하기" /> <!--시간날짜 지나면 파랑색으로 변경!-->
 
@@ -169,6 +170,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ff8da4"
                 android:textColor="@color/white"
+                android:textSize="12sp"
                 android:text="취소하기" />
 
         </LinearLayout>
