@@ -11,7 +11,7 @@
         android:id="@+id/chunkyLogo"
         android:layout_width="243dp"
         android:layout_height="205dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/logo"
         android:layout_marginEnd="12dp"
         android:layout_gravity="center" />
