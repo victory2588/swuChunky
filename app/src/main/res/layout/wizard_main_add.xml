@@ -19,11 +19,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/wizardname_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="7"
+                android:textSize="14dp"
+                android:hint="마법사 이름"
+                android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/dobiname_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:ems="7"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:hint="청소요정 이름"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
         <EditText
             android:id="@+id/category_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="32dp"
             android:textSize="14dp"
             android:hint="청소 분야"
             android:inputType="textPersonName"/>
@@ -46,16 +72,6 @@
             android:ems="15"
             android:textSize="14dp"
             android:hint="청소 위치"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/dobiname_add"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:ems="15"
-            android:textSize="14dp"
-            android:hint="청소요정 이름"
             android:inputType="textPersonName" />
 
         <EditText
