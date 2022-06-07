@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:layout_marginTop="-90dp"
-        android:src="@drawable/dobi_findwork" />
+        android:src="@drawable/dobi_list" />
 
     <LinearLayout
         android:id="@+id/dobi_main_layout1"
