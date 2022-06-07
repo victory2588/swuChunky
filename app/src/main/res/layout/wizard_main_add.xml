@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:ems="7"
+                android:layout_marginEnd="10dp"
                 android:textSize="14dp"
                 android:hint="마법사 이름"
                 android:inputType="textPersonName" />
@@ -37,8 +37,7 @@
                 android:id="@+id/dobiname_add"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="1dp"
-                android:ems="7"
+                android:layout_marginStart="5dp"
                 android:layout_weight="1"
                 android:textSize="14dp"
                 android:hint="청소요정 이름"
