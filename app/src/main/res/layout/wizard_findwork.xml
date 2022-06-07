@@ -38,7 +38,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/wizard_main_listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="54dp"/>
 
     </LinearLayout>
 

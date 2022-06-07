@@ -4,7 +4,8 @@ public class confirmed_reservation {
     private String category;
     private String time;
     private String where;
-    private String name;
+    private String wizard_name;
+    private String dobi_name;
     private String request;
     private String email;
 
@@ -32,12 +33,20 @@ public class confirmed_reservation {
         this.where = where;
     }
 
-    public String getName() {
-        return name;
+    public String getWizard_name() {
+        return wizard_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setWizard_name(String wizard_name) {
+        this.wizard_name = wizard_name;
+    }
+
+    public String getDobi_name() {
+        return dobi_name;
+    }
+
+    public void setDobi_name(String dobi_name) {
+        this.dobi_name = dobi_name;
     }
 
     public String getRequest() {
