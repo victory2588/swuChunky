@@ -2,6 +2,7 @@ package com.java.swuchunky;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 
@@ -28,6 +29,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,15 +44,21 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class wizard_main extends Fragment {
+    public static wizard_main newInstance() {
+        return new wizard_main();
+    }
 
     wizardMainActivity activity;
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
+    private RecyclerView.Adapter sAdapter;
+    private wizard_main_add_adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<wizard_main_Item> arrayList;
-    private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
+    private ArrayList<confirmed_reservation> arrayList;
     Spinner spinner;
+    Button add_schedule;
+
+    FirebaseDatabase database=FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference;
 
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -68,15 +76,57 @@ public class wizard_main extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         //뷰 넘어가는 부분
-        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);
-        RecyclerView recyclerview = (RecyclerView) view.findViewById(R.id.wizard_main_listView);
-        recyclerview.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager( getActivity().getApplicationContext());
-        //recyclerView.setLayoutManager(layoutManager);
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.wizard_main, container, false);recyclerView = (RecyclerView) view.findViewById(R.id.wizard_main_listView);
+        recyclerView=(RecyclerView)view.findViewById(R.id.wizard_main_listView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         arrayList = new ArrayList<>(); // 그룹 객체를 담을 어레이 리스트 (어댑터쪽으로)
 
-        database = FirebaseDatabase.getInstance(); // 파이어베이스 데이터베이스 연동
-        databaseReference = database.getReference(); // DB 테이블 연결
+        add_schedule=(Button)view.findViewById(R.id.add_schedule);
+
+        add_schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), wizard_main_add.class);
+                startActivity(intent);
+            }
+        });
+
+        databaseReference=database.getReference("wizard").child("confirmed reservation");
+
+        databaseReference.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                confirmed_reservation cv=snapshot.getValue(confirmed_reservation.class);
+                arrayList.add(cv);
+
+                Log.d("데이터", String.valueOf(snapshot.getValue()));
+
+                adapter=new wizard_main_add_adapter(arrayList,getActivity());
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);
         ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(getActivity().getApplicationContext(), R.array.month, android.R.layout.simple_spinner_dropdown_item);
@@ -92,29 +142,9 @@ public class wizard_main extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
-            }/*
-        //값이 변경되는걸 감지하는 함수!
-        databaseReference.child("reserve").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                // 파이어베이스 데이터베이스의 데이터를 받아오는 곳
-                arrayList.clear(); // 기존 배열리스트가 존재하지않게 초기화
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) { // 반복문으로 데이터 List를 추출해냄
-                    wizard_reserveview_Item wizard_reserview_Item = snapshot.getValue(wizard_reserveview_Item.class); //객체를 선언하여 데이터를 담기
-                    arrayList.add(wizard_reserview_Item); // 담은 데이터들을 배열리스트에 넣고 리사이클러뷰로 보낼 준비
-                }
-                adapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                // 디비를 가져오던중 에러 발생 시
-                Log.e("wizardMainActivity", String.valueOf(databaseError.toException())); // 에러문 출력
-            }
-
-            //adapter = new wizard_reserve_listAdapter(arrayList, this);
-            //recyclerView.setAdapter(adapter); // 리사이클러뷰에 어댑터 연결*/
         });
+
         return view;
     }
 

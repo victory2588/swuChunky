@@ -29,6 +29,7 @@
         <activity android:name=".wizard_reserve3"/>
         <activity android:name=".selectlogin"/>
         <activity android:name=".ChatActivity"/>
+        <activity android:name=".wizard_main_add"/>
 
     </application>
 
