@@ -26,7 +26,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
-                android:src="@drawable/chat_start" />
+                android:src="@drawable/dobi_chat" />
 
             <!--<TextView
                 android:layout_width="match_parent"

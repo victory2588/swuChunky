@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -17,21 +17,37 @@
 
             <ImageView
                 android:id="@+id/wizard_image"
-                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="3dp"
                 android:src="@mipmap/ic_launcher" />
 
-            <TextView
-                android:id="@+id/wizard_name"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="홍선미 마법사"
-                android:textColor="@color/black"
-                android:textSize="12dp"
-                android:textStyle="bold" />
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/dobi_name"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="김예원"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="11dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 청소요정"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="11dp" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -45,22 +61,22 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
-                <TextView
+                 <TextView
                     android:id="@+id/clean_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="청소 분야 : "
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
                 <TextView
                     android:id="@+id/clean_info_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="빈 텍스트"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,13 +91,13 @@
                     android:layout_height="wrap_content"
                     android:text="청소 날짜 : "
                     android:textStyle="bold"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
                 <TextView
                     android:id="@+id/clean_info1_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="빈 텍스트"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -96,13 +112,13 @@
                     android:layout_height="wrap_content"
                     android:text="요청사항 : "
                     android:textStyle="bold"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
                 <TextView
                     android:id="@+id/clean_info2_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="빈 텍스트"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -117,13 +133,13 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="위치 : "
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
                 <TextView
                     android:id="@+id/clean_info3_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="빈 텍스트"
-                    android:textSize="12dp" />
+                    android:textSize="11dp" />
             </LinearLayout>
 
 

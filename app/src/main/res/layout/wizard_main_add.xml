@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textSize="14dp"
-            android:hint="카테고리"
+            android:hint="청소 분야"
             android:inputType="textPersonName"/>
 
         <EditText
@@ -35,7 +35,7 @@
             android:layout_marginTop="32dp"
             android:ems="15"
             android:textSize="14dp"
-            android:hint="예약날짜 및 시간"
+            android:hint="청소 날짜"
             android:inputType="textPersonName"/>
 
         <EditText
@@ -58,6 +58,15 @@
             android:hint="청소요정 이름"
             android:inputType="textPersonName" />
 
+        <EditText
+            android:id="@+id/rqst_add3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="15"
+            android:textSize="14dp"
+            android:hint="요청사항"
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <Button
@@ -65,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="일정 등록하기" />
 
 </LinearLayout>
