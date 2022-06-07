@@ -85,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
         android:backgroundTint="#00b8ff"
+        android:textColor="@color/white"
         android:layout_gravity="center"
         android:text="다음" />
 
