@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class dobi_findWork1 extends Fragment {
+    public static dobi_findWork1 newInstance() {
+        return new dobi_findWork1();
+    }
     private RecyclerView recyclerView;
     private findwork_adapter adapter;
     private ArrayList<reservation_info> arrayList;

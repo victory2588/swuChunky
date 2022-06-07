@@ -67,7 +67,7 @@ public class findwork_adapter extends RecyclerView.Adapter<findwork_adapter.Cust
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
             this.imageView=itemView.findViewById(R.id.wizard_image);
-            this.email=itemView.findViewById(R.id.wizard_name);
+            this.email=itemView.findViewById(R.id.clean_email);
             this.category=itemView.findViewById(R.id.clean_category1);
             this.date=itemView.findViewById(R.id.clean_date1);
             this.request=itemView.findViewById(R.id.clean_request1);

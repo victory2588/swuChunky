@@ -37,8 +37,8 @@ public class wizard_findwork extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
-        ViewGroup rootview=(ViewGroup) inflater.inflate(R.layout.dobi_findwork1, container, false);
-        recyclerView=(RecyclerView)rootview.findViewById(R.id.dobi_main_listView);
+        ViewGroup rootview=(ViewGroup) inflater.inflate(R.layout.wizard_findwork, container, false);
+        recyclerView=(RecyclerView)rootview.findViewById(R.id.wizard_main_listView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         arrayList=new ArrayList<>();
