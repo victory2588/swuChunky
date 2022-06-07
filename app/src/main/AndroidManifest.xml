@@ -27,10 +27,10 @@
         <activity android:name=".dobiMainActivity"/>
         <activity android:name=".wizard_reserve1_sel"/>
         <activity android:name=".wizard_reserve3"/>
-        <activity android:name=".dobi_signup"/>
         <activity android:name=".LoadingActivity"/>
         <activity android:name=".selectlogin"/>
         <activity android:name=".ChatRoomActivity"/>
+        <activity android:name=".ChatActivity"/>
 
     </application>
 
