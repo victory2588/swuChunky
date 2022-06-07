@@ -40,7 +40,7 @@ public class dobi_ChatRoomFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.chat_start, container, false);
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.dobi_chat_start, container, false);
 
         activity = (dobiMainActivity) getActivity();
 
