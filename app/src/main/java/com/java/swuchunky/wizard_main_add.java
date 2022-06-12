@@ -20,8 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class wizard_main_add extends FragmentActivity {
     Button wizard_add_btn;
-    EditText mcategory_add, mtime_add, mwhere_add,mdobiname_add,mwizardname_add,mrqst_add;
-    String category_add,time_add,where_add,dobiname_add,wizardname_add,rqst_add,category;
+    EditText mtime_add, mwhere_add,mdobiname_add,mwizardname_add,mrqst_add;
+    String time_add,where_add,dobiname_add,wizardname_add,rqst_add,category;
     ImageButton living, move, sofa, animal,special, company, trash, toilet;
     private DatabaseReference firebaseDatabase;
     private FirebaseAuth firebaseAuth;
@@ -49,7 +49,6 @@ public class wizard_main_add extends FragmentActivity {
         trash = (ImageButton) findViewById(R.id.reservation3_trash_add);
         toilet = (ImageButton) findViewById(R.id.reservation3_toilet_add);
         wizard_add_btn=(Button) findViewById(R.id.wizard_add_btn);
-        mcategory_add= findViewById(R.id.category_add);
         mtime_add=findViewById(R.id.time_add);
         mwhere_add=findViewById(R.id.where_add);
         mdobiname_add = findViewById(R.id.dobiname_add);
@@ -72,14 +71,12 @@ public class wizard_main_add extends FragmentActivity {
         wizard_add_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                category_add=mcategory_add.getText().toString().trim();
                 time_add=mtime_add.getText().toString().trim();
                 where_add=mwhere_add.getText().toString().trim();
                 dobiname_add=mdobiname_add.getText().toString().trim();
                 wizardname_add=mwizardname_add.getText().toString().trim();
                 rqst_add=mrqst_add.getText().toString().trim();
 
-                cv.setCategory(category_add);
                 cv.setTime(time_add);
                 cv.setWhere(where_add);
                 cv.setDobi_name(dobiname_add);
@@ -100,6 +97,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="생활청소";
                 living_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/living.png?alt=media&token=d0ea4948-5758-4be1-b016-c96d2d072b8d");
+                cv.setCategory(category);
             }
         });
         move.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +106,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="이사청소";
                 move_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/move.png?alt=media&token=0b93ea57-ad28-48cc-9aec-0b07ebcf3b7f");
+                cv.setCategory(category);
             }
         });
         sofa.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +115,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="가구.가전청소";
                 sofa_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/sofa.png?alt=media&token=038cf9de-b8b9-419b-a33c-57071ca33587");
+                cv.setCategory(category);
             }
         });
         animal.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +124,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="반려동물";
                 animal_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/animal.png?alt=media&token=b2ff58a6-308c-4e36-9708-dd6d1ba81493");
+                cv.setCategory(category);
             }
         });
         special.setOnClickListener(new View.OnClickListener() {
@@ -132,6 +133,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="특수청소";
                 special_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/special.png?alt=media&token=bc22435f-e8ff-4bf0-a98c-9bd2cbd16ff1");
+                cv.setCategory(category);
             }
         });
         company.setOnClickListener(new View.OnClickListener() {
@@ -140,6 +142,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="사무실청소";
                 company_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/company.png?alt=media&token=bea32d32-09b2-477c-ab19-56034f9af855");
+                cv.setCategory(category);
             }
         });
         trash.setOnClickListener(new View.OnClickListener() {
@@ -148,6 +151,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="분리수거";
                 trash_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/trash.png?alt=media&token=0c8b0f00-1a44-4b84-b9ac-3a335dc545ed");
+                cv.setCategory(category);
             }
         });
         toilet.setOnClickListener(new View.OnClickListener() {
@@ -156,6 +160,7 @@ public class wizard_main_add extends FragmentActivity {
                 category="화장실";
                 toilet_txt.setTextColor(Color.parseColor("#ff8da4"));
                 cv.setImg("https://firebasestorage.googleapis.com/v0/b/swuchunky.appspot.com/o/toilet.png?alt=media&token=48594749-9aaf-4de8-9532-26c5ce918c5f");
+                cv.setCategory(category);
             }
         });
     }
