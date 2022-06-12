@@ -8,6 +8,7 @@ public class confirmed_reservation {
     private String dobi_name;
     private String request;
     private String email;
+    private String Img;
 
     public String getCategory() {
         return category;
@@ -63,5 +64,13 @@ public class confirmed_reservation {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImg() {
+        return Img;
+    }
+
+    public void setImg(String img) {
+        Img = img;
     }
 }

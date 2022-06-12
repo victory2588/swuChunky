@@ -33,7 +33,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
-                    android:id="@+id/reservation3_living"
+                    android:id="@+id/reservation3_living_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:background="@drawable/corners"
@@ -56,7 +56,7 @@
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_move"
+                    android:id="@+id/reservation3_move_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:scaleType="centerInside"
@@ -79,7 +79,7 @@
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_sofa"
+                    android:id="@+id/reservation3_sofa_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:background="@drawable/corners"
@@ -101,7 +101,7 @@
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_animal"
+                    android:id="@+id/reservation3_animal_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:scaleType="centerInside"
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_special"
+                    android:id="@+id/reservation3_special_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:scaleType="centerInside"
@@ -152,7 +152,7 @@
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_company"
+                    android:id="@+id/reservation3_company_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:scaleType="centerInside"
@@ -174,7 +174,7 @@
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_trash"
+                    android:id="@+id/reservation3_trash_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:scaleType="centerInside"
@@ -196,7 +196,7 @@
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
                 <ImageButton
-                    android:id="@+id/reservation3_toilet"
+                    android:id="@+id/reservation3_toilet_add"
                     android:layout_width="72dp"
                     android:layout_height="66dp"
                     android:scaleType="centerInside"

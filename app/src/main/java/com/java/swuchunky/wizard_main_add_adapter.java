@@ -37,7 +37,7 @@ public class wizard_main_add_adapter extends RecyclerView.Adapter<wizard_main_ad
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        //Glide.with(holder.itemView).load(arrayList.get(position).getImg()).into(holder.imageView);
+        Glide.with(holder.itemView).load(arrayList.get(position).getImg()).into(holder.imageView);
         holder.dobi_name.setText(arrayList.get(position).getDobi_name());
         holder.category.setText(arrayList.get(position).getCategory());
         holder.date.setText(String.valueOf(arrayList.get(position).getTime()));
