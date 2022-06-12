@@ -41,10 +41,10 @@ public class wizard_signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_signup);
         //액션 바 등록하기
-        ActionBar actionBar = getSupportActionBar();
+        /*ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("회원가입");
         actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
-        actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘
+        actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘*/
 
         //파이어베이스 접근 설정
         firebaseAuth =  FirebaseAuth.getInstance();
