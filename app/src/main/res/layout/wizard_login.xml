@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="당신은 청소요정을 부리는 마법사입니다. \n청소요정을 부르기 위한 소환의식을 진행해주세요."
+        android:text="안녕하세요. 로그인 페이지입니다. \n 청소를 위한 소환의식을 진행해주세요."
         android:layout_gravity="center" />
 
     <EditText

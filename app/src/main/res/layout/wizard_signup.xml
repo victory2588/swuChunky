@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="마법사가 되시겠습니까?"
+        android:text="개인정보를 입력해주세요"
         android:layout_gravity="center" />
 
     <EditText
