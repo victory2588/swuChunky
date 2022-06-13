@@ -40,14 +40,7 @@ public class wizard_main_add extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_main_add);
 
-        living = (ImageButton) findViewById(R.id.reservation3_living_add);
-        move = (ImageButton) findViewById(R.id.reservation3_move_add);
-        sofa = (ImageButton) findViewById(R.id.reservation3_sofa_add);
-        animal = (ImageButton) findViewById(R.id.reservation3_animal_add);
-        special = (ImageButton) findViewById(R.id.reservation3_special_add);
-        company = (ImageButton) findViewById(R.id.reservation3_company_add);
-        trash = (ImageButton) findViewById(R.id.reservation3_trash_add);
-        toilet = (ImageButton) findViewById(R.id.reservation3_toilet_add);
+
         wizard_add_btn=(Button) findViewById(R.id.wizard_add_btn);
         mtime_add=findViewById(R.id.time_add);
         mwhere_add=findViewById(R.id.where_add);

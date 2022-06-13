@@ -37,7 +37,7 @@ public class dobi_main_adapter extends RecyclerView.Adapter<dobi_main_adapter.Cu
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        //Glide.with(holder.itemView).load(arrayList.get(position).getImg()).into(holder.imageView);
+        Glide.with(holder.itemView).load(arrayList.get(position).getImg()).into(holder.imageView);
         holder.wizard_name.setText(arrayList.get(position).getWizard_name());
         holder.category.setText(arrayList.get(position).getCategory());
         holder.date.setText(String.valueOf(arrayList.get(position).getTime()));
@@ -61,7 +61,7 @@ public class dobi_main_adapter extends RecyclerView.Adapter<dobi_main_adapter.Cu
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.imageView=itemView.findViewById(R.id.wizard_image);
+            this.imageView=itemView.findViewById(R.id.dobi_image);
             this.wizard_name=itemView.findViewById(R.id.wizard_name);
             this.category=itemView.findViewById(R.id.clean_info_txt);
             this.date=itemView.findViewById(R.id.clean_info1_txt);
