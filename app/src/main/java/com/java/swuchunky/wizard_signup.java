@@ -33,18 +33,11 @@ public class wizard_signup extends AppCompatActivity {
     Button registerBtn;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference firebaseDatabase;
-    public int count;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wizard_signup);
-        //액션 바 등록하기
-        /*ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("회원가입");
-        actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
-        actionBar.setDisplayShowHomeEnabled(true); //홈 아이콘*/
 
         //파이어베이스 접근 설정
         firebaseAuth =  FirebaseAuth.getInstance();
@@ -99,7 +92,6 @@ public class wizard_signup extends AppCompatActivity {
                                     firebaseDatabase.child("wizard").child("user").child(user.getUid()).setValue(account);
                                 }
 
-                                //가입이 이루어졌을 시 가입 화면을 빠져나감.
                                 Intent i = new Intent(wizard_signup.this, selectlogin.class);
                                 startActivity(i);
                                 finish();

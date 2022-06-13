@@ -84,7 +84,7 @@ public class wizard_main_add extends FragmentActivity {
                 startActivity(intent);
             }
         });
-        living.setOnClickListener(new View.OnClickListener() {
+        living_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="생활청소";
@@ -93,7 +93,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        move.setOnClickListener(new View.OnClickListener() {
+        move_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="이사청소";
@@ -102,7 +102,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        sofa.setOnClickListener(new View.OnClickListener() {
+        sofa_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="가구.가전청소";
@@ -111,7 +111,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        animal.setOnClickListener(new View.OnClickListener() {
+        animal_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="반려동물";
@@ -120,7 +120,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        special.setOnClickListener(new View.OnClickListener() {
+        special_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="특수청소";
@@ -129,7 +129,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        company.setOnClickListener(new View.OnClickListener() {
+        company_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="사무실청소";
@@ -138,7 +138,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        trash.setOnClickListener(new View.OnClickListener() {
+        trash_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="분리수거";
@@ -147,7 +147,7 @@ public class wizard_main_add extends FragmentActivity {
                 cv.setCategory(category);
             }
         });
-        toilet.setOnClickListener(new View.OnClickListener() {
+        toilet_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 category="화장실";

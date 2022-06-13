@@ -85,11 +85,6 @@ public class wizard_login extends AppCompatActivity {
                                         startActivity(intent);
                                         Toast.makeText(getApplicationContext(),"요정님 환영합니다!",Toast.LENGTH_SHORT).show();
                                     }
-                                    /*FirebaseUser user = firebaseAuth.getCurrentUser();
-                                    Log.d("로그인 정보",user.getUid());
-
-                                    Intent intent = new Intent(wizard_login.this, LoadingActivity.class); //getApplicationContext()
-                                    startActivity(intent);*/
                                 }else{
                                     Toast.makeText(getApplicationContext(),"로그인 오류",Toast.LENGTH_SHORT).show();
                                 }
